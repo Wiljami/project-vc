@@ -11,5 +11,6 @@ public class AppTest
     public void subtractionTest(){
 	Calculator testCalc = new Calculator();
        	Assert.assertEquals(testCalc.subtract(2, 1), 1);
+	Assert.assertEquals(testCalc.subtract(-5, 5), -10);
     }
 }
