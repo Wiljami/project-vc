@@ -1,8 +1,8 @@
 package fi.tuni.tiko;
 
 /**
- * Hello world!
- *
+ * Calculator app for version control practice
+ * 
  */
 public class App 
 {
@@ -10,5 +10,9 @@ public class App
     {
         System.out.println( "Hello World!" );
         System.out.println("Heippa maailma!");
+    }
+
+    public int addition(int x, int y) {
+        return x+y;
     }
 }
