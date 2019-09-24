@@ -1,8 +1,8 @@
 package fi.tuni.tiko;
 
 /**
- * Hello world!
- *
+ * Calculator app for version control practice
+ * 
  */
 public class App 
 {
