@@ -37,12 +37,4 @@ public class App
         System.out.println(result);
 
     }
-
-    public int addition(int x, int y) {
-        return x+y;
-    }
-
-    public int divide(int x, int y) {
-        return x/y;
-    }
 }
