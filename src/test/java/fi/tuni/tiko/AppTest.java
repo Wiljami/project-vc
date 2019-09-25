@@ -1,20 +1,31 @@
 package fi.tuni.tiko;
 
-import static org.junit.Assert.assertTrue;
-
+import org.junit.Assert;
 import org.junit.Test;
+import fi.tuni.tiko.Calculator;
 
-/**
- * Unit test for simple App.
- */
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
+
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void subtractionTest(){
+	Calculator testCalc = new Calculator();
+       	Assert.assertEquals(testCalc.subtract(2, 1), 1);
+	Assert.assertEquals(testCalc.subtract(-5, 5), -10);
     }
+
+    @Test
+    public void additionTest() {
+	Calculator testCalc = new Calculator();
+	Assert.assertEquals(testCalc.addition(2,1),3);
+	Assert.assertEquals(testCalc.addition(-5,5),0);
+    }
+
+    @Test
+    public void multiplicationTest() {
+        Calculator testCalc = new Calculator();
+        Assert.assertEquals(testCalc.multiplication(5,5),25);
+        Assert.assertEquals(testCalc.multiplication(-5,5),-25);
+    }
+
 }
