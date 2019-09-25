@@ -25,5 +25,11 @@ public class AppTest
         Assert.assertEquals(testCalc.multiplication(5,5),25);
         Assert.assertEquals(testCalc.multiplication(-5,5),-25);
     }
+   
+    @Test
+    public void divisionTest() {
+        Assert.assertEquals(testCalc.divide(50,2),25);
+        Assert.assertEquals(testCalc.divide(-100,2),-50);
+    }
 
 }
