@@ -19,6 +19,17 @@ public class App
         if (args.length != 3) {
             return;
         }
+        int a = Integer.parseInt(args[0]);
+        int b = Integer.parseInt(args[2]);
+        char c = args[1].charAt(0);
+
+        int result = 0;
+
+        if (c == '+') {
+            result = calculator.addition(a, b);
+        }
+        System.out.println(result);
+
     }
 
     public int addition(int x, int y) {
