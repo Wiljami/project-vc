@@ -27,7 +27,9 @@ public class App
 
         if (c == '+') {
             result = calculator.addition(a, b);
-        }
+        }else if (c == '-'){
+	    result = calculator.subtraction(a, b);
+	}
         System.out.println(result);
 
     }
