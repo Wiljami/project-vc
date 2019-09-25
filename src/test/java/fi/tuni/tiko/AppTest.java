@@ -20,4 +20,12 @@ public class AppTest
 	Assert.assertEquals(testCalc.addition(2,1),3);
 	Assert.assertEquals(testCalc.addition(-5,5),0);
     }
+
+    @Test
+    public void multiplicationTest() {
+        Calculator testCalc = new Calculator();
+        Assert.assertEquals(testCalc.multiplication(5,5),25);
+        Assert.assertEquals(testCalc.multiplication(-5,5),-25);
+    }
+
 }
