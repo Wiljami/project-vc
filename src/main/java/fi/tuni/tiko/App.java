@@ -31,6 +31,8 @@ public class App
 	    result = calculator.subtract(a, b);
 	}else if (c == '*'){
 	    result = calculator.multiplication(a, b);
+	}else if (c == '/'){
+	    result = calculator.divide(a, b);
 	}
         System.out.println(result);
 
