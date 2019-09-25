@@ -16,7 +16,9 @@ public class App
     }
 
     private static void parseArgs(String[] args) {
-
+        if (args.length != 3) {
+            return;
+        }
     }
 
     public int addition(int x, int y) {
