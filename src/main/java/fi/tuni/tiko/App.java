@@ -13,6 +13,8 @@ public class App
         if (args.length > 0) {
             parseArgs(args);
         }
+
+        Window akkuna = new Window();
     }
 
     private static void parseArgs(String[] args) {
