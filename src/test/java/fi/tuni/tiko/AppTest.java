@@ -13,4 +13,11 @@ public class AppTest
        	Assert.assertEquals(testCalc.subtract(2, 1), 1);
 	Assert.assertEquals(testCalc.subtract(-5, 5), -10);
     }
+
+    @Test
+    public void additionTest() {
+	Calculator testCalc = new Calculator();
+	Assert.assertEquals(testCalc.addition(2,1),3);
+	Assert.assertEquals(testCalc.addition(-5,5),0);
+    }
 }
