@@ -5,4 +5,8 @@ public class SecretPoemGenerator{
         
     }
 
+    public void printTest(){
+        System.out.println("Welcome!");
+    }
+
 }
