@@ -10,4 +10,8 @@ class ConsoleUI {
     public ConsoleUI(Calculator calculator) {
         this.calculator = calculator;
     }
+
+    public void start() {
+        
+    }
 }
