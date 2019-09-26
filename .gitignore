@@ -4,4 +4,4 @@
 .settings/
 .vscode/
 *.class
-.target/
+target/
