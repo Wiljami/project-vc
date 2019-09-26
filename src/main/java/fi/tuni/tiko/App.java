@@ -33,8 +33,9 @@ public class App
 	        result = calculator.multiplication(a, b);
 	    } else if (c == '/') {
 	        result = calculator.divide(a, b);
-	    }
+	    } else {
+            System.out.println("Please give a valid command. (+, -, *, /");
+        }
         System.out.println(result);
-
     }
 }
