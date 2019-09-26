@@ -1,3 +1,4 @@
+package fi.tuni.tiko;
 import javax.swing.*;
 import java.awt.*;
 
