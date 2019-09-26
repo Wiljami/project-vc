@@ -22,7 +22,7 @@ class ConsoleUI {
         while (true) {
             String command = input.nextLine();
             if (command.equals("help")) {
-                System.out.println("quit to quit");
+                printHelp();
             } else if (command.equals("quit")) {
                 System.out.println("Good bye");
                 break;
@@ -30,5 +30,10 @@ class ConsoleUI {
                 System.out.println("Unknown command. Type 'help' for commands.");
             }
         }
+    }
+
+    private void printHelp() {
+        System.out.println("help - this printout");
+        System.out.println("quit - quits");
     }
 }
