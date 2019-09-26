@@ -4,4 +4,8 @@ public class SecretSnake {
     public SecretSnake() {
         
     }
+
+    public void startSnake() {
+        
+    }    
 }
