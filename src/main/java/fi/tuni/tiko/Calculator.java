@@ -24,4 +24,9 @@ public class Calculator {
 	public int addition(int x, int y) {
 		return x + y;
 	}
+
+	public void startPoemGenerator(){
+		SecretPoemGenerator poems = new SecretPoemGenerator();
+		poems.printTest();
+	}
 }
