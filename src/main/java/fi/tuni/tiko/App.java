@@ -14,7 +14,7 @@ public class App
             parseArgs(args);
         }
 
-        Window akkuna = new Window();
+        Window akkuna = new Window("Calculator");
     }
 
     private static void parseArgs(String[] args) {
