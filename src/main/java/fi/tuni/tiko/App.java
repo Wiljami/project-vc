@@ -17,7 +17,7 @@ public class App
 
     private static void parseArgs(String[] args) {
         if (args.length != 3) {
-            return;
+            System.out.println("Please give three arguments.");
         }
         int a = Integer.parseInt(args[0]);
         int b = Integer.parseInt(args[2]);
