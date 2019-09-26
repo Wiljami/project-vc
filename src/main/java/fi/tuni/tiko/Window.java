@@ -3,7 +3,8 @@ import java.awt.*;
 
 class Window extends JFrame {
 
-    public Window() {
+    public Window(String title) {
+        super(title);
         setSize(600, 600);
         setVisible(true);
     }
