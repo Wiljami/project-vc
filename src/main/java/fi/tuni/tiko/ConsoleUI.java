@@ -26,6 +26,8 @@ class ConsoleUI {
             } else if (command.equals("quit")) {
                 System.out.println("Good bye");
                 break;
+            } else {
+                System.out.println("Unknown command. Type 'help' for commands.");
             }
         }
     }
