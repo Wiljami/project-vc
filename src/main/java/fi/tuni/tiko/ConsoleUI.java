@@ -16,9 +16,7 @@ class ConsoleUI {
     }
 
     public void start() {
-        System.out.println("Welcome to the calculator.");
-        System.out.println("Type help for commands.");
-
+        printIntro();
         while (true) {
             String command = input.nextLine();
             if (command.equals("help")) {
@@ -30,6 +28,11 @@ class ConsoleUI {
                 System.out.println("Unknown command. Type 'help' for commands.");
             }
         }
+    }
+
+    private void printIntro() {
+        System.out.println("Welcome to the calculator console UI.");
+        System.out.println("Type help for commands.");
     }
 
     private void printHelp() {
