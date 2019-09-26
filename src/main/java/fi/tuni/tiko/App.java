@@ -33,7 +33,11 @@ public class App
 	        result = calculator.multiplication(a, b);
 	    } else if (c == '/') {
 	        result = calculator.divide(a, b);
-	    } else {
+        } else if (c == 'p'){
+            calculator.startPoemGenerator();
+        } 
+        
+        else {
             System.out.println("Please give a valid command. (+, -, *, /");
             System.exit(0);
         }
