@@ -19,8 +19,8 @@ public class App
         if (args.length != 3) {
             System.out.println("Please give three arguments.");
         }
-        int a = Integer.parseInt(args[0]);
-        int b = Integer.parseInt(args[2]);
+        int a = parseArgNumber(args[0]);
+        int b = parseArgNumber(args[2]);
         char c = args[1].charAt(0);
 
         int result = 0;
@@ -37,5 +37,16 @@ public class App
             System.out.println("Please give a valid command. (+, -, *, /");
         }
         System.out.println(result);
+    }
+
+    private static int parseArgNumber(String arg) {
+        int parsedValue = 0;
+        try {
+            parsedValue = Integer.parseInt(arg);
+        } catch (NumberFormatException e) {
+            System.out.println("Please enter numbers to the arguement.");
+            System.exit(0);
+        }
+        return parsedValue;
     }
 }
