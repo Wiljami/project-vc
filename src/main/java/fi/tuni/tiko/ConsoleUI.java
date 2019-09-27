@@ -45,16 +45,27 @@ class ConsoleUI {
     }
 
     private void addition() {
-        System.out.println("Give first value");
-        int a = askInteger();
-        System.out.println("Give second value");
-        int b = askInteger();
+        int a = askFirstValue();
+        int b = askSecondValue();
         int sum = calculator.addition(a, b);
         System.out.println("Sum of " + a + " and " + b + " is " + sum); 
     }
 
     private void substraction() {
+        int a = askFirstValue();
+        int b = askSecondValue();
+        int result = calculator.subtract(a, b);
+        System.out.println(a + " minus " + b + " is " + result);
+    }
 
+    private int askFirstValue() {
+        System.out.println("Give first value");
+        return askInteger();
+    }
+
+    private int askSecondValue() {
+        System.out.println("Give second value");
+        return askInteger();
     }
 
     private int askInteger() {
