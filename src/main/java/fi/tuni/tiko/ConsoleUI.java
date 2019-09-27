@@ -20,6 +20,7 @@ class ConsoleUI {
         boolean running = true;
         while (running) {
             String command = input.nextLine();
+            command = command.toLowerCase();
             if (command.equals("help")) {
                 printHelp();
             } else if (command.equals("quit")) {
