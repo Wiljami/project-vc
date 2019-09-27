@@ -2,6 +2,7 @@ package fi.tuni.tiko;
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
+import java.awt.event.*;
 
 class Window extends JFrame {
 
@@ -20,10 +21,13 @@ class Window extends JFrame {
         container = getContentPane();
 
         calcButton = new JButton("=");
+        calcButton.addActionListener(this::buttonClicked);
         panel.add(calcButton);
         container.add(panel);
 
         setVisible(true);
     }
+
+    public void buttonClicked(ActionEvent e) {}
 
 }
