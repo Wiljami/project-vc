@@ -15,4 +15,8 @@ public class SecretSnake {
     public void createBoard() {
         
     }
+
+    public void printBoard() {
+        
+    }
 }
