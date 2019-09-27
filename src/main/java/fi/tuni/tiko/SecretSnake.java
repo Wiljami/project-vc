@@ -25,6 +25,11 @@ public class SecretSnake {
     }
 
     public void printBoard() {
-        
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j  <colls; j++) {
+                System.out.print(board[i][j]);
+            }
+            System.out.println("");
+        }
     }
 }
