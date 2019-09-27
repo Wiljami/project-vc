@@ -8,7 +8,7 @@ class Window extends JFrame {
 
     JButton calcButton;
     Container container;
-    JTextArea inputField;
+    JTextArea textField;
     JPanel panel;
     CardLayout cards;
 
@@ -23,6 +23,11 @@ class Window extends JFrame {
         calcButton = new JButton("=");
         calcButton.addActionListener(this::buttonClicked);
         panel.add(calcButton);
+
+        textField = new JTextArea("", 1,1);
+        textField.setEditable(true);
+        panel.add(textField);
+
         container.add(panel);
 
         setVisible(true);
