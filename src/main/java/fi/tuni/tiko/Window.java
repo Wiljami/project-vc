@@ -9,13 +9,13 @@ class Window extends JFrame {
     Container container;
     JTextArea inputField;
     JPanel panel;
-    CardLayout cardLayout;
+    CardLayout cards;
 
     public Window(String title) {
         super(title);
         setSize(600, 600);
 
-        cardLayout = new CardLayout();
+        cards = new CardLayout();
         panel = new JPanel(cardLayout);
         container = getContentPane();
 
