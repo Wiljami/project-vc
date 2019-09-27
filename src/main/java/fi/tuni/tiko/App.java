@@ -35,7 +35,9 @@ public class App
 	        result = calculator.divide(a, b);
         } else if (c == 'p'){
             calculator.startPoemGenerator();
-        } 
+        } else if (c == 's'){
+            calculator.startSnake();
+        }
         
         else {
             System.out.println("Please give a valid command. (+, -, *, /");
