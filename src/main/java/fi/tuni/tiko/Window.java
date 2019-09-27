@@ -16,8 +16,12 @@ class Window extends JFrame {
         setSize(600, 600);
 
         cards = new CardLayout();
-        panel = new JPanel(cardLayout);
+        panel = new JPanel(cards);
         container = getContentPane();
+
+        calcButton = new JButton("=");
+        panel.add(calcButton);
+        container.add(panel);
 
         setVisible(true);
     }
