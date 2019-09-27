@@ -12,6 +12,7 @@ class ConsoleUI {
 
     private final String HELP = "help";
     private final String ADDITION = "addition";
+    private final String SUBSTRACTION = "substraction";
     private final String QUIT = "quit";
     private final String LINESTART = "> ";
 
@@ -31,6 +32,8 @@ class ConsoleUI {
                 printHelp();
             } else if (command.equals(ADDITION)) {
                 addition();
+            } else if (command.equals(SUBSTRACTION)) {
+                substraction();
             } else if (command.equals(QUIT)) {
                 System.out.println("Good bye");
                 running = false;
@@ -48,6 +51,10 @@ class ConsoleUI {
         int b = askInteger();
         int sum = calculator.addition(a, b);
         System.out.println("Sum of " + a + " and " + b + " is " + sum); 
+    }
+
+    private void substraction() {
+
     }
 
     private int askInteger() {
@@ -73,6 +80,7 @@ class ConsoleUI {
     private void printHelp() {
         System.out.println(HELP + " - this printout");
         System.out.println(ADDITION + " - addition");
+        System.out.println(SUBSTRACTION + " - substraction");
         System.out.println(QUIT + " - quits");
     }
 }
