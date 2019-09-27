@@ -13,6 +13,7 @@ class ConsoleUI {
     private final String HELP = "help";
     private final String ADDITION = "addition";
     private final String QUIT = "quit";
+    private final String LINESTART = "> ";
 
     public ConsoleUI(Calculator calculator) {
         this.calculator = calculator;
@@ -23,6 +24,7 @@ class ConsoleUI {
         printIntro();
         boolean running = true;
         while (running) {
+            System.out.print(LINESTART);
             String command = input.nextLine();
             command = command.toLowerCase();
             if (command.equals(HELP)) {
@@ -40,9 +42,9 @@ class ConsoleUI {
     }
 
     private void addition() {
-        System.out.print("Give first value: ");
+        System.out.println("Give first value");
         int a = askInteger();
-        System.out.print("Give second value: ");
+        System.out.println("Give second value");
         int b = askInteger();
         int sum = calculator.addition(a, b);
         System.out.println("Sum of " + a + " and " + b + " is " + sum); 
@@ -52,6 +54,7 @@ class ConsoleUI {
         boolean okValue = false;
         int i = 0;
         while (!okValue) {
+            System.out.print(LINESTART);
             try {
                 i = Integer.parseInt(input.nextLine());
                 okValue = true;
