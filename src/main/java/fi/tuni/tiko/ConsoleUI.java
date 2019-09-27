@@ -23,6 +23,8 @@ class ConsoleUI {
             command = command.toLowerCase();
             if (command.equals("help")) {
                 printHelp();
+            } else if (command.equals("addition")) {
+                addition();
             } else if (command.equals("quit")) {
                 System.out.println("Good bye");
                 running = false;
@@ -31,6 +33,15 @@ class ConsoleUI {
                 System.out.println("Unknown command. Type 'help' for commands.");
             }
         }
+    }
+
+    private void addition() {
+        System.out.print("Give first value: ");
+        int a = Integer.parseInt(input.nextLine());
+        System.out.print("Give second value: ");
+        int b = Integer.parseInt(input.nextLine());
+        int sum = calculator.addition(a, b);
+        System.out.println("Sum of " + a + " and " + b + " is " + sum); 
     }
 
     private void printIntro() {
