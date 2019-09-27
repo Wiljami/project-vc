@@ -37,11 +37,25 @@ class ConsoleUI {
 
     private void addition() {
         System.out.print("Give first value: ");
-        int a = Integer.parseInt(input.nextLine());
+        int a = askInteger();
         System.out.print("Give second value: ");
-        int b = Integer.parseInt(input.nextLine());
+        int b = askInteger();
         int sum = calculator.addition(a, b);
         System.out.println("Sum of " + a + " and " + b + " is " + sum); 
+    }
+
+    private int askInteger() {
+        boolean okValue = false;
+        int i = 0;
+        while (!okValue) {
+            try {
+                i = Integer.parseInt(input.nextLine());
+                okValue = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Please type a whole number.");
+            }
+        }
+        return i;
     }
 
     private void printIntro() {
