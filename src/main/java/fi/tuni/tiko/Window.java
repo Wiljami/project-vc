@@ -11,6 +11,7 @@ class Window extends JFrame {
     JTextArea textField;
     JPanel panel;
     CardLayout cards;
+    Border border;
 
     public Window(String title) {
         super(title);
@@ -24,8 +25,10 @@ class Window extends JFrame {
         calcButton.addActionListener(this::buttonClicked);
         panel.add(calcButton);
 
-        textField = new JTextArea("", 1,1);
+        border = BorderFactory.createLineBorder(Color.GRAY, 1);
+        textField = new JTextArea("0", 1,1);
         textField.setEditable(true);
+        textField.setBorder(border);
         panel.add(textField);
 
         container.add(panel);
