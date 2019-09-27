@@ -6,6 +6,6 @@ public class SecretSnake {
     }
 
     public void startSnake() {
-        
-    }    
+        System.out.println("Test");
+    }
 }

@@ -29,4 +29,9 @@ public class Calculator {
 		SecretPoemGenerator poems = new SecretPoemGenerator();
 		poems.printTest();
 	}
+
+	public void startSnake(){
+		SecretSnake snake = new SecretSnake();
+		snake.startSnake();
+	}
 }
