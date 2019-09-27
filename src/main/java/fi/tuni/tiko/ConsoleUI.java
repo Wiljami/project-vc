@@ -10,6 +10,10 @@ class ConsoleUI {
     private Calculator calculator;
     private Scanner input;
 
+    private final String HELP = "help";
+    private final String ADDITION = "addition";
+    private final String QUIT = "quit";
+
     public ConsoleUI(Calculator calculator) {
         this.calculator = calculator;
         this.input = new Scanner(System.in);
@@ -21,11 +25,11 @@ class ConsoleUI {
         while (running) {
             String command = input.nextLine();
             command = command.toLowerCase();
-            if (command.equals("help")) {
+            if (command.equals(HELP)) {
                 printHelp();
-            } else if (command.equals("addition")) {
+            } else if (command.equals(ADDITION)) {
                 addition();
-            } else if (command.equals("quit")) {
+            } else if (command.equals(QUIT)) {
                 System.out.println("Good bye");
                 running = false;
                 continue;
