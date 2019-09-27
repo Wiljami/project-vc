@@ -1,11 +1,18 @@
 package fi.tuni.tiko;
 
+import java.util.ArrayList;
+
 public class SecretSnake {
+    
     public SecretSnake() {
         
     }
 
     public void startSnake() {
-        System.out.println("Test");
+
+    }
+
+    public void createBoard() {
+        
     }
 }
