@@ -25,4 +25,8 @@ public class SecretPoemGenerator{
         System.out.println(poet1 + " + " + poet2 + ". You got it! [Press Enter]" );
     }
 
+    public void readPoemFiles(){
+        //To-do: this method
+    }
+
 }
