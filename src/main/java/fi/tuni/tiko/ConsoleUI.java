@@ -17,13 +17,15 @@ class ConsoleUI {
 
     public void start() {
         printIntro();
-        while (true) {
+        boolean running = true;
+        while (running) {
             String command = input.nextLine();
             if (command.equals("help")) {
                 printHelp();
             } else if (command.equals("quit")) {
                 System.out.println("Good bye");
-                break;
+                running = false;
+                continue;
             } else {
                 System.out.println("Unknown command. Type 'help' for commands.");
             }
