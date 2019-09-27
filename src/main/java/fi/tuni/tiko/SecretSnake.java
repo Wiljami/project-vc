@@ -15,7 +15,13 @@ public class SecretSnake {
     }
 
     public void createBoard() {
-    
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j  <colls; j++) {
+                if(i==0 || j == 0 || i == rows-1|| j == colls-1){
+                    board[i][j] = '*';
+                }
+            }
+        }
     }
 
     public void printBoard() {
