@@ -10,7 +10,8 @@ class ConsoleUI {
     private Calculator calculator;
     private Scanner input;
 
-    private final String HELP = "help";
+    //private final String HELP = "help";
+    private final String[] HELP = {"help", "h"};
     private final String ADDITION = "addition";
     private final String SUBSTRACTION = "substraction";
     private final String MULTIPLICATION = "multiplication";
@@ -30,7 +31,7 @@ class ConsoleUI {
             System.out.print(LINESTART);
             String command = input.nextLine();
             command = command.toLowerCase();
-            if (command.equals(HELP)) {
+            if (checkCommand(HELP, command)) {
                 printHelp();
             } else if (command.equals(ADDITION)) {
                 addition();
