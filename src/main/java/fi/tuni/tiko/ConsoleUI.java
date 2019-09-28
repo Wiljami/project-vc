@@ -13,6 +13,7 @@ class ConsoleUI {
     private final String HELP = "help";
     private final String ADDITION = "addition";
     private final String SUBSTRACTION = "substraction";
+    private final String MULTIPLICATION = "multiplication";
     private final String QUIT = "quit";
     private final String LINESTART = "> ";
 
@@ -42,6 +43,9 @@ class ConsoleUI {
                 System.out.println("Unknown command. Type 'help' for commands.");
             }
         }
+    }
+
+    private void multiplication() {
     }
 
     private void addition() {
