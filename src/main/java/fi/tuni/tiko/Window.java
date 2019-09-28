@@ -26,15 +26,19 @@ class Window extends JFrame {
     }
 
     private void addComponentsToPane() {
-        calcButton = new JButton("=");
-        calcButton.addActionListener(this::buttonClicked);
-        pane.add(calcButton);
+        addButton("=");
 
         border = BorderFactory.createLineBorder(Color.GRAY, 1);
         textField = new JTextArea("0", 1,1);
         textField.setEditable(true);
         textField.setBorder(border);
         pane.add(textField);
+    }
+
+    private void addButton(String text) {
+        JButton newButton = new JButton(text);
+        newButton.addActionListener(this::buttonClicked);
+        pane.add(newButton);
     }
 
     public void buttonClicked(ActionEvent e) { System.out.println("click"); }
