@@ -10,12 +10,12 @@ class Window extends JFrame {
     Container container;
     JTextArea textField;
     JPanel panel;
-    CardLayout cards;
     Border border;
 
     public Window(String title) {
         super(title);
         setSize(600, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         cards = new CardLayout();
         panel = new JPanel(cards);
