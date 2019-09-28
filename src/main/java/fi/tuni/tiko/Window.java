@@ -36,6 +36,6 @@ class Window extends JFrame {
         setVisible(true);
     }
 
-    public void buttonClicked(ActionEvent e) {}
+    public void buttonClicked(ActionEvent e) { System.out.println("click"); }
 
 }
