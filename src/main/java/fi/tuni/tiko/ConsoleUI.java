@@ -107,9 +107,9 @@ class ConsoleUI {
     }
 
     private void printHelp() {
-        System.out.println(HELP + " - this printout");
+        System.out.println(HELP[0] + " - this printout");
         System.out.println(ADDITION + " - addition");
         System.out.println(SUBSTRACTION + " - substraction");
-        System.out.println(QUIT + " - quits");
+        System.out.println(QUIT[0] + " - quits");
     }
 }
