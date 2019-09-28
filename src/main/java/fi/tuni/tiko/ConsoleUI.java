@@ -35,6 +35,8 @@ class ConsoleUI {
                 addition();
             } else if (command.equals(SUBSTRACTION)) {
                 substraction();
+            } else if (command.equals(MULTIPLICATION)) {
+                multiplication();
             } else if (command.equals(QUIT)) {
                 System.out.println("Good bye");
                 running = false;
@@ -46,6 +48,11 @@ class ConsoleUI {
     }
 
     private void multiplication() {
+        int a = askFirstValue();
+        int b = askSecondValue();
+        int result = calculator.multiplication(a, b);
+        System.out.println(a + " times " + b + " is " + result); 
+
     }
 
     private void addition() {
