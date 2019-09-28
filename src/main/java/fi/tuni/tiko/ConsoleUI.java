@@ -11,9 +11,9 @@ class ConsoleUI {
     private Scanner input;
 
     private final String[] HELP = {"help", "h"};
-    private final String ADDITION = "addition";
-    private final String SUBSTRACTION = "substraction";
-    private final String MULTIPLICATION = "multiplication";
+    private final String[] ADDITION = {"addition", "add", "+"};
+    private final String[] SUBSTRACTION = {"substraction", "sub", "-"};
+    private final String[] MULTIPLICATION = {"multiplication", "multi", "*"};
     private final String[] QUIT = {"quit", "q"};
     private final String LINESTART = "> ";
 
@@ -31,11 +31,11 @@ class ConsoleUI {
             command = command.toLowerCase();
             if (checkCommand(HELP, command)) {
                 printHelp();
-            } else if (command.equals(ADDITION)) {
+            } else if (checkCommand(ADDITION, command)) {
                 addition();
-            } else if (command.equals(SUBSTRACTION)) {
+            } else if (checkCommand(SUBSTRACTION, command)) {
                 substraction();
-            } else if (command.equals(MULTIPLICATION)) {
+            } else if (checkCommand(MULTIPLICATION, command)) {
                 multiplication();
             } else if (checkCommand(QUIT, command)) {
                 System.out.println("Good bye");
@@ -108,8 +108,8 @@ class ConsoleUI {
 
     private void printHelp() {
         System.out.println(HELP[0] + " - this printout");
-        System.out.println(ADDITION + " - addition");
-        System.out.println(SUBSTRACTION + " - substraction");
+        System.out.println(ADDITION[0] + " - addition");
+        System.out.println(SUBSTRACTION[0] + " - substraction");
         System.out.println(QUIT[0] + " - quits");
     }
 }
