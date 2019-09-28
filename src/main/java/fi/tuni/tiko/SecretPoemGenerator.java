@@ -9,10 +9,11 @@ public class SecretPoemGenerator{
     }
 
     public void startPoemGenerator(){
-        System.out.println("You found a Secret Poem Generator.");
+        System.out.println("\nYou found a Secret Poem Generator.");
         System.out.println("Welcome, Friend!");
-        System.out.println("         **************************************");
+        System.out.println("\n         **************************************");
         System.out.println();
+        askPoets();
     }
 
     public void askPoets(){
