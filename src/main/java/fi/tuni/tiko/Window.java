@@ -9,7 +9,7 @@ class Window extends JFrame {
     JButton calcButton;
     Container container;
     JTextArea textField;
-    JPanel panel;
+    JPanel pane;
     CardLayout cards;
     Border border;
 
@@ -17,23 +17,25 @@ class Window extends JFrame {
         super(title);
 
         cards = new CardLayout();
-        panel = new JPanel(cards);
+        pane = new JPanel(cards);
         container = getContentPane();
+        addComponentsToPane();
 
+        container.add(pane);
+        pack();
+        setVisible(true);
+    }
+
+    private void addComponentsToPane() {
         calcButton = new JButton("=");
         calcButton.addActionListener(this::buttonClicked);
-        panel.add(calcButton);
+        pane.add(calcButton);
 
         border = BorderFactory.createLineBorder(Color.GRAY, 1);
         textField = new JTextArea("0", 1,1);
         textField.setEditable(true);
         textField.setBorder(border);
-        panel.add(textField);
-
-        container.add(panel);
-
-        pack();
-        setVisible(true);
+        pane.add(textField);
     }
 
     public void buttonClicked(ActionEvent e) { System.out.println("click"); }
