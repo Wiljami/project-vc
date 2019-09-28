@@ -10,14 +10,13 @@ class Window extends JFrame {
     Container container;
     JTextArea textField;
     JPanel pane;
-    CardLayout cards;
     Border border;
 
     public Window(String title) {
         super(title);
 
-        cards = new CardLayout();
-        pane = new JPanel(cards);
+        pane = new JPanel();
+        pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
         container = getContentPane();
         addComponentsToPane();
 
