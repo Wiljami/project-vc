@@ -14,7 +14,8 @@ class ConsoleUI {
     private final String ADDITION = "addition";
     private final String SUBSTRACTION = "substraction";
     private final String MULTIPLICATION = "multiplication";
-    private final String QUIT = "quit";
+    //private final String QUIT = "quit";
+    private final String[] QUIT = {"quit", "q"};
     private final String LINESTART = "> ";
 
     public ConsoleUI(Calculator calculator) {
@@ -37,7 +38,7 @@ class ConsoleUI {
                 substraction();
             } else if (command.equals(MULTIPLICATION)) {
                 multiplication();
-            } else if (command.equals(QUIT)) {
+            } else if (checkCommand(QUIT, command)) {
                 System.out.println("Good bye");
                 running = false;
                 continue;
