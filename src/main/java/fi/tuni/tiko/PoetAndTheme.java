@@ -4,4 +4,9 @@ import java.util.ArrayList;
 public class PoetAndTheme{
     ArrayList<String> verseLines;
     String nameAndTheme;
+
+    public PoetAndTheme(String themeAndPoet){
+        verseLines = new ArrayList<>();
+        this.nameAndTheme = themeAndPoet;
+    }
 }
