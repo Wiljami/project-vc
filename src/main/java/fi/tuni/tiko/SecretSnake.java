@@ -24,6 +24,10 @@ public class SecretSnake {
         }
     }
 
+    public int randomGenerator() {
+        return 0;
+    }
+
     public void printBoard() {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j  <colls; j++) {
