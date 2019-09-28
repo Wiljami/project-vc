@@ -47,6 +47,13 @@ class ConsoleUI {
         }
     }
 
+    private boolean checkCommand(String[] commands, String command) {
+        for (String cmd : commands) {
+            if (command.equals(cmd)) return true;
+        }
+        return false;
+    }
+
     private void multiplication() {
         int a = askFirstValue();
         int b = askSecondValue();
