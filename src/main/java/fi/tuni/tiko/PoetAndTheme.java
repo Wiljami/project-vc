@@ -9,4 +9,8 @@ public class PoetAndTheme{
         verseLines = new ArrayList<>();
         this.nameAndTheme = themeAndPoet;
     }
+
+    public void addVerseLine(String verseLine){
+        this.verseLines.add(verseLine);
+    }
 }
