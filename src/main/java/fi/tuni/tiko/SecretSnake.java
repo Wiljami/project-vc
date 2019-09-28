@@ -11,6 +11,7 @@ public class SecretSnake {
 
     public void startSnake() {
         createBoard();
+        generateFirstSnake();
         printBoard();
     }
 
@@ -19,13 +20,15 @@ public class SecretSnake {
             for (int j = 0; j  <colls; j++) {
                 if(i==0 || j == 0 || i == rows-1|| j == colls-1){
                     board[i][j] = '*';
+                } else {
+                    board[i][j] = ' ';
                 }
             }
         }
     }
 
     public void generateFirstSnake() {
-       
+
     }
 
     public int randomGenerator(int min, int max) {
