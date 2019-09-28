@@ -28,7 +28,13 @@ public class SecretSnake {
     }
 
     public void generateFirstSnake() {
-
+        int rowsPlace = randomGenerator(0, rows-1);
+        int collsPlace = randomGenerator(0, colls-1);
+        if(board[rowsPlace][collsPlace] == ' '){
+            board[rowsPlace][collsPlace] = 'S';
+        } else {
+            generateFirstSnake();
+        }
     }
 
     public int randomGenerator(int min, int max) {
