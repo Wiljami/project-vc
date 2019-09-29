@@ -1,9 +1,12 @@
 package fi.tuni.tiko;
 
+import java.util.Scanner;
+
 public class SecretSnake {
     char[][] board = new char[20][20];
     int rows = board.length;
     int colls = board[0].length;
+    Scanner scan = new Scanner(System.in);
 
     public SecretSnake() {
         
@@ -38,7 +41,7 @@ public class SecretSnake {
     }
 
     public void move() {
-        
+
     }
 
     public int randomGenerator(int min, int max) {
