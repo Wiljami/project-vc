@@ -7,7 +7,6 @@ import java.awt.event.*;
 class Window extends JFrame {
 
     JButton calcButton;
-    Container container;
     JTextArea textField;
     JPanel pane;
     Border border;
@@ -17,10 +16,9 @@ class Window extends JFrame {
 
         pane = new JPanel();
         setLayout(new FlowLayout());
-        container = getContentPane();
         addComponentsToPane();
 
-        container.add(pane);
+        add(pane);
         pack();
         setVisible(true);
     }
