@@ -38,6 +38,8 @@ class ConsoleUI {
                 substraction();
             } else if (checkCommand(MULTIPLICATION, command)) {
                 multiplication();
+            } else if (checkCommand(DIVISION, command)) {
+                division();
             } else if (checkCommand(QUIT, command)) {
                 System.out.println("Good bye");
                 running = false;
@@ -53,6 +55,10 @@ class ConsoleUI {
             if (command.equals(cmd)) return true;
         }
         return false;
+    }
+
+    private void division() {
+
     }
 
     private void multiplication() {
