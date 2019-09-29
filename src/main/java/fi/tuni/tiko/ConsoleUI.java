@@ -58,7 +58,10 @@ class ConsoleUI {
     }
 
     private void division() {
-
+        int a = askFirstValue();
+        int b = askSecondValue();
+        int result = calculator.divide(a, b);
+        System.out.println(a + " divided by " + b + " is " + result);
     }
 
     private void multiplication() {
