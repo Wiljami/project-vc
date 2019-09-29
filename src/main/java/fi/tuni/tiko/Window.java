@@ -24,6 +24,13 @@ class Window extends JFrame {
     }
 
     private void addComponentsToPane() {
+
+        border = BorderFactory.createLineBorder(Color.GRAY, 1);
+        textField = new JTextArea("0", 1,1);
+        textField.setEditable(true);
+        textField.setBorder(border);
+        add(textField);
+        
         for(int i=0; i<10; i++) {
             addButton(Integer.toString(i));
         }
@@ -32,12 +39,6 @@ class Window extends JFrame {
         addButton("*");
         addButton("/");
         addButton("=");
-
-        border = BorderFactory.createLineBorder(Color.GRAY, 1);
-        textField = new JTextArea("0", 1,1);
-        textField.setEditable(true);
-        textField.setBorder(border);
-        add(textField);
     }
 
     private void addButton(String text) {
