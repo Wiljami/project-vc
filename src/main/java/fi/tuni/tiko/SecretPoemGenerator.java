@@ -36,6 +36,12 @@ public class SecretPoemGenerator{
 
     public void readPoemFiles(){
         //To-do: this method
+        try (Scanner fileScan = new Scanner(new File("poems.txt"))) {
+
+            
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
     }
 
 }
