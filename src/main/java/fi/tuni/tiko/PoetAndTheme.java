@@ -13,4 +13,8 @@ public class PoetAndTheme{
     public void addVerseLine(String verseLine){
         this.verseLines.add(verseLine);
     }
+
+    public String getRandomVerseLine(){
+        return " ";
+    }
 }
