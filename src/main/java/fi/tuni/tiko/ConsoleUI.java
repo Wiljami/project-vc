@@ -121,6 +121,7 @@ class ConsoleUI {
         System.out.println(ADDITION[0] + " - addition");
         System.out.println(SUBSTRACTION[0] + " - substraction");
         System.out.println(MULTIPLICATION[0] + " - multiplication");
+        System.out.println(DIVISION[0] + " - division");
         System.out.println(QUIT[0] + " - quits");
     }
 }
