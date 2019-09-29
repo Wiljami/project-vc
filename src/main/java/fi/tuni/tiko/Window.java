@@ -16,7 +16,7 @@ class Window extends JFrame {
         super(title);
 
         pane = new JPanel();
-        pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
+        setLayout(new FlowLayout());
         container = getContentPane();
         addComponentsToPane();
 
