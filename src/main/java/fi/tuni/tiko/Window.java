@@ -29,6 +29,10 @@ class Window extends JFrame {
         for(int i=0; i<10; i++) {
             addButton(Integer.toString(i));
         }
+        addButton("+");
+        addButton("-");
+        addButton("*");
+        addButton("/");
         addButton("=");
 
         border = BorderFactory.createLineBorder(Color.GRAY, 1);
