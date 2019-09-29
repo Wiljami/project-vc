@@ -15,6 +15,7 @@ public class SecretSnake {
     public void startSnake() {
         createBoard();
         generateFirstSnake();
+        spawnApples();
         printBoard();
     }
 
