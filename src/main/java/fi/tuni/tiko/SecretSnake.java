@@ -45,7 +45,13 @@ public class SecretSnake {
     }
 
     public void spawnApples() {
-        
+        int rowsPlace = randomGenerator(0, rows-1);
+        int collsPlace = randomGenerator(0, colls-1);
+        if(board[rowsPlace][collsPlace] == ' '){
+            board[rowsPlace][collsPlace] = '@';
+        } else {
+            spawnApples();
+        }
     }
 
     public int randomGenerator(int min, int max) {
