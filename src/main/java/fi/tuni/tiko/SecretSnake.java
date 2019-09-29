@@ -44,6 +44,10 @@ public class SecretSnake {
 
     }
 
+    public void spawnApples() {
+        
+    }
+
     public int randomGenerator(int min, int max) {
         int random = (int) ((Math.random()*((max-min)+1))+min);
         return random;
