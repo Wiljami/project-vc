@@ -7,9 +7,11 @@ import java.io.File;
 
 public class SecretPoemGenerator{
     Scanner scanner;
+    ArrayList<PoetAndTheme> poetsAndThemesList;
 
     public SecretPoemGenerator(){
         scanner = new Scanner(System.in);
+        poetsAndThemesList = new ArrayList<>();
     }
 
     public void startPoemGenerator(){
