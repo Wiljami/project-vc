@@ -8,6 +8,7 @@ public class SecretSnake {
     int colls = board[0].length;
     Scanner scan = new Scanner(System.in);
     int snakeHeadRows;
+    int snakeHeadCols;
 
     public SecretSnake() {
         
