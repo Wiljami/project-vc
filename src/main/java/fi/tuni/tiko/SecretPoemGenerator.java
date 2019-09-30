@@ -37,10 +37,13 @@ public class SecretPoemGenerator{
     public void readPoemFiles(){
         //To-do: this method
         try (Scanner fileScan = new Scanner(new File("poems.txt"))) {
+            //Poems.txt consist of a header (poet and theme) plus verse lines.
+            //First loop reads the header and creates object 'PoetAndTheme'.
             while (fileScan.hasNextLine()){
                 String themeAndPoet = fileScan.nextLine();
                 PoetAndTheme addToList = new PoetAndTheme(themeAndPoet);
                 String verseLine = "placeholder";
+                //Second loop reads verse lines and adds them to object 'PoetAndTheme'.
                 while(!(verseLine.isEmpty())){
                     verseLine = fileScan.nextLine();
                     addToList.addVerseLine(verseLine);
