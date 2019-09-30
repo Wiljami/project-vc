@@ -19,6 +19,7 @@ class ConsoleUI {
     private final String LINESTART = "> ";
 
     private final String[] CALCULATOR = {"calculator", "calc", "c"};
+    private final String[] POEM = {"poem", "p", "secret poem generator"};
 
     public ConsoleUI(Calculator calculator) {
         this.calculator = calculator;
@@ -59,6 +60,8 @@ class ConsoleUI {
         command = command.toLowerCase();
         if (checkCommand(CALCULATOR, command)) {
             start();
+        } else if (checkCommand(POEM, command)) {
+            calculator.startPoemGenerator();
         } else {
             System.out.println("Unknown command");
         }
