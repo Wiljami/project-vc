@@ -13,12 +13,9 @@ public class App
         if (args.length > 0) {
             parseArgs(args);
         } else {
-            console();
+            ConsoleUI console = new ConsoleUI(calculator);
+            console.startLaunchUI();
         }
-    }
-
-    private static void console() {
-        
     }
 
     private static void parseArgs(String[] args) {

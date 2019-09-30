@@ -50,6 +50,13 @@ class ConsoleUI {
         }
     }
 
+    public void startLaunchUI() {
+        boolean running = true;
+        while (running) {
+            System.out.println("Give launch arguement: ");
+        }
+    }
+
     private boolean checkCommand(String[] commands, String command) {
         for (String cmd : commands) {
             if (command.equals(cmd)) return true;
