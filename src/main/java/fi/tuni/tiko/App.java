@@ -12,7 +12,13 @@ public class App
         calculator = new Calculator();
         if (args.length > 0) {
             parseArgs(args);
+        } else {
+            console();
         }
+    }
+
+    private static void console() {
+        
     }
 
     private static void parseArgs(String[] args) {
