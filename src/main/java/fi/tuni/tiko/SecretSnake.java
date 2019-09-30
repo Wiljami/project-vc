@@ -41,7 +41,7 @@ public class SecretSnake {
     public void setSnakeHeadCols(int snakeHeadCols) {
         this.snakeHeadCols = snakeHeadCols;
     }
-    
+
     public void startSnake() {
         createBoard();
         generateFirstSnake();
@@ -66,6 +66,8 @@ public class SecretSnake {
         int collsPlace = randomGenerator(0, colls-1);
         if(board[rowsPlace][collsPlace] == ' '){
             board[rowsPlace][collsPlace] = 'S';
+            setSnakeHeadCols(collsPlace);
+            setSnakeHeadRows(rowsPlace);
         } else {
             generateFirstSnake();
         }
