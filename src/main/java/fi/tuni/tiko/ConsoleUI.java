@@ -18,6 +18,8 @@ class ConsoleUI {
     private final String[] QUIT = {"quit", "q"};
     private final String LINESTART = "> ";
 
+    private final String[] CALCULATOR = {"calculator", "calc", "c"};
+
     public ConsoleUI(Calculator calculator) {
         this.calculator = calculator;
         this.input = new Scanner(System.in);
@@ -51,9 +53,14 @@ class ConsoleUI {
     }
 
     public void startLaunchUI() {
-        boolean running = true;
-        while (running) {
-            System.out.println("Give launch arguement: ");
+        System.out.println("Give launch arguement");
+        System.out.print(LINESTART);
+        String command = input.nextLine();
+        command = command.toLowerCase();
+        if (checkCommand(CALCULATOR, command)) {
+            start();
+        } else {
+            System.out.println("Unknown command");
         }
     }
 
