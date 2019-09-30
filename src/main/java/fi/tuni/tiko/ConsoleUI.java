@@ -20,6 +20,7 @@ class ConsoleUI {
 
     private final String[] CALCULATOR = {"calculator", "calc", "c"};
     private final String[] POEM = {"poem", "p", "secret poem generator"};
+    private final String[] SNAKE = {"snake", "s", "snaek"};
 
     public ConsoleUI(Calculator calculator) {
         this.calculator = calculator;
@@ -62,6 +63,8 @@ class ConsoleUI {
             start();
         } else if (checkCommand(POEM, command)) {
             calculator.startPoemGenerator();
+        } else if (checkCommand(SNAKE, command)) {
+            calculator.startSnake();
         } else {
             System.out.println("Unknown command");
         }
