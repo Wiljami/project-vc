@@ -8,7 +8,7 @@ public class SecretSnake {
     int colls = board[0].length;
     Scanner scan = new Scanner(System.in);
     private int snakeHeadRows;
-    int snakeHeadCols;
+    private int snakeHeadCols;
 
     public SecretSnake() {
         
@@ -26,6 +26,20 @@ public class SecretSnake {
      */
     public void setSnakeHeadRows(int snakeHeadRows) {
         this.snakeHeadRows = snakeHeadRows;
+    }
+
+    /**
+     * @return the snakeHeadCols
+     */
+    public int getSnakeHeadCols() {
+        return snakeHeadCols;
+    }
+
+    /**
+     * @param snakeHeadCols the snakeHeadCols to set
+     */
+    public void setSnakeHeadCols(int snakeHeadCols) {
+        this.snakeHeadCols = snakeHeadCols;
     }
     
     public void startSnake() {
