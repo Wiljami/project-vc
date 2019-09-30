@@ -38,7 +38,13 @@ public class SecretPoemGenerator{
         //To-do: this method
         try (Scanner fileScan = new Scanner(new File("poems.txt"))) {
             while (fileScan.hasNextLine()){
+<<<<<<< HEAD
                 
+=======
+                String themeAndPoet = fileScan.nextLine();
+                PoetAndTheme addToList = new PoetAndTheme(themeAndPoet);
+                String verseLine = "placeholder";
+>>>>>>> poem
             }
             
         } catch (Exception e) {
