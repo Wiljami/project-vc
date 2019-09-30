@@ -41,6 +41,10 @@ public class SecretPoemGenerator{
                 String themeAndPoet = fileScan.nextLine();
                 PoetAndTheme addToList = new PoetAndTheme(themeAndPoet);
                 String verseLine = "placeholder";
+                while(!(verseLine.isEmpty())){
+                    verseLine = fileScan.nextLine();
+                    addToList.addVerseLine(verseLine);
+                }
             }
             
         } catch (Exception e) {
