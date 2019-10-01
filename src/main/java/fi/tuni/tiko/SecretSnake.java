@@ -47,6 +47,8 @@ public class SecretSnake {
         generateFirstSnake();
         spawnApples();
         printBoard();
+        move();
+        printBoard();
     }
 
     public void createBoard() {
@@ -74,7 +76,36 @@ public class SecretSnake {
     }
 
     public void move() {
+        System.out.println("Move snake: (wasd)");
+        char move = scan.nextLine().charAt(0);
 
+        switch (move) {
+            case 'w':
+                board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
+                setSnakeHeadCols(getSnakeHeadCols()-1);
+                setSnakeHeadRows(getSnakeHeadRows()-1);
+                board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
+            break;
+
+            case 'a':
+                board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
+                setSnakeHeadCols(getSnakeHeadCols()-1);
+                board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
+            break;
+
+            case 's':
+                board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
+                setSnakeHeadCols(getSnakeHeadCols()+1);
+                setSnakeHeadRows(getSnakeHeadRows()+1);
+                board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
+            break;
+
+            case 'd':
+                board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
+                setSnakeHeadCols(getSnakeHeadCols()+1);
+                board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
+            break;
+        }
     }
 
     public void spawnApples() {
