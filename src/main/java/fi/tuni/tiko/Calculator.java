@@ -25,6 +25,18 @@ public class Calculator {
 		return x + y;
 	}
 
+	public int[] fibonacci(int x) {
+		int[] series = new int[x];
+		series[0] = 1;
+		if (x == 1) return series;
+		series[1] = 1;
+		if (x == 2) return series;
+		for (int n = 3; n <= x; n++) {
+			series[n] = series[n-1] + series[n-2];
+		}
+		return series;
+	}
+
 	public void startPoemGenerator(){
 		SecretPoemGenerator poems = new SecretPoemGenerator();
 		poems.startPoemGenerator();
