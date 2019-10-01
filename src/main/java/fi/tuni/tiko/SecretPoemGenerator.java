@@ -19,11 +19,11 @@ public class SecretPoemGenerator{
         System.out.println();
         askPoets();
         readPoemFiles();
-        System.out.println(poetsAndThemesList.get(0).getRandomVerseLine());
+        fetchVerseLines();
     }
 
     public void askPoets(){
-        System.out.println("Eino Leino    William Shakespeare    Thomas Tranströmer    Charles Baudelaire");
+        System.out.println("Walt Withman    William Shakespeare    John Keats    Emily Dickinson");
         System.out.println("Pick a poet and press enter: ");
         String poet1 = scanner.nextLine();
         System.out.println("Pick another poet: ");
@@ -37,7 +37,7 @@ public class SecretPoemGenerator{
 
     public void readPoemFiles(){
         //To-do: this method
-        try (Scanner fileScan = new Scanner(new File("../../../../../../poems.txt"))) {
+        try (Scanner fileScan = new Scanner(new File("poems.txt"))) {
             //Poems.txt consist of a header (poet and theme) plus verse lines.
             //First loop reads the header and creates object 'PoetAndTheme'.
             while (fileScan.hasNextLine()){
@@ -57,6 +57,10 @@ public class SecretPoemGenerator{
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
+    }
+
+    public void fetchVerseLines(){
+        System.out.println(poetsAndThemesList.get(0).getRandomVerseLine());
     }
 
 }
