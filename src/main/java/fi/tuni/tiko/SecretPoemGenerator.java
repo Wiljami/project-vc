@@ -48,6 +48,7 @@ public class SecretPoemGenerator{
                     verseLine = fileScan.nextLine();
                     addToList.addVerseLine(verseLine);
                 }
+                poetsAndThemesList.add(addToList);
             }
             
         } catch (Exception e) {
