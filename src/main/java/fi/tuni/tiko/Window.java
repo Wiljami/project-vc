@@ -26,7 +26,7 @@ class Window extends JFrame {
         for(int i=0; i<10; i++) {
             addButtonToPane(Integer.toString(i));
         }
-        add(pane);
+        add(pane, BorderLayout.CENTER);
     }
 
     private void addComponents() {
