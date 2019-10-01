@@ -16,14 +16,14 @@ class Window extends JFrame {
 
         pane = new JPanel();
         setLayout(new BorderLayout());
-        addComponentsToPane();
+        addComponents();
 
         add(pane);
         pack();
         setVisible(true);
     }
 
-    private void addComponentsToPane() {
+    private void addComponents() {
 
         border = BorderFactory.createLineBorder(Color.GRAY, 1);
         textField = new JTextArea("0", 1,1);
@@ -46,7 +46,7 @@ class Window extends JFrame {
     private void addButton(String text) {
         JButton newButton = new JButton(text);
         newButton.addActionListener(this::buttonClicked);
-        pane.add(newButton);
+        add(newButton);
     }
 
     public void buttonClicked(ActionEvent e) { System.out.println("click"); }
