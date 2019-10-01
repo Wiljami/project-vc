@@ -1,5 +1,6 @@
 package fi.tuni.tiko;
 import java.util.ArrayList;
+import java.lang.Math;
 
 public class PoetAndTheme{
     ArrayList<String> verseLines;
@@ -15,6 +16,7 @@ public class PoetAndTheme{
     }
 
     public String getRandomVerseLine(){
-        return " ";
+        int rnd = (int) Math.random() * (this.verseLines.size() - 1);
+        return this.verseLines.get(rnd);
     }
 }
