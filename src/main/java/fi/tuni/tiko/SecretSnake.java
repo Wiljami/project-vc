@@ -48,7 +48,7 @@ public class SecretSnake {
         generateFirstSnake();
         spawnApples();
         printBoard();
-        keepMoving(keepMoving);
+        keepMoving();
     }
 
     public void createBoard() {
@@ -122,7 +122,7 @@ public class SecretSnake {
         }
     }
 
-    public void keepMoving(boolean keepMoving) {
+    public void keepMoving() {
         while(keepMoving) {
             move();
             printBoard();
