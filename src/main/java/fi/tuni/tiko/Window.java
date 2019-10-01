@@ -31,10 +31,12 @@ class Window extends JFrame {
     }
 
     private void addOperators() {
+        side = new JPanel();
         addOperationButton("+");
         addOperationButton("-");
         addOperationButton("*");
         addOperationButton("/");
+        add(side, BorderLayout.LINE_END);
     }
 
     private void addComponents() {
