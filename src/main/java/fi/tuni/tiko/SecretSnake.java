@@ -9,6 +9,7 @@ public class SecretSnake {
     Scanner scan = new Scanner(System.in);
     private int snakeHeadRows;
     private int snakeHeadCols;
+    boolean keepMoving = true;
 
     public SecretSnake() {
         
@@ -47,8 +48,7 @@ public class SecretSnake {
         generateFirstSnake();
         spawnApples();
         printBoard();
-        move();
-        printBoard();
+
     }
 
     public void createBoard() {
@@ -106,6 +106,10 @@ public class SecretSnake {
                 board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
             break;
         }
+    }
+
+    public void keepMoving(boolean keepMoving) {
+
     }
 
     public void spawnApples() {
