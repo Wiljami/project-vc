@@ -81,27 +81,43 @@ public class SecretSnake {
 
         switch (move) {
             case 'w':
-                board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
-                setSnakeHeadRows(getSnakeHeadRows()-1);
-                board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
+                if(board[getSnakeHeadRows()-1][getSnakeHeadCols()] == ' ' || board[getSnakeHeadRows()-1][getSnakeHeadCols()] == '@' ) {
+                    board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
+                    setSnakeHeadRows(getSnakeHeadRows()-1);
+                    board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
+                } else {
+                    keepMoving = false;
+                }
             break;
 
             case 'a':
-                board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
-                setSnakeHeadCols(getSnakeHeadCols()-1);
-                board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
+                if(board[getSnakeHeadRows()][getSnakeHeadCols()-1] == ' ' || board[getSnakeHeadRows()][getSnakeHeadCols()-1] == '@' ) {
+                    board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
+                    setSnakeHeadCols(getSnakeHeadCols()-1);
+                    board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
+                } else {
+                    keepMoving = false;
+                }
             break;
 
             case 's':
-                board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
-                setSnakeHeadRows(getSnakeHeadRows()+1);
-                board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
+                if(board[getSnakeHeadRows()+1][getSnakeHeadCols()] == ' ' || board[getSnakeHeadRows()+1][getSnakeHeadCols()] == '@' ) {
+                    board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
+                    setSnakeHeadRows(getSnakeHeadRows()+1);
+                    board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
+                } else {
+                    keepMoving = false;
+                }
             break;
 
             case 'd':
-                board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
-                setSnakeHeadCols(getSnakeHeadCols()+1);
-                board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
+                if(board[getSnakeHeadRows()][getSnakeHeadCols()+1] == ' ' || board[getSnakeHeadRows()][getSnakeHeadCols()+1] == '@' ) {
+                    board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
+                    setSnakeHeadCols(getSnakeHeadCols()+1);
+                    board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
+                } else {
+                    keepMoving = false;
+                }
             break;
         }
     }
