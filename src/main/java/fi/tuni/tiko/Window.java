@@ -29,7 +29,7 @@ class Window extends JFrame {
         textField = new JTextArea("0", 1,1);
         textField.setEditable(true);
         textField.setBorder(border);
-        add(textField);
+        pane.add(textField);
         
         for(int i=0; i<10; i++) {
             addButton(Integer.toString(i));
@@ -44,7 +44,7 @@ class Window extends JFrame {
     private void addButton(String text) {
         JButton newButton = new JButton(text);
         newButton.addActionListener(this::buttonClicked);
-        add(newButton);
+        pane.add(newButton);
     }
 
     public void buttonClicked(ActionEvent e) { System.out.println("click"); }
