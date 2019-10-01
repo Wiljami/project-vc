@@ -14,13 +14,16 @@ class Window extends JFrame {
     public Window(String title) {
         super(title);
 
-        pane = new JPanel();
         setLayout(new BorderLayout());
         addComponents();
 
-        add(pane);
         pack();
         setVisible(true);
+    }
+
+    private void addNumberPane() {
+        pane = new JPanel();
+        add(pane);
     }
 
     private void addComponents() {
