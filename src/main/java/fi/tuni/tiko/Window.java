@@ -47,6 +47,7 @@ class Window extends JFrame {
         textField.setBorder(border);
         add(textField, BorderLayout.PAGE_START);
 
+        addOperators();
         addNumberPane();
         
         JButton resultButton = new JButton("=");
