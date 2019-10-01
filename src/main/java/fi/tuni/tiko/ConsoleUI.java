@@ -10,6 +10,10 @@ class ConsoleUI {
     private Calculator calculator;
     private Scanner input;
 
+    private ConsoleCommand[] commands = {
+
+    };
+
     private final String[] HELP = {"help", "h"};
     private final String[] ADDITION = {"addition", "add", "+"};
     private final String[] SUBSTRACTION = {"substraction", "sub", "-"};
