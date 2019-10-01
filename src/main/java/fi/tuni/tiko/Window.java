@@ -9,6 +9,7 @@ class Window extends JFrame {
     JButton calcButton;
     JTextArea textField;
     JPanel pane;
+    JPanel side:
     Border border;
 
     public Window(String title) {
@@ -29,6 +30,13 @@ class Window extends JFrame {
         add(pane, BorderLayout.CENTER);
     }
 
+    private void addOperators() {
+                /* addButton("+");
+        addButton("-");
+        addButton("*");
+        addButton("/");*/
+    }
+
     private void addComponents() {
 
         border = BorderFactory.createLineBorder(Color.GRAY, 1);
@@ -38,17 +46,18 @@ class Window extends JFrame {
         add(textField, BorderLayout.PAGE_START);
 
         addNumberPane();
-   
-        /* addButton("+");
-        addButton("-");
-        addButton("*");
-        addButton("/");*/
         
         JButton resultButton = new JButton("=");
         add(resultButton, BorderLayout.PAGE_END);
     }
 
     private void addButtonToPane(String text) {
+        JButton newButton = new JButton(text);
+        newButton.addActionListener(this::buttonClicked);
+        pane.add(newButton);
+    }
+
+    private void addOperationButtons(String text) {
         JButton newButton = new JButton(text);
         newButton.addActionListener(this::buttonClicked);
         pane.add(newButton);
