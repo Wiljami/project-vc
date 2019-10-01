@@ -16,7 +16,8 @@ public class PoetAndTheme{
     }
 
     public String getRandomVerseLine(){
-        int rnd = (int) Math.random() * (this.verseLines.size() - 1);
+        double rndDouble = Math.random() * (this.verseLines.size() - 1);
+        int rnd = (int) rndDouble;
         return this.verseLines.get(rnd);
     }
 }

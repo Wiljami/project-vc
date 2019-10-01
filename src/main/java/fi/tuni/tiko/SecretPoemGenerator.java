@@ -3,8 +3,6 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.File;
 
-
-
 public class SecretPoemGenerator{
     Scanner scanner;
     ArrayList<PoetAndTheme> poetsAndThemesList;
@@ -34,6 +32,7 @@ public class SecretPoemGenerator{
         System.out.println("Choose a theme [Love / Death]: ");
         String theme = scanner.nextLine();
         System.out.println("\n(" + poet1 + " + " + poet2 + ") * " + theme + ". Coming right up! [Press Enter]" );
+        String ignore = scanner.nextLine();
     }
 
     public void readPoemFiles(){
@@ -44,10 +43,12 @@ public class SecretPoemGenerator{
             while (fileScan.hasNextLine()){
                 String themeAndPoet = fileScan.nextLine();
                 PoetAndTheme addToList = new PoetAndTheme(themeAndPoet);
-                String verseLine = "placeholder";
                 //Second loop reads verse lines and adds them to object 'PoetAndTheme'.
-                while(!(verseLine.isEmpty())){
-                    verseLine = fileScan.nextLine();
+                while(fileScan.hasNextLine()){
+                    String verseLine = fileScan.nextLine();
+                    if (verseLine.isEmpty()){
+                        break;
+                    }
                     addToList.addVerseLine(verseLine);
                 }
                 poetsAndThemesList.add(addToList);
