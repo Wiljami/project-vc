@@ -15,7 +15,7 @@ class Window extends JFrame {
         super(title);
 
         pane = new JPanel();
-        setLayout(new FlowLayout());
+        setLayout(new BorderLayout());
         addComponentsToPane();
 
         add(pane);
