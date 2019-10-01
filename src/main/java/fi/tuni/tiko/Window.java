@@ -24,7 +24,7 @@ class Window extends JFrame {
     private void addNumberPane() {
         pane = new JPanel();
         for(int i=0; i<10; i++) {
-            addButton(Integer.toString(i));
+            addButtonToPane(Integer.toString(i));
         }
         add(pane);
     }
@@ -36,11 +36,13 @@ class Window extends JFrame {
         textField.setEditable(true);
         textField.setBorder(border);
         add(textField, BorderLayout.PAGE_START);
+
+        addNumberPane();
    
-        addButton("+");
+        /* addButton("+");
         addButton("-");
         addButton("*");
-        addButton("/");
+        addButton("/");*/
         
         JButton resultButton = new JButton("=");
         add(resultButton, BorderLayout.PAGE_END);
