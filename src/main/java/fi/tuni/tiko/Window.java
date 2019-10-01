@@ -29,7 +29,7 @@ class Window extends JFrame {
         textField = new JTextArea("0", 1,1);
         textField.setEditable(true);
         textField.setBorder(border);
-        pane.add(textField);
+        add(textField, BorderLayout.PAGE_START);
         
         for(int i=0; i<10; i++) {
             addButton(Integer.toString(i));
