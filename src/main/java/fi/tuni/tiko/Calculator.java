@@ -32,7 +32,7 @@ public class Calculator {
 		series[1] = 1;
 		if (x == 2) return series;
 		for (int n = 3; n <= x; n++) {
-			series[n] = series[n-1] + series[n-2];
+			series[n-1] = series[n-2] + series[n-3];
 		}
 		return series;
 	}
