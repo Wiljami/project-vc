@@ -82,7 +82,6 @@ public class SecretSnake {
         switch (move) {
             case 'w':
                 board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
-                setSnakeHeadCols(getSnakeHeadCols()-1);
                 setSnakeHeadRows(getSnakeHeadRows()-1);
                 board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
             break;
@@ -95,7 +94,6 @@ public class SecretSnake {
 
             case 's':
                 board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
-                setSnakeHeadCols(getSnakeHeadCols()+1);
                 setSnakeHeadRows(getSnakeHeadRows()+1);
                 board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
             break;
