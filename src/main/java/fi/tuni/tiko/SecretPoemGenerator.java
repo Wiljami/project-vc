@@ -20,6 +20,8 @@ public class SecretPoemGenerator{
         System.out.println("\n         **************************************");
         System.out.println();
         askPoets();
+        readPoemFiles();
+        System.out.println(poetsAndThemesList.get(0).getRandomVerseLine());
     }
 
     public void askPoets(){
