@@ -38,7 +38,9 @@ class Window extends JFrame {
         addButton("-");
         addButton("*");
         addButton("/");
-        addButton("=");
+        
+        JButton resultButton = new JButton("=");
+        add(resultButton, BorderLayout.PAGE_END);
     }
 
     private void addButton(String text) {
