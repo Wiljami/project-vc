@@ -15,6 +15,7 @@ class ConsoleUI {
     private final String[] SUBSTRACTION = {"substraction", "sub", "-"};
     private final String[] MULTIPLICATION = {"multiplication", "multi", "*"};
     private final String[] DIVISION = {"division", "divide", "div", "/"};
+    private final String[] FIBONACCI = {"fibonacci", "fibo", "f"};
     private final String[] QUIT = {"quit", "q"};
     private final String LINESTART = "> ";
 
@@ -44,6 +45,8 @@ class ConsoleUI {
                 multiplication();
             } else if (checkCommand(DIVISION, command)) {
                 division();
+            } else if (checkCommand(FIBONACCI, command)) {
+                fibonacci();
             } else if (checkCommand(QUIT, command)) {
                 System.out.println("Good bye");
                 running = false;
@@ -75,6 +78,15 @@ class ConsoleUI {
             if (command.equals(cmd)) return true;
         }
         return false;
+    }
+
+    private void fibonacci() {
+        int a = askFirstValue();
+        int[] result = calculator.fibonacci(a);
+        for (int i : result) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
     }
 
     private void division() {
