@@ -9,7 +9,7 @@ class Window extends JFrame {
     JButton calcButton;
     JTextArea textField;
     JPanel pane;
-    JPanel side:
+    JPanel side;
     Border border;
 
     public Window(String title) {
@@ -31,10 +31,10 @@ class Window extends JFrame {
     }
 
     private void addOperators() {
-                /* addButton("+");
-        addButton("-");
-        addButton("*");
-        addButton("/");*/
+        addOperationButton("+");
+        addOperationButton("-");
+        addOperationButton("*");
+        addOperationButton("/");
     }
 
     private void addComponents() {
@@ -57,10 +57,10 @@ class Window extends JFrame {
         pane.add(newButton);
     }
 
-    private void addOperationButtons(String text) {
+    private void addOperationButton(String text) {
         JButton newButton = new JButton(text);
         newButton.addActionListener(this::buttonClicked);
-        pane.add(newButton);
+        side.add(newButton);
     }
 
     public void buttonClicked(ActionEvent e) { System.out.println("click"); }
