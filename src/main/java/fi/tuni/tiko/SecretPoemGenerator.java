@@ -28,7 +28,12 @@ public class SecretPoemGenerator{
     public void askPoets(){
         System.out.println("Walt Withman    William Shakespeare    John Keats    Emily Dickinson");
         System.out.println("Pick a poet and press enter: ");
-        poet1 = scanner.nextLine();
+        String poet1_input = scanner.nextLine();
+        if (poet1_input.toLowerCase().contains("withman")){
+            poet1 = "Withman";
+        }else if (poet1_input.toLowerCase().contains("shakespeare")){
+            poet1 = "Shakespeare";
+        } //TO-DO: exception handling
         System.out.println("Pick another poet: ");
         poet2 = scanner.nextLine();
         System.out.println();
