@@ -36,6 +36,7 @@ class Window extends JFrame {
         addOperationButton("-");
         addOperationButton("*");
         addOperationButton("/");
+        side.setPreferredSize(new Dimension(50,200));
         add(side, BorderLayout.LINE_END);
     }
 
