@@ -6,6 +6,9 @@ import java.io.File;
 public class SecretPoemGenerator{
     Scanner scanner;
     ArrayList<PoetAndTheme> poetsAndThemesList;
+    String poet1;
+    String poet2;
+    String theme;
 
     public SecretPoemGenerator(){
         scanner = new Scanner(System.in);
@@ -25,12 +28,12 @@ public class SecretPoemGenerator{
     public void askPoets(){
         System.out.println("Walt Withman    William Shakespeare    John Keats    Emily Dickinson");
         System.out.println("Pick a poet and press enter: ");
-        String poet1 = scanner.nextLine();
+        poet1 = scanner.nextLine();
         System.out.println("Pick another poet: ");
-        String poet2 = scanner.nextLine();
+        poet2 = scanner.nextLine();
         System.out.println();
         System.out.println("Choose a theme [Love / Death]: ");
-        String theme = scanner.nextLine();
+        theme = scanner.nextLine();
         System.out.println("\n(" + poet1 + " + " + poet2 + ") * " + theme + ". Coming right up! [Press Enter]" );
         String ignore = scanner.nextLine();
     }
