@@ -42,7 +42,7 @@ class Window extends JFrame {
     private void addComponents() {
 
         border = BorderFactory.createLineBorder(Color.GRAY, 1);
-        textField = new JTextArea("0", 1,1);
+        textField = new JTextArea("0", 5,10);
         textField.setEditable(true);
         textField.setBorder(border);
         add(textField, BorderLayout.PAGE_START);
