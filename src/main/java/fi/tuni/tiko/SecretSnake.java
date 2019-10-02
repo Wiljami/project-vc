@@ -101,6 +101,8 @@ public class SecretSnake {
             board[rowsPlace][collsPlace] = 'S';
             setSnakeHeadColls(collsPlace);
             setSnakeHeadRows(rowsPlace);
+            setSnakeButtColls(collsPlace);
+            setSnakeButtRows(rowsPlace);
         } else {
             generateFirstSnake();
         }
