@@ -11,6 +11,7 @@ public class SecretSnake {
     private int snakeHeadColls;
     private int snakeButtRows;
     private int snakeButtColls;
+    int appleCount = 0;
     boolean keepMoving = true;
 
     public SecretSnake() {
@@ -65,7 +66,7 @@ public class SecretSnake {
     public int getSnakeButtColls() {
         return snakeButtColls;
     }
-    
+
     /**
      * @param snakeButtColls the snakeButtColls to set
      */
