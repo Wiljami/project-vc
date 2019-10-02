@@ -1,5 +1,6 @@
 package fi.tuni.tiko;
 
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -23,9 +24,16 @@ class ConsoleUI {
     private final String[] POEM = {"poem", "p", "secret poem generator"};
     private final String[] SNAKE = {"snake", "s", "snaek"};
 
+    private List<Command> commands;
+
     public ConsoleUI(Calculator calculator) {
         this.calculator = calculator;
         this.input = new Scanner(System.in);
+        setupCommands();
+    }
+
+    private void setupCommands() {
+        commands.add(new Command(HELP, " - this printout"));
     }
 
     public void start() {
