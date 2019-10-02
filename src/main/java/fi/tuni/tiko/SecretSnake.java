@@ -8,7 +8,7 @@ public class SecretSnake {
     int colls = board[0].length;
     Scanner scan = new Scanner(System.in);
     private int snakeHeadRows;
-    private int snakeHeadCols;
+    private int snakeHeadColls;
     boolean keepMoving = true;
 
     public SecretSnake() {
@@ -32,15 +32,15 @@ public class SecretSnake {
     /**
      * @return the snakeHeadCols
      */
-    public int getSnakeHeadCols() {
-        return snakeHeadCols;
+    public int getSnakeHeadColls() {
+        return snakeHeadColls;
     }
 
     /**
      * @param snakeHeadCols the snakeHeadCols to set
      */
-    public void setSnakeHeadCols(int snakeHeadCols) {
-        this.snakeHeadCols = snakeHeadCols;
+    public void setSnakeHeadColls(int snakeHeadCols) {
+        this.snakeHeadColls = snakeHeadCols;
     }
 
     public void startSnake() {
@@ -68,7 +68,7 @@ public class SecretSnake {
         int collsPlace = randomGenerator(0, colls-1);
         if(board[rowsPlace][collsPlace] == ' '){
             board[rowsPlace][collsPlace] = 'S';
-            setSnakeHeadCols(collsPlace);
+            setSnakeHeadColls(collsPlace);
             setSnakeHeadRows(rowsPlace);
         } else {
             generateFirstSnake();
@@ -81,40 +81,40 @@ public class SecretSnake {
 
         switch (move) {
             case 'w':
-                if(board[getSnakeHeadRows()-1][getSnakeHeadCols()] == ' ' || board[getSnakeHeadRows()-1][getSnakeHeadCols()] == '@' ) {
-                    board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
+                if(board[getSnakeHeadRows()-1][getSnakeHeadColls()] == ' ' || board[getSnakeHeadRows()-1][getSnakeHeadColls()] == '@' ) {
+                    board[getSnakeHeadRows()][getSnakeHeadColls()] = ' ';
                     setSnakeHeadRows(getSnakeHeadRows()-1);
-                    board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
+                    board[getSnakeHeadRows()][getSnakeHeadColls()] = 'S';
                 } else {
                     keepMoving = false;
                 }
             break;
 
             case 'a':
-                if(board[getSnakeHeadRows()][getSnakeHeadCols()-1] == ' ' || board[getSnakeHeadRows()][getSnakeHeadCols()-1] == '@' ) {
-                    board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
-                    setSnakeHeadCols(getSnakeHeadCols()-1);
-                    board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
+                if(board[getSnakeHeadRows()][getSnakeHeadColls()-1] == ' ' || board[getSnakeHeadRows()][getSnakeHeadColls()-1] == '@' ) {
+                    board[getSnakeHeadRows()][getSnakeHeadColls()] = ' ';
+                    setSnakeHeadColls(getSnakeHeadColls()-1);
+                    board[getSnakeHeadRows()][getSnakeHeadColls()] = 'S';
                 } else {
                     keepMoving = false;
                 }
             break;
 
             case 's':
-                if(board[getSnakeHeadRows()+1][getSnakeHeadCols()] == ' ' || board[getSnakeHeadRows()+1][getSnakeHeadCols()] == '@' ) {
-                    board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
+                if(board[getSnakeHeadRows()+1][getSnakeHeadColls()] == ' ' || board[getSnakeHeadRows()+1][getSnakeHeadColls()] == '@' ) {
+                    board[getSnakeHeadRows()][getSnakeHeadColls()] = ' ';
                     setSnakeHeadRows(getSnakeHeadRows()+1);
-                    board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
+                    board[getSnakeHeadRows()][getSnakeHeadColls()] = 'S';
                 } else {
                     keepMoving = false;
                 }
             break;
 
             case 'd':
-                if(board[getSnakeHeadRows()][getSnakeHeadCols()+1] == ' ' || board[getSnakeHeadRows()][getSnakeHeadCols()+1] == '@' ) {
-                    board[getSnakeHeadRows()][getSnakeHeadCols()] = ' ';
-                    setSnakeHeadCols(getSnakeHeadCols()+1);
-                    board[getSnakeHeadRows()][getSnakeHeadCols()] = 'S';
+                if(board[getSnakeHeadRows()][getSnakeHeadColls()+1] == ' ' || board[getSnakeHeadRows()][getSnakeHeadColls()+1] == '@' ) {
+                    board[getSnakeHeadRows()][getSnakeHeadColls()] = ' ';
+                    setSnakeHeadColls(getSnakeHeadColls()+1);
+                    board[getSnakeHeadRows()][getSnakeHeadColls()] = 'S';
                 } else {
                     keepMoving = false;
                 }
@@ -130,7 +130,7 @@ public class SecretSnake {
     }
 
     public void eatApple(){
-        
+
     }
 
     public void spawnApples() {
