@@ -35,7 +35,12 @@ public class SecretPoemGenerator{
             poet1 = "Shakespeare";
         } //TO-DO: exception handling
         System.out.println("Pick another poet: ");
-        poet2 = scanner.nextLine();
+        String poet2_input = scanner.nextLine();
+        if (poet2_input.toLowerCase().contains("withman")){
+            poet2 = "Withman";
+        }else if (poet1_input.toLowerCase().contains("shakespeare")){
+            poet2 = "Shakespeare";
+        } //TO-DO: exception handling
         System.out.println();
         System.out.println("Choose a theme [Love / Death]: ");
         theme = scanner.nextLine();
