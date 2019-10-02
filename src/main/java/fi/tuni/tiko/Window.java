@@ -14,7 +14,7 @@ class Window extends JFrame {
 
     public Window(String title) {
         super(title);
-        setSize(200,400);
+        setSize(230,300);
 
         setLayout(new BorderLayout());
         addComponents();
