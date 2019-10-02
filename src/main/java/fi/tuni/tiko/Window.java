@@ -14,11 +14,11 @@ class Window extends JFrame {
 
     public Window(String title) {
         super(title);
+        setSize(300,400);
 
         setLayout(new BorderLayout());
         addComponents();
 
-        pack();
         setVisible(true);
     }
 
