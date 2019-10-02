@@ -24,9 +24,10 @@ class Window extends JFrame {
 
     private void addNumberPane() {
         pane = new JPanel();
-        for(int i=0; i<10; i++) {
+        for(int i=1; i<10; i++) {
             addButtonToPane(Integer.toString(i));
         }
+        addButtonToPane("0");
         add(pane, BorderLayout.CENTER);
     }
 
