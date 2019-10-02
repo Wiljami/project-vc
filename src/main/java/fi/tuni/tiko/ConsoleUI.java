@@ -154,6 +154,7 @@ class ConsoleUI {
         System.out.println(SUBSTRACTION[0] + " - substraction");
         System.out.println(MULTIPLICATION[0] + " - multiplication");
         System.out.println(DIVISION[0] + " - division");
+        System.out.println(FIBONACCI[0] + " - fibonacci series");
         System.out.println(QUIT[0] + " - quits");
     }
 }
