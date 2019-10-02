@@ -129,6 +129,10 @@ public class SecretSnake {
         }
     }
 
+    public void eatApple(){
+        
+    }
+
     public void spawnApples() {
         int rowsPlace = randomGenerator(0, rows-1);
         int collsPlace = randomGenerator(0, colls-1);
