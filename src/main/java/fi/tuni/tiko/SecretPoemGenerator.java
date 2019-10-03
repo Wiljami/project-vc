@@ -28,12 +28,14 @@ public class SecretPoemGenerator{
     public void askPoets(){
         System.out.println("Walt Withman    William Shakespeare    John Keats    Emily Dickinson");
         System.out.println("Pick a poet and press enter: ");
+
         String poet1_input = scanner.nextLine();
         if (poet1_input.toLowerCase().contains("withman")){
             poet1 = "Withman";
         }else if (poet1_input.toLowerCase().contains("shakespeare")){
             poet1 = "Shakespeare";
         } //TO-DO: exception handling
+
         System.out.println("Pick another poet: ");
         String poet2_input = scanner.nextLine();
         if (poet2_input.toLowerCase().contains("withman")){
@@ -42,8 +44,14 @@ public class SecretPoemGenerator{
             poet2 = "Shakespeare";
         } //TO-DO: exception handling
         System.out.println();
+
         System.out.println("Choose a theme [Love / Death]: ");
-        theme = scanner.nextLine();
+        String theme_input = scanner.nextLine();
+        if(theme_input.toLowerCase().contains("love")){
+            theme = "Love";
+        }else if(theme_input.toLowerCase().contains("death")){
+            theme = "Death";
+        }
         System.out.println("\n(" + poet1 + " + " + poet2 + ") * " + theme + ". Coming right up! [Press Enter]" );
         String ignore = scanner.nextLine();
     }
