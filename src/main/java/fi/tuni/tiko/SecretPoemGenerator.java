@@ -81,13 +81,19 @@ public class SecretPoemGenerator{
     }
 
     public void fetchVerseLines(){
+        String strObject1;
         PoetAndTheme object1;
+        String strObject2;
         PoetAndTheme object2;
         if(theme.equals("Love")){
             if(poet1.equals("Withman") | poet2.equals("Withman")){
-
+                strObject1 = "love Withman";
             }else if(poet1.equals("Shakespeare") | poet2.equals("Shakespeare")){
-                
+                strObject1 = "love Shakespeare";
+            }else if(poet1.equals("Keats") | poet2.equals("Keats")){
+                strObject1 = "love Keats";
+            }else if(poet1.equals("Dickinson") | poet2.equals("Dickinson")){
+                strObject1 = "love Dickinson";
             }
         }else{
         }
