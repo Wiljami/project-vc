@@ -17,7 +17,6 @@ public class App
             console.startLaunchUI();
         }
 
-        Window akkuna = new Window("Calculator");
     }
 
     private static void parseArgs(String[] args) {
