@@ -81,6 +81,11 @@ public class SecretPoemGenerator{
     }
 
     public void fetchVerseLines(){
+        PoetAndTheme object1;
+        PoetAndTheme object2;
+        if(theme.equals("Love")){
+        }else{
+        }
         System.out.println(poetsAndThemesList.get(0).getRandomVerseLine());
     }
 
