@@ -1,6 +1,6 @@
 package fi.tuni.tiko;
 
-import java.util.List;
+import java.util.*;
 
 class ConsoleCommands {
     private final String[] HELP = {"help", "h"};
@@ -18,8 +18,11 @@ class ConsoleCommands {
     
     private List<Command> commands;
 
+    public ConsoleCommands() {
+        commands = new ArrayList<Command>();
+        setupCommands();
+    }
 
-    commands = new ArrayList<Command>();
     private void setupCommands() {
         commands.add(new Command(HELP, " - this printout"));
     }
