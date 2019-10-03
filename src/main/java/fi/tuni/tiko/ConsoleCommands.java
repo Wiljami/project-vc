@@ -17,16 +17,20 @@ class ConsoleCommands {
     private final String[] SNAKE = {"snake", "s", "snaek"};
     
     private List<Command> commands;
-    private Calculator calculator;
+    private ConsoleUI consoleUI;
 
-    public ConsoleCommands(Calculator calculator) {
-        this.calculator = calculator;
+    public ConsoleCommands(ConsoleUI consoleUI) {
+        this.consoleUI = consoleUI;
         commands = new ArrayList<Command>();
         setupCommands();
     }
 
     private void setupCommands() {
-        commands.add(new Command(HELP, " - this printout"));
+        Command help = new Command(HELP, " - this printout"){
+            @Override
+            void run() {
+                consoleUI.printHelp();
+            }
+        };
     }
-
 }

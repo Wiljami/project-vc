@@ -1,6 +1,5 @@
 package fi.tuni.tiko;
-
-class Command {
+abstract class Command {
     private String[] str;
     private String desc;
     public Command(String[] str, String desc) {
@@ -23,4 +22,6 @@ class Command {
     public void setStr(String[] str) {
         this.str = str;
     }
+
+    abstract void run();
 }

@@ -149,7 +149,7 @@ class ConsoleUI {
         System.out.println("Type help for commands.");
     }
 
-    private void printHelp() {
+    void printHelp() {
         System.out.println(HELP[0] + " - this printout");
         System.out.println(ADDITION[0] + " - addition");
         System.out.println(SUBSTRACTION[0] + " - substraction");
