@@ -5,14 +5,28 @@ class SnakePart {
     private int snakePartCollsNew;
     private int snapePartRowsOld;
     private int snakePartCollsOld;
+    private int id;
 
-    public SnakePart(int snapePartRowsNew, int snakePartCollsNew) {
+    public SnakePart(int snapePartRowsNew, int snakePartCollsNew, int id) {
         setSnakePartCollsNew(snakePartCollsNew);
         setSnapePartRowsNew(snapePartRowsNew);
         setSnakePartCollsOld(snakePartCollsNew);
         setSnapePartRowsOld(snapePartRowsNew);
+        setId(id);
     }
 
+    /**
+     * @param id the id to set
+     */
+    public void setId(int id) {
+        this.id = id;
+    }
+    /**
+     * @return the id
+     */
+    public int getId() {
+        return id;
+    }
     /**
      * @return the snakePartCollsNew
      */
