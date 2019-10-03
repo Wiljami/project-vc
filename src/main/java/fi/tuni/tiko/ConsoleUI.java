@@ -1,6 +1,6 @@
 package fi.tuni.tiko;
 
-import java.util.List;
+import java.util.*;
 import java.util.Scanner;
 
 /**
@@ -29,6 +29,7 @@ class ConsoleUI {
     public ConsoleUI(Calculator calculator) {
         this.calculator = calculator;
         this.input = new Scanner(System.in);
+        commands = new ArrayList<Command>();
         setupCommands();
     }
 
