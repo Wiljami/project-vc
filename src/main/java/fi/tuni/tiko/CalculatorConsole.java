@@ -9,6 +9,7 @@ class ConsoleCommands {
     private final String[] MULTIPLICATION = {"multiplication", "multi", "*"};
     private final String[] DIVISION = {"division", "divide", "div", "/"};
     private final String[] FIBONACCI = {"fibonacci", "fibo", "f"};
+    private final String[] GRAPHCALC = {"graphicalcalculator", "gcalc", "g"};
     private final String[] QUIT = {"quit", "q"};
     private final String LINESTART = "> ";
     
