@@ -24,17 +24,9 @@ class ConsoleUI {
     private final String[] POEM = {"poem", "p", "secret poem generator"};
     private final String[] SNAKE = {"snake", "s", "snaek"};
 
-    private List<Command> commands;
-
     public ConsoleUI(Calculator calculator) {
         this.calculator = calculator;
         this.input = new Scanner(System.in);
-        commands = new ArrayList<Command>();
-        setupCommands();
-    }
-
-    private void setupCommands() {
-        commands.add(new Command(HELP, " - this printout"));
     }
 
     public void start() {
