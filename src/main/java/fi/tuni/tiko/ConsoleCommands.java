@@ -17,8 +17,10 @@ class ConsoleCommands {
     private final String[] SNAKE = {"snake", "s", "snaek"};
     
     private List<Command> commands;
+    private Calculator calculator;
 
-    public ConsoleCommands() {
+    public ConsoleCommands(Calculator calculator) {
+        this.calculator = calculator;
         commands = new ArrayList<Command>();
         setupCommands();
     }
