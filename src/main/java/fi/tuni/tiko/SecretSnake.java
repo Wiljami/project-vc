@@ -9,8 +9,6 @@ public class SecretSnake {
     Scanner scan = new Scanner(System.in);
     private int snakeHeadRows;
     private int snakeHeadColls;
-    private int snakeButtRows;
-    private int snakeButtColls;
     int appleCount = 0;
     boolean keepMoving = true;
 
@@ -46,34 +44,6 @@ public class SecretSnake {
         this.snakeHeadColls = snakeHeadCols;
     }
 
-    /**
-     * @return the snakeButtRows
-     */
-    public int getSnakeButtRows() {
-        return snakeButtRows;
-    }
-
-    /**
-     * @param snakeButtRows the snakeButtRows to set
-     */
-    public void setSnakeButtRows(int snakeButtRows) {
-        this.snakeButtRows = snakeButtRows;
-    }
-
-    /**
-     * @return the snakeButtColls
-     */
-    public int getSnakeButtColls() {
-        return snakeButtColls;
-    }
-
-    /**
-     * @param snakeButtColls the snakeButtColls to set
-     */
-    public void setSnakeButtColls(int snakeButtColls) {
-        this.snakeButtColls = snakeButtColls;
-    }
-
     public void startSnake() {
         createBoard();
         generateFirstSnake();
@@ -101,8 +71,6 @@ public class SecretSnake {
             board[rowsPlace][collsPlace] = 'S';
             setSnakeHeadColls(collsPlace);
             setSnakeHeadRows(rowsPlace);
-            setSnakeButtColls(collsPlace);
-            setSnakeButtRows(rowsPlace);
         } else {
             generateFirstSnake();
         }
