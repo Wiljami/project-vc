@@ -11,6 +11,10 @@ public class PoetAndTheme{
         this.nameAndTheme = themeAndPoet;
     }
 
+    public String getNameAndTheme(){
+        return this.nameAndTheme;
+    }
+
     public void addVerseLine(String verseLine){
         this.verseLines.add(verseLine);
     }
