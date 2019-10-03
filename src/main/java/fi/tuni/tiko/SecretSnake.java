@@ -1,9 +1,12 @@
 package fi.tuni.tiko;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SecretSnake {
     char[][] board = new char[20][20];
+    ArrayList<SnakePart> snakePartList = new ArrayList<SnakePart>();
+
     int rows = board.length;
     int colls = board[0].length;
     Scanner scan = new Scanner(System.in);
@@ -11,6 +14,7 @@ public class SecretSnake {
     private int snakeHeadColls;
     int appleCount = 0;
     boolean keepMoving = true;
+    int SnakePartMaxID = 1;
 
     public SecretSnake() {
         
@@ -67,6 +71,9 @@ public class SecretSnake {
     public void generateFirstSnake() {
         int rowsPlace = randomGenerator(0, rows-1);
         int collsPlace = randomGenerator(0, colls-1);
+        snakePartList.add(new SnakePart(rowsPlace, collsPlace, SnakePartMaxID));
+        SnakePartMaxID++;
+        
         if(board[rowsPlace][collsPlace] == ' '){
             board[rowsPlace][collsPlace] = 'S';
             setSnakeHeadColls(collsPlace);
