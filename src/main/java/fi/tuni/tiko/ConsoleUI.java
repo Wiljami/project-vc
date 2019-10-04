@@ -16,7 +16,7 @@ class ConsoleUI {
     private final String[] MULTIPLICATION = {"multiplication", "multi", "*"};
     private final String[] DIVISION = {"division", "divide", "div", "/"};
     private final String[] FIBONACCI = {"fibonacci", "fibo", "f"};
-    private final String[] GRAPHCALC = {"graphicalcalculator", "gcalc", "g"};
+    private final String[] GRAPHCALC = {"graphicalcalculator", "graphcalc", "gcalc", "g"};
     private final String[] QUIT = {"quit", "q"};
     private final String LINESTART = "> ";
 
@@ -71,6 +71,8 @@ class ConsoleUI {
             calculator.startPoemGenerator();
         } else if (checkCommand(SNAKE, command)) {
             calculator.startSnake();
+        } else if (checkCommand(GRAPHCALC, command)) {
+            Window Window = new Window("calculator");
         } else {
             System.out.println("Unknown command");
         }
