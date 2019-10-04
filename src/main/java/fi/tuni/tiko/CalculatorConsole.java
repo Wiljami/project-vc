@@ -16,6 +16,9 @@ class ConsoleCommands {
     private final String[] POEM = {"poem", "p", "secret poem generator"};
     private final String[] SNAKE = {"snake", "s", "snaek"};
     
+    private final String FIRSTVALUE = "Give first value";
+    private final String SECONDVALUE = "Give second value";
+
     private List<Command> commands;
     private ConsoleUI consoleUI;
     private Calculator calculator;
@@ -38,8 +41,8 @@ class ConsoleCommands {
         commands.add(new Command(ADDITION, " - addition"){
             @Override
             void run() {
-                int a = consoleUI.askFirstValue();
-                int b = consoleUI.askSecondValue();
+                int a = consoleUI.askValueWithPrompt(FIRSTVALUE);
+                int b = consoleUI.askValueWithPrompt(SECONDVALUE);
                 System.out.println(calculator.addition(a, b));
             }
         });
