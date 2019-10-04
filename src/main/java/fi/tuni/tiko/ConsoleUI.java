@@ -48,6 +48,8 @@ class ConsoleUI {
                 division();
             } else if (checkCommand(FIBONACCI, command)) {
                 fibonacci();
+            } else if (checkCommand(GRAPHCALC, command)) {
+                graphcalc();
             } else if (checkCommand(QUIT, command)) {
                 System.out.println("Good bye");
                 running = false;
