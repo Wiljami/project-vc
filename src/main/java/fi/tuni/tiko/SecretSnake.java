@@ -14,7 +14,7 @@ public class SecretSnake {
     private int snakeHeadColls;
     int appleCount = 0;
     boolean keepMoving = true;
-    int SnakePartMaxID = 1;
+    int SnakePartMaxID = 0;
 
     public SecretSnake() {
         
@@ -72,7 +72,7 @@ public class SecretSnake {
         int rowsPlace = randomGenerator(0, rows-1);
         int collsPlace = randomGenerator(0, colls-1);
         snakePartList.add(new SnakePart(rowsPlace, collsPlace, SnakePartMaxID));
-        SnakePartMaxID++;
+        // SnakePartMaxID++;
         
         if(board[rowsPlace][collsPlace] == ' '){
             board[rowsPlace][collsPlace] = 'S';
@@ -90,6 +90,9 @@ public class SecretSnake {
         switch (move) {
             case 'w':
                 if(board[getSnakeHeadRows()-1][getSnakeHeadColls()] == ' ' || board[getSnakeHeadRows()-1][getSnakeHeadColls()] == '@' ) {
+                    if(board[getSnakeHeadRows()-1][getSnakeHeadColls()] == '@') {
+                        eatApple();
+                    }
                     board[getSnakeHeadRows()][getSnakeHeadColls()] = ' ';
                     setSnakeHeadRows(getSnakeHeadRows()-1);
                     board[getSnakeHeadRows()][getSnakeHeadColls()] = 'S';
@@ -100,6 +103,9 @@ public class SecretSnake {
 
             case 'a':
                 if(board[getSnakeHeadRows()][getSnakeHeadColls()-1] == ' ' || board[getSnakeHeadRows()][getSnakeHeadColls()-1] == '@' ) {
+                    if( board[getSnakeHeadRows()][getSnakeHeadColls()-1] == '@') {
+                        eatApple();
+                    }
                     board[getSnakeHeadRows()][getSnakeHeadColls()] = ' ';
                     setSnakeHeadColls(getSnakeHeadColls()-1);
                     board[getSnakeHeadRows()][getSnakeHeadColls()] = 'S';
@@ -110,6 +116,10 @@ public class SecretSnake {
 
             case 's':
                 if(board[getSnakeHeadRows()+1][getSnakeHeadColls()] == ' ' || board[getSnakeHeadRows()+1][getSnakeHeadColls()] == '@' ) {
+                    if( board[getSnakeHeadRows()+1][getSnakeHeadColls()] == '@') {
+                        eatApple();
+                    }
+
                     board[getSnakeHeadRows()][getSnakeHeadColls()] = ' ';
                     setSnakeHeadRows(getSnakeHeadRows()+1);
                     board[getSnakeHeadRows()][getSnakeHeadColls()] = 'S';
@@ -120,6 +130,9 @@ public class SecretSnake {
 
             case 'd':
                 if(board[getSnakeHeadRows()][getSnakeHeadColls()+1] == ' ' || board[getSnakeHeadRows()][getSnakeHeadColls()+1] == '@' ) {
+                    if(board[getSnakeHeadRows()][getSnakeHeadColls()+1] == '@') {
+                        eatApple();
+                    }
                     board[getSnakeHeadRows()][getSnakeHeadColls()] = ' ';
                     setSnakeHeadColls(getSnakeHeadColls()+1);
                     board[getSnakeHeadRows()][getSnakeHeadColls()] = 'S';
@@ -138,6 +151,7 @@ public class SecretSnake {
     }
 
     public void eatApple(){
+        System.out.println(snakePartList.get(SnakePartMaxID).getSnapePartRowsOld());
         snakePartList.add(new SnakePart(snakePartList.get(SnakePartMaxID).getSnapePartRowsOld(), snakePartList.get(SnakePartMaxID).getSnakePartCollsOld(), SnakePartMaxID));
         board[snakePartList.get(SnakePartMaxID).getSnapePartRowsOld()][snakePartList.get(SnakePartMaxID).getSnakePartCollsOld()] = 'S';
         SnakePartMaxID++;
