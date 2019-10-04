@@ -28,11 +28,20 @@ class ConsoleCommands {
     }
 
     private void setupCommands() {
-        Command help = new Command(HELP, " - this printout"){
+        commands.add(new Command(HELP, " - this printout"){
             @Override
             void run() {
                 consoleUI.printHelp(commands);
             }
-        };
+        });
+
+        commands.add(new Command(ADDITION, " - addition"){
+            @Override
+            void run() {
+                int a = consoleUI.askFirstValue();
+                int b = consoleUI.askSecondValue();
+                System.out.println(calculator.addition(a, b));
+            }
+        });
     }
 }

@@ -118,12 +118,12 @@ class ConsoleUI {
         System.out.println(a + " minus " + b + " is " + result);
     }
 
-    private int askFirstValue() {
+    public int askFirstValue() {
         System.out.println("Give first value");
         return askInteger();
     }
 
-    private int askSecondValue() {
+    public int askSecondValue() {
         System.out.println("Give second value");
         return askInteger();
     }
