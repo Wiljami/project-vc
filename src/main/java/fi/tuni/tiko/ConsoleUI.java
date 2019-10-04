@@ -83,6 +83,10 @@ class ConsoleUI {
         return false;
     }
 
+    private void graphcalc() {
+        
+    }
+
     private void fibonacci() {
         int a = askFirstValue();
         int[] result = calculator.fibonacci(a);
