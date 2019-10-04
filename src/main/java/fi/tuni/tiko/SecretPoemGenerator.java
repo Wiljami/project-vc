@@ -2,6 +2,7 @@ package fi.tuni.tiko;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.File;
+import java.lang.Math;
 
 public class SecretPoemGenerator{
     Scanner scanner;
@@ -117,7 +118,14 @@ public class SecretPoemGenerator{
                 object2 = object;
             }
         }
-        System.out.println(poetsAndThemesList.get(0).getRandomVerseLine());
+        //Poems length is a random number between 5 and 10
+        double poemLengthDouble = Math.random() * 5 + 5;
+        int poemLength = (int) poemLengthDouble;
+
+        for (int i=0; i < poemLength; i++){
+            System.out.println(poetsAndThemesList.get(0).getRandomVerseLine());
+        }
+        
     }
 
 }
