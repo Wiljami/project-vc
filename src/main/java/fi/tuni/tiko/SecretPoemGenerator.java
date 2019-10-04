@@ -111,6 +111,9 @@ public class SecretPoemGenerator{
             if (object.getNameAndTheme().equals(strObject1)){
                 object1 = object;
             }
+            if (object.getNameAndTheme().equals(strObject2)){
+                object2 = object;
+            }
         }
         System.out.println(poetsAndThemesList.get(0).getRandomVerseLine());
     }
