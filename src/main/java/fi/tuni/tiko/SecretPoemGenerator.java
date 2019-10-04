@@ -6,6 +6,7 @@ import java.io.File;
 public class SecretPoemGenerator{
     Scanner scanner;
     ArrayList<PoetAndTheme> poetsAndThemesList;
+    ArrayList<String> printablePoem;
     String poet1;
     String poet2;
     String theme;
@@ -13,6 +14,7 @@ public class SecretPoemGenerator{
     public SecretPoemGenerator(){
         scanner = new Scanner(System.in);
         poetsAndThemesList = new ArrayList<>();
+        printablePoem = new ArrayList<>();
     }
 
     public void startPoemGenerator(){
