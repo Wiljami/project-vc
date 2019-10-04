@@ -151,9 +151,9 @@ public class SecretSnake {
     }
 
     public void eatApple(){
-        System.out.println(snakePartList.get(SnakePartMaxID).getSnapePartRowsOld());
-        snakePartList.add(new SnakePart(snakePartList.get(SnakePartMaxID).getSnapePartRowsOld(), snakePartList.get(SnakePartMaxID).getSnakePartCollsOld(), SnakePartMaxID));
-        board[snakePartList.get(SnakePartMaxID).getSnapePartRowsOld()][snakePartList.get(SnakePartMaxID).getSnakePartCollsOld()] = 'S';
+        System.out.println(snakePartList.get(SnakePartMaxID).getSnakePartRowsOld());
+        snakePartList.add(new SnakePart(snakePartList.get(SnakePartMaxID).getSnakePartRowsOld(), snakePartList.get(SnakePartMaxID).getSnakePartCollsOld(), SnakePartMaxID));
+        board[snakePartList.get(SnakePartMaxID).getSnakePartRowsOld()][snakePartList.get(SnakePartMaxID).getSnakePartCollsOld()] = 'S';
         SnakePartMaxID++;
     }
 

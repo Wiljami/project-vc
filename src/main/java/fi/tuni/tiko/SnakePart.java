@@ -1,17 +1,17 @@
 package fi.tuni.tiko;
 
 class SnakePart {
-    private int snapePartRowsNew;
+    private int snakePartRowsNew;
     private int snakePartCollsNew;
-    private int snapePartRowsOld;
+    private int snakePartRowsOld;
     private int snakePartCollsOld;
     private int id;
 
-    public SnakePart(int snapePartRowsNew, int snakePartCollsNew, int id) {
+    public SnakePart(int snakePartRowsNew, int snakePartCollsNew, int id) {
         setSnakePartCollsNew(snakePartCollsNew);
-        setSnapePartRowsNew(snapePartRowsNew);
+        setSnakePartRowsNew(snakePartRowsNew);
         setSnakePartCollsOld(snakePartCollsNew);
-        setSnapePartRowsOld(snapePartRowsNew);
+        setSnakePartRowsOld(snakePartRowsNew);
         setId(id);
     }
 
@@ -55,30 +55,30 @@ class SnakePart {
     }
 
     /**
-     * @return the snapePartRowsNew
+     * @return the snakePartRowsNew
      */
-    public int getSnapePartRowsNew() {
-        return snapePartRowsNew;
+    public int getSnakePartRowsNew() {
+        return snakePartRowsNew;
     }
 
     /**
-     * @param snapePartRowsNew the snapePartRowsNew to set
+     * @param snakePartRowsNew the snakePartRowsNew to set
      */
-    public void setSnapePartRowsNew(int snapePartRowsNew) {
-        this.snapePartRowsNew = snapePartRowsNew;
+    public void setSnakePartRowsNew(int snakePartRowsNew) {
+        this.snakePartRowsNew = snakePartRowsNew;
     }
 
     /**
-     * @return the snapePartRowsOld
+     * @return the snakePartRowsOld
      */
-    public int getSnapePartRowsOld() {
-        return snapePartRowsOld;
+    public int getSnakePartRowsOld() {
+        return snakePartRowsOld;
     }
 
     /**
-     * @param snapePartRowsOld the snapePartRowsOld to set
+     * @param snakePartRowsOld the snakePartRowsOld to set
      */
-    public void setSnapePartRowsOld(int snapePartRowsOld) {
-        this.snapePartRowsOld = snapePartRowsOld;
+    public void setSnakePartRowsOld(int snakePartRowsOld) {
+        this.snakePartRowsOld = snakePartRowsOld;
     }
 }
