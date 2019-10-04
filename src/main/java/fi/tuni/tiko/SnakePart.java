@@ -85,19 +85,19 @@ class SnakePart {
     public void movePartToNewPlace(char move) {
         switch (move) {
             case 'w':
-                
+                setSnakePartRowsNew(getSnakePartRowsNew()-1);
             break;
 
             case 'a':
-               
+                setSnakePartCollsNew(getSnakePartCollsNew()-1);
             break;
 
             case 's':
-                
+                setSnakePartRowsNew(getSnakePartRowsNew()+1);
             break;
 
             case 'd':
-               
+                setSnakePartCollsNew(getSnakePartCollsNew()+1);
             break;
         }
         
