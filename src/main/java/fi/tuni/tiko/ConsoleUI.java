@@ -84,7 +84,7 @@ class ConsoleUI {
     }
 
     private void graphcalc() {
-        
+        Window Window = new Window("calculator");
     }
 
     private void fibonacci() {
