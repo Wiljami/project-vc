@@ -86,16 +86,25 @@ public class SecretPoemGenerator{
         String strObject2 = "";
         PoetAndTheme object2;
         if(theme.equals("Love")){
-            if(poet1.equals("Withman") | poet2.equals("Withman")){
+            if(poet1.equals("Withman")){
                 strObject1 = "love Withman";
-            }else if(poet1.equals("Shakespeare") | poet2.equals("Shakespeare")){
+            }else if(poet1.equals("Shakespeare")){
                 strObject1 = "love Shakespeare";
-            }else if(poet1.equals("Keats") | poet2.equals("Keats")){
+            }else if(poet1.equals("Keats")){
                 strObject1 = "love Keats";
-            }else if(poet1.equals("Dickinson") | poet2.equals("Dickinson")){
+            }else if(poet1.equals("Dickinson")){
                 strObject1 = "love Dickinson";
             }
-        }else{
+        }else if (theme.equals("Death")){
+            if(poet2.equals("Withman")){
+                strObject2 = "death Withman";
+            }else if(poet2.equals("Shakespeare")){
+                strObject2 = "death Shakespeare";
+            }else if(poet2.equals("Keats")){
+                strObject2 = "death Keats";
+            }else if(poet2.equals("Dickinson")){
+                strObject2 = "death Dickinson";
+            }
         }
 
         for(PoetAndTheme object: poetsAndThemesList){
