@@ -81,4 +81,25 @@ class SnakePart {
     public void setSnakePartRowsOld(int snakePartRowsOld) {
         this.snakePartRowsOld = snakePartRowsOld;
     }
+
+    public void movePartToNewPlace(char move) {
+        switch (move) {
+            case 'w':
+                
+            break;
+
+            case 'a':
+               
+            break;
+
+            case 's':
+                
+            break;
+
+            case 'd':
+               
+            break;
+        }
+        
+    }
 }
