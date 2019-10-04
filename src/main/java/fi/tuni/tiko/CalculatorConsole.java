@@ -18,9 +18,11 @@ class ConsoleCommands {
     
     private List<Command> commands;
     private ConsoleUI consoleUI;
+    private Calculator calculator;
 
-    public ConsoleCommands(ConsoleUI consoleUI) {
+    public ConsoleCommands(ConsoleUI consoleUI, Calculator calculator) {
         this.consoleUI = consoleUI;
+        this.calculator = calculator;
         commands = new ArrayList<Command>();
         setupCommands();
     }
