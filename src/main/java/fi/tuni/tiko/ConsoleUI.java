@@ -49,7 +49,7 @@ class ConsoleUI {
             } else if (checkCommand(FIBONACCI, command)) {
                 fibonacci();
             } else if (checkCommand(GRAPHCALC, command)) {
-                graphcalc();
+                graphCalc();
             } else if (checkCommand(QUIT, command)) {
                 System.out.println("Good bye");
                 running = false;
@@ -83,7 +83,7 @@ class ConsoleUI {
         return false;
     }
 
-    private void graphcalc() {
+    private void graphCalc() {
         Window Window = new Window("calculator");
     }
 
