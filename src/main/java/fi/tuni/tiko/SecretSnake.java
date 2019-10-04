@@ -138,7 +138,9 @@ public class SecretSnake {
     }
 
     public void eatApple(){
-
+        snakePartList.add(new SnakePart(snakePartList.get(SnakePartMaxID).getSnapePartRowsOld(), snakePartList.get(SnakePartMaxID).getSnakePartCollsOld(), SnakePartMaxID));
+        board[snakePartList.get(SnakePartMaxID).getSnapePartRowsOld()][snakePartList.get(SnakePartMaxID).getSnakePartCollsOld()] = 'S';
+        SnakePartMaxID++;
     }
 
     public void spawnApples() {
