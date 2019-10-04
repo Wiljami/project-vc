@@ -31,7 +31,7 @@ class ConsoleCommands {
         Command help = new Command(HELP, " - this printout"){
             @Override
             void run() {
-                consoleUI.printHelp();
+                consoleUI.printHelp(commands);
             }
         };
     }

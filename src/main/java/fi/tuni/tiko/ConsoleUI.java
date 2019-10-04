@@ -1,7 +1,6 @@
 package fi.tuni.tiko;
 
 import java.util.*;
-import java.util.Scanner;
 
 /**
  * An UI to be used in console.
@@ -147,6 +146,12 @@ class ConsoleUI {
     private void printIntro() {
         System.out.println("Welcome to the calculator console UI.");
         System.out.println("Type help for commands.");
+    }
+
+    void printHelp(List<Command> commands) {
+        for (Command c : commands) {
+            System.out.println(c.getStr()[0] + c.getDesc());
+        }
     }
 
     void printHelp() {
