@@ -12,6 +12,7 @@ class ConsoleCommands {
     private final String[] MULTIPLICATION = {"multiplication", "multi", "*"};
     private final String MULTIPLICATIONDESC = " - multiplication.";
     private final String[] DIVISION = {"division", "divide", "div", "/"};
+    private final String DIVISIONDESC = " - division.";
     private final String[] FIBONACCI = {"fibonacci", "fibo", "f"};
     private final String[] GRAPHCALC = {"graphicalcalculator", "gcalc", "g"};
     private final String[] QUIT = {"quit", "q"};
@@ -67,6 +68,15 @@ class ConsoleCommands {
                 int a = consoleUI.askValueWithPrompt(FIRSTVALUE);
                 int b = consoleUI.askValueWithPrompt(SECONDVALUE);
                 System.out.println(calculator.multiplication(a, b));
+            }
+        });
+
+        commands.add(new Command(DIVISION, DIVISIONDESC){
+            @Override
+            void run() {
+                int a = consoleUI.askValueWithPrompt(FIRSTVALUE);
+                int b = consoleUI.askValueWithPrompt(SECONDVALUE);
+                System.out.println(calculator.divide(a, b));
             }
         });
     }
