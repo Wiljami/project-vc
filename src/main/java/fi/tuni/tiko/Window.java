@@ -71,4 +71,6 @@ class Window extends JFrame {
 
     public void buttonClicked(ActionEvent e) { System.out.println("click"); }
 
+    public void resultClicked(ActionEvent e) { textField.setText(); }
+
 }
