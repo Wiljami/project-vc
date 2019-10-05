@@ -12,7 +12,12 @@ class Window extends JFrame {
     JPanel side;
     Border border;
 
+    float number1;
+    float number2;
+    Calculator calc;
+
     public Window(String title) {
+        calc = new Calculator();
         super(title);
         setSize(230,300);
 
