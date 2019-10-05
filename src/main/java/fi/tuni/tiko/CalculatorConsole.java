@@ -47,5 +47,14 @@ class ConsoleCommands {
                 System.out.println(calculator.addition(a, b));
             }
         });
+
+        commands.add(new Command(SUBSTRACTION, " - substraction"){
+            @Override
+            void run() {
+                int a = consoleUI.askValueWithPrompt(FIRSTVALUE);
+                int b = consoleUI.askValueWithPrompt(SECONDVALUE);
+                System.out.println(calculator.addition(a, b));
+            }
+        });
     }
 }
