@@ -37,14 +37,22 @@ public class SecretPoemGenerator{
             poet1 = "Withman";
         }else if (poet1_input.toLowerCase().contains("shakespeare")){
             poet1 = "Shakespeare";
+        }else if (poet1_input.toLowerCase().contains("keats")){
+            poet1 = "Keats";
+        }else if (poet1_input.toLowerCase().contains("dickinson")){
+            poet1 = "Dickinson";
         } //TO-DO: exception handling
 
         System.out.println("Pick another poet: ");
         String poet2_input = scanner.nextLine();
         if (poet2_input.toLowerCase().contains("withman")){
             poet2 = "Withman";
-        }else if (poet1_input.toLowerCase().contains("shakespeare")){
+        }else if (poet2_input.toLowerCase().contains("shakespeare")){
             poet2 = "Shakespeare";
+        }else if (poet2_input.toLowerCase().contains("keats")){
+            poet2 = "Keats";
+        }else if (poet2_input.toLowerCase().contains("dickinson")){
+            poet2 = "Dickinson";
         } //TO-DO: exception handling
         System.out.println();
 
