@@ -85,9 +85,9 @@ public class SecretPoemGenerator{
 
     public void fetchVerseLines(){
         String strObject1 = "";
-        PoetAndTheme object1;
+        PoetAndTheme object1 = poetsAndThemesList.get(0);
         String strObject2 = "";
-        PoetAndTheme object2;
+        PoetAndTheme object2 = poetsAndThemesList.get(0);
         if(theme.equals("Love")){
             if(poet1.equals("Withman")){
                 strObject1 = "love Withman";
@@ -119,12 +119,16 @@ public class SecretPoemGenerator{
             }
         }
         //Poems length is a random number between 5 and 10
-        double poemLengthDouble = Math.random() * 5 + 5;
+        double poemLengthDouble = Math.random() * 4 + 6;
         int poemLength = (int) poemLengthDouble;
 
-        for (int i=0; i < poemLength; i++){
-            System.out.println(poetsAndThemesList.get(0).getRandomVerseLine());
+        if(poemLength % 2 == 0){
+            for (int i=0; i < (poemLength/2); i++){
+                System.out.println(object1.getRandomVerseLine());
+                System.out.println(object2.getRandomVerseLine());
+            }
         }
+        
         
     }
 
