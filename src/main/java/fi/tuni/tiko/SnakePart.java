@@ -100,6 +100,9 @@ class SnakePart {
                 setSnakePartCollsNew(getSnakePartCollsNew()+1);
             break;
         }
+    }
+
+    public void updateOldPlace(int newOldPlaceRows, int newOldPlaceColls) {
         
     }
 }
