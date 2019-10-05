@@ -57,7 +57,7 @@ class ConsoleCommands {
             void run() {
                 int a = consoleUI.askValueWithPrompt(FIRSTVALUE);
                 int b = consoleUI.askValueWithPrompt(SECONDVALUE);
-                System.out.println(calculator.addition(a, b));
+                System.out.println(calculator.subtract(a, b));
             }
         });
 
