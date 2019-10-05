@@ -71,10 +71,9 @@ public class SecretSnake {
     public void generateFirstSnake() {
         int rowsPlace = randomGenerator(0, rows-1);
         int collsPlace = randomGenerator(0, colls-1);
-        snakePartList.add(new SnakePart(rowsPlace, collsPlace, SnakePartMaxID));
-        // SnakePartMaxID++;
         
         if(board[rowsPlace][collsPlace] == ' '){
+            snakePartList.add(new SnakePart(rowsPlace, collsPlace, SnakePartMaxID));
             board[rowsPlace][collsPlace] = 'S';
             setSnakeHeadColls(collsPlace);
             setSnakeHeadRows(rowsPlace);
