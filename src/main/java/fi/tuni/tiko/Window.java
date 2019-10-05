@@ -78,4 +78,9 @@ class Window extends JFrame {
 
     public void resultClicked(ActionEvent e) { textField.setText(); }
 
+    private void plusClicked(ActionEvent e) {  }
+    private void minusClicked(ActionEvent e) {  }
+    private void divisionClicked(ActionEvent e) {  }
+    private void multiplicationClicked(ActionEvent e) {  }
+
 }
