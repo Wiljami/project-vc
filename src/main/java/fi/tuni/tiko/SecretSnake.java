@@ -89,12 +89,24 @@ public class SecretSnake {
         switch (move) {
             case 'w':
                 if(board[getSnakeHeadRows()-1][getSnakeHeadColls()] == ' ' || board[getSnakeHeadRows()-1][getSnakeHeadColls()] == '@' ) {
+                    for(int i = 0; i < snakePartList.size(); i++) {
+                        if(i != 0) {
+                            snakePartList.get(i).setSnakePartRowsNew(snakePartList.get(i-1).getSnakePartRowsOld());
+                        } else {
+                            snakePartList.get(i).setSnakePartRowsNew(snakePartList.get(i).getSnakePartRowsOld()-1);
+                        }
+                    }
+
+                    for(int i = 0; i < snakePartList.size(); i++) {
+                        snakePartList.get(i).setSnakePartRowsOld(snakePartList.get(i).getSnakePartRowsOld());
+                    }
+                    
                     if(board[getSnakeHeadRows()-1][getSnakeHeadColls()] == '@') {
                         eatApple();
                     }
-                    board[getSnakeHeadRows()][getSnakeHeadColls()] = ' ';
-                    setSnakeHeadRows(getSnakeHeadRows()-1);
-                    board[getSnakeHeadRows()][getSnakeHeadColls()] = 'S';
+                    // board[getSnakeHeadRows()][getSnakeHeadColls()] = ' ';
+                    // setSnakeHeadRows(getSnakeHeadRows()-1);
+                    // board[getSnakeHeadRows()][getSnakeHeadColls()] = 'S';
                 } else {
                     keepMoving = false;
                 }
@@ -102,12 +114,24 @@ public class SecretSnake {
 
             case 'a':
                 if(board[getSnakeHeadRows()][getSnakeHeadColls()-1] == ' ' || board[getSnakeHeadRows()][getSnakeHeadColls()-1] == '@' ) {
+                    for(int i = 0; i < snakePartList.size(); i++) {
+                        if(i != 0) {
+                            snakePartList.get(i).setSnakePartCollsNew(snakePartList.get(i-1).getSnakePartCollsOld());
+                        } else {
+                            snakePartList.get(i).setSnakePartCollsNew(snakePartList.get(i).getSnakePartCollsOld()-1);
+                        }
+                    }
+
+                    for(int i = 0; i < snakePartList.size(); i++) {
+                        snakePartList.get(i).setSnakePartCollsOld(snakePartList.get(i).getSnakePartCollsOld());
+                    }
+
                     if( board[getSnakeHeadRows()][getSnakeHeadColls()-1] == '@') {
                         eatApple();
                     }
-                    board[getSnakeHeadRows()][getSnakeHeadColls()] = ' ';
-                    setSnakeHeadColls(getSnakeHeadColls()-1);
-                    board[getSnakeHeadRows()][getSnakeHeadColls()] = 'S';
+                    // board[getSnakeHeadRows()][getSnakeHeadColls()] = ' ';
+                    // setSnakeHeadColls(getSnakeHeadColls()-1);
+                    // board[getSnakeHeadRows()][getSnakeHeadColls()] = 'S';
                 } else {
                     keepMoving = false;
                 }
@@ -115,13 +139,25 @@ public class SecretSnake {
 
             case 's':
                 if(board[getSnakeHeadRows()+1][getSnakeHeadColls()] == ' ' || board[getSnakeHeadRows()+1][getSnakeHeadColls()] == '@' ) {
+                    for(int i = 0; i < snakePartList.size(); i++) {
+                        if(i != 0) {
+                            snakePartList.get(i).setSnakePartRowsNew(snakePartList.get(i-1).getSnakePartRowsOld());
+                        } else {
+                            snakePartList.get(i).setSnakePartRowsNew(snakePartList.get(i).getSnakePartRowsOld()+1);
+                        }
+                    }
+
+                    for(int i = 0; i < snakePartList.size(); i++) {
+                        snakePartList.get(i).setSnakePartRowsOld(snakePartList.get(i).getSnakePartRowsOld());
+                    }
+
                     if( board[getSnakeHeadRows()+1][getSnakeHeadColls()] == '@') {
                         eatApple();
                     }
 
-                    board[getSnakeHeadRows()][getSnakeHeadColls()] = ' ';
-                    setSnakeHeadRows(getSnakeHeadRows()+1);
-                    board[getSnakeHeadRows()][getSnakeHeadColls()] = 'S';
+                    // board[getSnakeHeadRows()][getSnakeHeadColls()] = ' ';
+                    // setSnakeHeadRows(getSnakeHeadRows()+1);
+                    // board[getSnakeHeadRows()][getSnakeHeadColls()] = 'S';
                 } else {
                     keepMoving = false;
                 }
@@ -129,12 +165,24 @@ public class SecretSnake {
 
             case 'd':
                 if(board[getSnakeHeadRows()][getSnakeHeadColls()+1] == ' ' || board[getSnakeHeadRows()][getSnakeHeadColls()+1] == '@' ) {
+                    for(int i = 0; i < snakePartList.size(); i++) {
+                        if(i != 0) {
+                            snakePartList.get(i).setSnakePartCollsNew(snakePartList.get(i-1).getSnakePartCollsOld());
+                        } else {
+                            snakePartList.get(i).setSnakePartCollsNew(snakePartList.get(i).getSnakePartCollsOld()+1);
+                        }
+                    }
+
+                    for(int i = 0; i < snakePartList.size(); i++) {
+                        snakePartList.get(i).setSnakePartCollsOld(snakePartList.get(i).getSnakePartCollsOld());
+                    }
+
                     if(board[getSnakeHeadRows()][getSnakeHeadColls()+1] == '@') {
                         eatApple();
                     }
-                    board[getSnakeHeadRows()][getSnakeHeadColls()] = ' ';
-                    setSnakeHeadColls(getSnakeHeadColls()+1);
-                    board[getSnakeHeadRows()][getSnakeHeadColls()] = 'S';
+                    // board[getSnakeHeadRows()][getSnakeHeadColls()] = ' ';
+                    // setSnakeHeadColls(getSnakeHeadColls()+1);
+                    // board[getSnakeHeadRows()][getSnakeHeadColls()] = 'S';
                 } else {
                     keepMoving = false;
                 }
