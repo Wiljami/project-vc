@@ -4,8 +4,11 @@ import java.util.*;
 
 class ConsoleCommands {
     private final String[] HELP = {"help", "h"};
+    private final String HELPDESC = " - this printout.";
     private final String[] ADDITION = {"addition", "add", "+"};
+    private final String ADDITIONDESC = " - addition.";
     private final String[] SUBSTRACTION = {"substraction", "sub", "-"};
+    private final String SUBSTRACTIONDESC = "- substraction.";
     private final String[] MULTIPLICATION = {"multiplication", "multi", "*"};
     private final String[] DIVISION = {"division", "divide", "div", "/"};
     private final String[] FIBONACCI = {"fibonacci", "fibo", "f"};
@@ -32,14 +35,14 @@ class ConsoleCommands {
     }
 
     private void setupCommands() {
-        commands.add(new Command(HELP, " - this printout"){
+        commands.add(new Command(HELP, HELPDESC){
             @Override
             void run() {
                 consoleUI.printHelp(commands);
             }
         });
 
-        commands.add(new Command(ADDITION, " - addition"){
+        commands.add(new Command(ADDITION, ADDITIONDESC){
             @Override
             void run() {
                 int a = consoleUI.askValueWithPrompt(FIRSTVALUE);
@@ -48,7 +51,7 @@ class ConsoleCommands {
             }
         });
 
-        commands.add(new Command(SUBSTRACTION, " - substraction"){
+        commands.add(new Command(SUBSTRACTION, SUBSTRACTIONDESC){
             @Override
             void run() {
                 int a = consoleUI.askValueWithPrompt(FIRSTVALUE);
