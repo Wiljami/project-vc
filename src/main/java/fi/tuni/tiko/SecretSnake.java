@@ -82,6 +82,10 @@ public class SecretSnake {
         }
     }
 
+    public void updateBoard() {
+
+    }
+
     public void move() {
         System.out.println("Move snake: (wasd)");
         char move = scan.nextLine().charAt(0);
