@@ -53,6 +53,7 @@ class Window extends JFrame {
         addNumberPane();
         
         JButton resultButton = new JButton("=");
+        resultButton.addActionListener(this.resultClicked);
         add(resultButton, BorderLayout.PAGE_END);
     }
 
