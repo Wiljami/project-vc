@@ -127,6 +127,12 @@ public class SecretPoemGenerator{
                 System.out.println(object1.getRandomVerseLine());
                 System.out.println(object2.getRandomVerseLine());
             }
+        }else{
+            for (int i=0; i < (poemLength/2 - 1); i++){
+                System.out.println(object1.getRandomVerseLine());
+                System.out.println(object2.getRandomVerseLine());
+            }
+                System.out.println(object1.getRandomVerseLine());
         }
         
         
