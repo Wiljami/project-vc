@@ -17,8 +17,8 @@ class Window extends JFrame {
     Calculator calc;
 
     public Window(String title) {
-        calc = new Calculator();
         super(title);
+        calc = new Calculator();
         setSize(230,300);
 
         setLayout(new BorderLayout());
@@ -58,7 +58,7 @@ class Window extends JFrame {
         addNumberPane();
         
         JButton resultButton = new JButton("=");
-        resultButton.addActionListener(this.resultClicked);
+        resultButton.addActionListener(this::resultClicked);
         add(resultButton, BorderLayout.PAGE_END);
     }
 
@@ -76,7 +76,7 @@ class Window extends JFrame {
 
     private void buttonClicked(ActionEvent e) { System.out.println("click"); }
 
-    private void resultClicked(ActionEvent e) { textField.setText(); }
+    private void resultClicked(ActionEvent e) { textField.setText(""); }
 
     private void plusClicked(ActionEvent e) {  }
     private void minusClicked(ActionEvent e) {  }
