@@ -140,6 +140,9 @@ public class SecretPoemGenerator{
                 System.out.println(object1.getRandomVerseLine());
                 System.out.println(object2.getRandomVerseLine());
             }
+
+            //Checking if the last verse line ends with period or question mark.
+            //If not, get a new verse line.
             boolean lastCharDot = false;
             String lastVerseLine = "";
             while(!lastCharDot){
