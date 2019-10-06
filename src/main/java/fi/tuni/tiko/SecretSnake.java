@@ -216,6 +216,7 @@ public class SecretSnake {
         snakePartList.add(new SnakePart(snakePartList.get(SnakePartMaxID).getSnakePartRowsOld(), snakePartList.get(SnakePartMaxID).getSnakePartCollsOld(), SnakePartMaxID));
         board[snakePartList.get(SnakePartMaxID).getSnakePartRowsOld()][snakePartList.get(SnakePartMaxID).getSnakePartCollsOld()] = 'S';
         SnakePartMaxID++;
+        appleCount++;
         spawnApples();
     }
 
