@@ -171,4 +171,8 @@ class ConsoleUI {
         System.out.println(FIBONACCI[0] + " - fibonacci series");
         System.out.println(QUIT[0] + " - quits");
     }
+
+    void quit(String msg) {
+        System.out.println(msg);
+    }
 }
