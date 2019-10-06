@@ -132,7 +132,7 @@ public class SecretPoemGenerator{
 
         if(poemLength % 2 == 0){
             for (int i=0; i < (poemLength/2); i++){
-                if(i != poemLength/2){
+                if(i != (poemLength/2 - 1)){
                     System.out.println(object1.getRandomVerseLine());
                     System.out.println(object2.getRandomVerseLine());
                 }else{
@@ -144,10 +144,11 @@ public class SecretPoemGenerator{
                     String lastVerseLine = "";
                     while(!lastCharDot){
                         lastVerseLine = object2.getRandomVerseLine();
-                        if(lastVerseLine.substring(lastVerseLine.length() - 1).equals(".")){
+                        if(lastVerseLine.substring(lastVerseLine.length() - 1).equals(".") ||
+                            lastVerseLine.substring(lastVerseLine.length() - 1).equals("!")||
+                            lastVerseLine.substring(lastVerseLine.length() - 1).equals("?")){
                             lastCharDot = true;
                         }
-                        System.out.println("[" + lastVerseLine + "]");
                     }
                     System.out.println(lastVerseLine);
                 }
@@ -165,10 +166,11 @@ public class SecretPoemGenerator{
             String lastVerseLine2 = "";
             while(!lastCharDot2){
                 lastVerseLine2 = object1.getRandomVerseLine();
-                if(lastVerseLine2.substring(lastVerseLine2.length() - 1).equals(".")){
+                if(lastVerseLine2.substring(lastVerseLine2.length() - 1).equals(".") ||
+                    lastVerseLine2.substring(lastVerseLine2.length() - 1).equals("!") ||
+                    lastVerseLine2.substring(lastVerseLine2.length() - 1).equals("?")){
                     lastCharDot2 = true;
                 }
-                System.out.println("[" + lastVerseLine2 + "]");
             }
             System.out.println(lastVerseLine2);
         }
