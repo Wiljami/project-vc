@@ -15,10 +15,9 @@ class ConsoleCommands {
     private final String DIVISIONDESC = " - division.";
     private final String[] FIBONACCI = {"fibonacci", "fibo", "f"};
     private final String FIBONACCIDESC = " - fibonacci series";
-    private final String[] GRAPHCALC = {"graphicalcalculator", "gcalc", "g"};
     private final String[] QUIT = {"quit", "q"};
-    private final String LINESTART = "> ";
     
+    private final String[] GRAPHCALC = {"graphicalcalculator", "gcalc", "g"};
     private final String[] CALCULATOR = {"calculator", "calc", "c"};
     private final String[] POEM = {"poem", "p", "secret poem generator"};
     private final String[] SNAKE = {"snake", "s", "snaek"};
