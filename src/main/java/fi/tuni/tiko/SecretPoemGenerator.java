@@ -132,8 +132,26 @@ public class SecretPoemGenerator{
 
         if(poemLength % 2 == 0){
             for (int i=0; i < (poemLength/2); i++){
-                System.out.println(object1.getRandomVerseLine());
-                System.out.println(object2.getRandomVerseLine());
+                if(i != poemLength/2){
+                    System.out.println(object1.getRandomVerseLine());
+                    System.out.println(object2.getRandomVerseLine());
+                }else{
+                    System.out.println(object1.getRandomVerseLine());
+
+                    //Checking if the last verse line ends with period or question mark.
+                    //If not, get a new verse line.
+                    boolean lastCharDot = false;
+                    String lastVerseLine = "";
+                    while(!lastCharDot){
+                        lastVerseLine = object2.getRandomVerseLine();
+                        if(lastVerseLine.substring(lastVerseLine.length() - 1).equals(".")){
+                            lastCharDot = true;
+                        }
+                        System.out.println("[" + lastVerseLine + "]");
+                    }
+                    System.out.println(lastVerseLine);
+                }
+                
             }
         }else{
             for (int i=0; i < (poemLength/2 - 1); i++){
@@ -143,15 +161,16 @@ public class SecretPoemGenerator{
 
             //Checking if the last verse line ends with period or question mark.
             //If not, get a new verse line.
-            boolean lastCharDot = false;
-            String lastVerseLine = "";
-            while(!lastCharDot){
-                lastVerseLine = object1.getRandomVerseLine();
-                if(lastVerseLine.substring(lastVerseLine.length() - 1).equals(".")){
-                    lastCharDot = true;
+            boolean lastCharDot2 = false;
+            String lastVerseLine2 = "";
+            while(!lastCharDot2){
+                lastVerseLine2 = object1.getRandomVerseLine();
+                if(lastVerseLine2.substring(lastVerseLine2.length() - 1).equals(".")){
+                    lastCharDot2 = true;
                 }
+                System.out.println("[" + lastVerseLine2 + "]");
             }
-            System.out.println(lastVerseLine);
+            System.out.println(lastVerseLine2);
         }
         
         
