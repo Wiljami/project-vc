@@ -14,6 +14,7 @@ class ConsoleCommands {
     private final String[] DIVISION = {"division", "divide", "div", "/"};
     private final String DIVISIONDESC = " - division.";
     private final String[] FIBONACCI = {"fibonacci", "fibo", "f"};
+    private final String FIBONACCIDESC = " - fibonacci series";
     private final String[] GRAPHCALC = {"graphicalcalculator", "gcalc", "g"};
     private final String[] QUIT = {"quit", "q"};
     private final String LINESTART = "> ";
@@ -24,6 +25,7 @@ class ConsoleCommands {
     
     private final String FIRSTVALUE = "Give first value";
     private final String SECONDVALUE = "Give second value";
+    private final String SERIESTARGET = "How far into the series";
 
     private List<Command> commands;
     private ConsoleUI consoleUI;
@@ -77,6 +79,14 @@ class ConsoleCommands {
                 int a = consoleUI.askValueWithPrompt(FIRSTVALUE);
                 int b = consoleUI.askValueWithPrompt(SECONDVALUE);
                 System.out.println(calculator.divide(a, b));
+            }
+        });
+
+        commands.add(new Command(FIBONACCI, FIBONACCIDESC){
+            @Override
+            void run() {
+                int a = consoleUI.askValueWithPrompt(SERIESTARGET);
+                System.out.println(calculator.fibonacci(a));
             }
         });
     }
