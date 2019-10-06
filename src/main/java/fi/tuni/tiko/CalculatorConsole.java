@@ -23,6 +23,8 @@ class ConsoleCommands {
     private final String[] POEM = {"poem", "p", "secret poem generator"};
     private final String[] SNAKE = {"snake", "s", "snaek"};
     
+    private final String WELCOMEMESSAGE = 
+        "Welcome to the Calculator!\nType help for commands";
     private final String FIRSTVALUE = "Give first value";
     private final String SECONDVALUE = "Give second value";
     private final String SERIESTARGET = "How far into the series";
