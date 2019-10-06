@@ -239,6 +239,9 @@ public class SecretSnake {
             for (int j = 0; j  <colls; j++) {
                 System.out.print(board[i][j]);
             }
+            if(i == 0) {
+                System.out.print("   Apples eaten: " + appleCount);
+            }
             System.out.println("");
         }
     }
