@@ -140,7 +140,15 @@ public class SecretPoemGenerator{
                 System.out.println(object1.getRandomVerseLine());
                 System.out.println(object2.getRandomVerseLine());
             }
-                System.out.println(object1.getRandomVerseLine());
+            boolean lastCharDot = false;
+            String lastVerseLine = "";
+            while(!lastCharDot){
+                lastVerseLine = object1.getRandomVerseLine();
+                if(lastVerseLine.substring(lastVerseLine.length() - 1).equals(".")){
+                    lastCharDot = true;
+                }
+            }
+            System.out.println(lastVerseLine);
         }
         
         
