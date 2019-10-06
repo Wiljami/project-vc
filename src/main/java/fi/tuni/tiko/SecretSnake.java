@@ -99,10 +99,11 @@ public class SecretSnake {
                     if(board[snakePartList.get(0).getSnakePartRowsOld()-1][snakePartList.get(0).getSnakePartCollsOld()] == '@') {
                         eatApple();
                     }
-                    
+
                     for(int i = 0; i < snakePartList.size(); i++) {
                         if(i != 0) {
                             snakePartList.get(i).setSnakePartRowsNew(snakePartList.get(i-1).getSnakePartRowsOld());
+                            snakePartList.get(i).setSnakePartCollsNew(snakePartList.get(i-1).getSnakePartCollsOld());
                         } else {
                             snakePartList.get(i).setSnakePartRowsNew(snakePartList.get(i).getSnakePartRowsOld()-1);
                         }
@@ -114,6 +115,7 @@ public class SecretSnake {
 
                     for(int i = 0; i < snakePartList.size(); i++) {
                         snakePartList.get(i).setSnakePartRowsOld(snakePartList.get(i).getSnakePartRowsNew());
+                        snakePartList.get(i).setSnakePartCollsOld(snakePartList.get(i).getSnakePartCollsNew());
                     }
                     
                     
@@ -130,6 +132,7 @@ public class SecretSnake {
                     for(int i = 0; i < snakePartList.size(); i++) {
                         if(i != 0) {
                             snakePartList.get(i).setSnakePartCollsNew(snakePartList.get(i-1).getSnakePartCollsOld());
+                            snakePartList.get(i).setSnakePartRowsNew(snakePartList.get(i-1).getSnakePartRowsOld());
                         } else {
                             snakePartList.get(i).setSnakePartCollsNew(snakePartList.get(i).getSnakePartCollsOld()-1);
                         }
@@ -138,6 +141,7 @@ public class SecretSnake {
 
                     for(int i = 0; i < snakePartList.size(); i++) {
                         snakePartList.get(i).setSnakePartCollsOld(snakePartList.get(i).getSnakePartCollsNew());
+                        snakePartList.get(i).setSnakePartRowsOld(snakePartList.get(i).getSnakePartRowsNew());
                     }
 
                    
@@ -154,6 +158,7 @@ public class SecretSnake {
                     for(int i = 0; i < snakePartList.size(); i++) {
                         if(i != 0) {
                             snakePartList.get(i).setSnakePartRowsNew(snakePartList.get(i-1).getSnakePartRowsOld());
+                            snakePartList.get(i).setSnakePartCollsNew(snakePartList.get(i-1).getSnakePartCollsOld());
                         } else {
                             snakePartList.get(i).setSnakePartRowsNew(snakePartList.get(i).getSnakePartRowsOld()+1);
                         }
@@ -162,6 +167,7 @@ public class SecretSnake {
 
                     for(int i = 0; i < snakePartList.size(); i++) {
                         snakePartList.get(i).setSnakePartRowsOld(snakePartList.get(i).getSnakePartRowsNew());
+                        snakePartList.get(i).setSnakePartCollsOld(snakePartList.get(i).getSnakePartCollsNew());
                     }
 
                    
@@ -178,6 +184,7 @@ public class SecretSnake {
                     for(int i = 0; i < snakePartList.size(); i++) {
                         if(i != 0) {
                             snakePartList.get(i).setSnakePartCollsNew(snakePartList.get(i-1).getSnakePartCollsOld());
+                            snakePartList.get(i).setSnakePartRowsNew(snakePartList.get(i-1).getSnakePartRowsOld());
                         } else {
                             snakePartList.get(i).setSnakePartCollsNew(snakePartList.get(i).getSnakePartCollsOld()+1);
                         }
@@ -186,6 +193,7 @@ public class SecretSnake {
                     
                     for(int i = 0; i < snakePartList.size(); i++) {
                         snakePartList.get(i).setSnakePartCollsOld(snakePartList.get(i).getSnakePartCollsNew());
+                        snakePartList.get(i).setSnakePartRowsOld(snakePartList.get(i).getSnakePartRowsNew());
                     }
 
                    
