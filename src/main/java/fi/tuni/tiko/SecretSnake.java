@@ -90,8 +90,13 @@ public class SecretSnake {
     }
 
     public void move() {
-        System.out.println("Move snake: (wasd)");
-        char move = scan.nextLine().charAt(0);
+        char move;
+
+        do {
+            System.out.println("Move snake: (wasd)");
+            move = scan.nextLine().charAt(0);
+        } while(move != 'a' && move != 'w' && move != 's' && move != 'd');
+        
 
         switch (move) {
             case 'w':
