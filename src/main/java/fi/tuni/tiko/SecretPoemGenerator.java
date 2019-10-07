@@ -33,6 +33,10 @@ public class SecretPoemGenerator{
         
     }
 
+    /**
+    * Ask user input for two poets and a theme. Print out summary of user's picks.
+    *
+    */
     public void askPoets(){
         System.out.println("Walt Withman    William Shakespeare    John Keats    Emily Dickinson");
         System.out.println("Pick a poet and press enter: ");
