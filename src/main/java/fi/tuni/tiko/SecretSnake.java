@@ -105,6 +105,10 @@ public class SecretSnake {
                         eatApple();
                     }
 
+                    if(board[snakePartList.get(0).getSnakePartRowsOld()-1][snakePartList.get(0).getSnakePartCollsOld()] == 'S') {
+                        keepMoving = false;
+                    }
+
                     for(int i = 0; i < snakePartList.size(); i++) {
                         if(i != 0) {
                             snakePartList.get(i).setSnakePartRowsNew(snakePartList.get(i-1).getSnakePartRowsOld());
@@ -134,6 +138,9 @@ public class SecretSnake {
                     if( board[snakePartList.get(0).getSnakePartRowsOld()][snakePartList.get(0).getSnakePartCollsOld()-1] == '@') {
                         eatApple();
                     }
+                    if( board[snakePartList.get(0).getSnakePartRowsOld()][snakePartList.get(0).getSnakePartCollsOld()-1] == 'S') {
+                        keepMoving = false;
+                    }
                     for(int i = 0; i < snakePartList.size(); i++) {
                         if(i != 0) {
                             snakePartList.get(i).setSnakePartCollsNew(snakePartList.get(i-1).getSnakePartCollsOld());
@@ -160,6 +167,9 @@ public class SecretSnake {
                     if( board[snakePartList.get(0).getSnakePartRowsOld()+1][snakePartList.get(0).getSnakePartCollsOld()] == '@') {
                         eatApple();
                     }
+                    if( board[snakePartList.get(0).getSnakePartRowsOld()+1][snakePartList.get(0).getSnakePartCollsOld()] == 'S') {
+                        keepMoving = false;
+                    }
                     for(int i = 0; i < snakePartList.size(); i++) {
                         if(i != 0) {
                             snakePartList.get(i).setSnakePartRowsNew(snakePartList.get(i-1).getSnakePartRowsOld());
@@ -185,6 +195,9 @@ public class SecretSnake {
                 if(board[snakePartList.get(0).getSnakePartRowsOld()][snakePartList.get(0).getSnakePartCollsOld()+1] != '*') {
                     if(board[snakePartList.get(0).getSnakePartRowsOld()][snakePartList.get(0).getSnakePartCollsOld()+1] == '@') {
                         eatApple();
+                    }
+                    if(board[snakePartList.get(0).getSnakePartRowsOld()][snakePartList.get(0).getSnakePartCollsOld()+1] == 'S') {
+                        keepMoving = false;
                     }
                     for(int i = 0; i < snakePartList.size(); i++) {
                         if(i != 0) {
