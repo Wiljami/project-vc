@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 class Window extends JFrame {
 
-    JButton calcButton;
+    JButton calcButton, plusButton, minusButton, divideButton, multiplyButton;
     JTextArea textField;
     JPanel pane;
     JPanel side;
