@@ -233,6 +233,7 @@ public class SecretSnake {
         board[snakePartList.get(SnakePartMaxID).getSnakePartRowsOld()][snakePartList.get(SnakePartMaxID).getSnakePartCollsOld()] = 'S';
         SnakePartMaxID++;
         appleCount++;
+        generateNewBoardAfterWin();
         spawnApples();
     }
 
@@ -247,7 +248,13 @@ public class SecretSnake {
     }
 
     public void generateNewBoardAfterWin() {
-        
+        if(appleCount % 3 == 0) {
+            System.out.println("CONGRATULATIONS YOU HAVE PASSED THE MAGICAL NUMBER OF: " + appleCount);
+            System.out.println("THIS MEANS YOU GET TO GO TO A NEW BOARD AND CONTINUE YOUR GAME - ENJOY!");
+            snakePartList.clear();
+            SnakePartMaxID = 0;
+            startSnake();
+        }
     }
 
     public int randomGenerator(int min, int max) {
