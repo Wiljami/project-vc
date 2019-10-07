@@ -75,7 +75,7 @@ class Window extends JFrame {
     }
 
     private void buttonClicked(ActionEvent e) { 
-        System.out.println(e.getSource());
+        if(e.getSource() == plusButton) { textField.setText(""); }
     }
 
     private void resultClicked(ActionEvent e) { textField.setText(""); }
