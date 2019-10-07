@@ -78,11 +78,4 @@ class Window extends JFrame {
         if(e.getSource() == plusButton) { textField.setText(""); }
     }
 
-    private void resultClicked(ActionEvent e) { textField.setText(""); }
-
-    private void plusClicked(ActionEvent e) {  }
-    private void minusClicked(ActionEvent e) {  }
-    private void divisionClicked(ActionEvent e) {  }
-    private void multiplicationClicked(ActionEvent e) {  }
-
 }
