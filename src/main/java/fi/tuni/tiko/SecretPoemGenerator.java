@@ -28,7 +28,7 @@ public class SecretPoemGenerator{
         try{
             fetchVerseLines();
         }catch(Exception e){
-            System.out.println("test");
+            System.out.println("Invalid input. Please, try again!");
         }
         
     }
@@ -46,7 +46,7 @@ public class SecretPoemGenerator{
             poet1 = "Keats";
         }else if (poet1_input.toLowerCase().contains("dickinson")){
             poet1 = "Dickinson";
-        } //TO-DO: exception handling
+        }
 
         System.out.println("Pick another poet: ");
         String poet2_input = scanner.nextLine();
@@ -58,7 +58,7 @@ public class SecretPoemGenerator{
             poet2 = "Keats";
         }else if (poet2_input.toLowerCase().contains("dickinson")){
             poet2 = "Dickinson";
-        } //TO-DO: exception handling
+        }
         System.out.println();
 
         System.out.println("Choose a theme [Love / Death]: ");
@@ -110,6 +110,9 @@ public class SecretPoemGenerator{
                 strObject1 = "love Keats";
             }else if(poet1.equals("Dickinson")){
                 strObject1 = "love Dickinson";
+            }else{
+                IncorrectInput e = new IncorrectInput();
+                throw e;
             }
         }else if (theme.equals("Death")){
             if(poet2.equals("Withman")){
@@ -120,6 +123,9 @@ public class SecretPoemGenerator{
                 strObject2 = "death Keats";
             }else if(poet2.equals("Dickinson")){
                 strObject2 = "death Dickinson";
+            }else{
+                IncorrectInput e = new IncorrectInput();
+                throw e;
             }
         }else{
             IncorrectInput e = new IncorrectInput();
