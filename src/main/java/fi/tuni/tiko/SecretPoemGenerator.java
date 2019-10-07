@@ -23,9 +23,14 @@ public class SecretPoemGenerator{
         System.out.println("Welcome, Friend!");
         System.out.println("\n         **************************************");
         System.out.println();
-        askPoets();
         readPoemFiles();
-        fetchVerseLines();
+        askPoets();
+        try{
+            fetchVerseLines();
+        }catch(Exception e){
+            System.out.println("test");
+        }
+        
     }
 
     public void askPoets(){
@@ -91,7 +96,7 @@ public class SecretPoemGenerator{
         }
     }
 
-    public void fetchVerseLines(){
+    public void fetchVerseLines() throws IncorrectInput{
         String strObject1 = "";
         PoetAndTheme object1 = poetsAndThemesList.get(0);
         String strObject2 = "";
@@ -116,6 +121,9 @@ public class SecretPoemGenerator{
             }else if(poet2.equals("Dickinson")){
                 strObject2 = "death Dickinson";
             }
+        }else{
+            IncorrectInput e = new IncorrectInput();
+            throw e;
         }
 
         for(PoetAndTheme object: poetsAndThemesList){
@@ -179,3 +187,4 @@ public class SecretPoemGenerator{
     }
 
 }
+class IncorrectInput extends Exception{}
