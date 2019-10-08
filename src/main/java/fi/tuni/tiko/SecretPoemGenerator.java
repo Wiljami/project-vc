@@ -105,36 +105,8 @@ public class SecretPoemGenerator{
         PoetAndTheme object1 = poetsAndThemesList.get(0);
         String strObject2 = "";
         PoetAndTheme object2 = poetsAndThemesList.get(0);
-        if(theme.equals("Love")){
-            if(poet1.equals("Withman")){
-                strObject1 = "love Withman";
-            }else if(poet1.equals("Shakespeare")){
-                strObject1 = "love Shakespeare";
-            }else if(poet1.equals("Keats")){
-                strObject1 = "love Keats";
-            }else if(poet1.equals("Dickinson")){
-                strObject1 = "love Dickinson";
-            }else{
-                IncorrectInput e = new IncorrectInput();
-                throw e;
-            }
-        }else if (theme.equals("Death")){
-            if(poet2.equals("Withman")){
-                strObject2 = "death Withman";
-            }else if(poet2.equals("Shakespeare")){
-                strObject2 = "death Shakespeare";
-            }else if(poet2.equals("Keats")){
-                strObject2 = "death Keats";
-            }else if(poet2.equals("Dickinson")){
-                strObject2 = "death Dickinson";
-            }else{
-                IncorrectInput e = new IncorrectInput();
-                throw e;
-            }
-        }else{
-            IncorrectInput e = new IncorrectInput();
-            throw e;
-        }
+        strObject1 = userInputToPoet(poet1, theme);
+        strObject2 = userInputToPoet(poet2, theme);
 
         for(PoetAndTheme object: poetsAndThemesList){
             if (object.getNameAndTheme().equals(strObject1)){
@@ -173,6 +145,39 @@ public class SecretPoemGenerator{
         }
         
         
+    }
+
+    public String userInputToPoet(String poet, String theme) throws IncorrectInput{
+        String returnable = "";
+        if(poet.equals("Withman")){
+            if(theme.equals("Love")){
+                returnable = "love Withman";
+            }else{
+                returnable = "death Withman";
+            }
+        }else if(poet.equals("Shakespeare")){
+            if(theme.equals("Love")){
+                returnable = "love Shakespeare";
+            }else{
+                returnable = "death Shakespeare";
+            }
+        }else if(poet.equals("Keats")){
+            if(theme.equals("Love")){
+                returnable = "love Keats";
+            }else{
+                returnable = "death Keats";
+            }
+        }else if(poet.equals("Dickinson")){
+            if(theme.equals("Love")){
+                returnable = "love Dickinson";
+            }else{
+                returnable = "death Dickinson";
+            }
+        }else{
+            IncorrectInput e = new IncorrectInput();
+            throw e;
+        }
+        return returnable;
     }
 
     public int getRandomPoemLength(){
