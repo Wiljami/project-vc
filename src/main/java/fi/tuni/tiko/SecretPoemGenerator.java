@@ -76,8 +76,12 @@ public class SecretPoemGenerator{
         String ignore = scanner.nextLine();
     }
 
+    /**
+    * Read lines in 'poems' text file (located in project root directory). Create PoetAndTheme objects
+    * from lines and add objects to an array list 'poetsAndThemesList'.
+    *
+    */
     public void readPoemFiles(){
-        //To-do: this method
         try (Scanner fileScan = new Scanner(new File("poems.txt"))) {
             //Poems.txt consist of a header (poet and theme) plus verse lines.
             //First loop reads the header and creates object 'PoetAndTheme'.
@@ -131,20 +135,16 @@ public class SecretPoemGenerator{
                     //If not, get a new verse line.
                     System.out.println(getLastPoemLine(object2));
                 }
-                
             }
         }else{
             for (int i=0; i < (poemLength/2 - 1); i++){
                 System.out.println(object1.getRandomVerseLine());
                 System.out.println(object2.getRandomVerseLine());
             }
-
             //Checking if the last verse line ends with period or question mark.
             //If not, get a new verse line.
             System.out.println(getLastPoemLine(object1));
         }
-        
-        
     }
 
     public String userInputToPoet(String poet, String theme) throws IncorrectInput{
