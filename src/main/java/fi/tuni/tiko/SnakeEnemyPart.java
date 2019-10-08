@@ -6,7 +6,9 @@ class SnakeEnemyPart {
     int id;
 
     public SnakeEnemyPart(int snakeEnemyPartRowsNew, int snakeEnemyPartCollsNew, int id) {
-        
+        setSnakeEnemyPartCollsNew(snakeEnemyPartCollsNew);
+        setSnakeEnemyPartRowsNew(snakeEnemyPartRowsNew);
+        setId(id);
     }
 
     /**
