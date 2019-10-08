@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class SecretSnake {
     char[][] board = new char[20][20];
     ArrayList<SnakePart> snakePartList = new ArrayList<SnakePart>();
+    ArrayList<SnakeEnemyPart> snakeEnemyPartList = new ArrayList<SnakeEnemyPart>();
 
     int rows = board.length;
     int colls = board[0].length;
@@ -245,6 +246,10 @@ public class SecretSnake {
         } else {
             spawnApples();
         }
+    }
+
+    public void generateEnemy() {
+        
     }
 
     public void generateNewBoardAfterWin() {
