@@ -3,6 +3,8 @@ package fi.tuni.tiko;
 class SnakeEnemyPart {
     int snakeEnemyPartRowsNew;
     int snakeEnemyPartCollsNew;
+    int snakeEnemyPartCollsOld;
+    int snakeEnemyPartRowsOld;
     int id;
 
     public SnakeEnemyPart(int snakeEnemyPartRowsNew, int snakeEnemyPartCollsNew, int id) {
@@ -47,6 +49,21 @@ class SnakeEnemyPart {
     public int getId() {
         return id;
     }
+
+    /**
+     * @param snakeEnemyPartCollsOld the snakeEnemyPartCollsOld to set
+     */
+    public void setSnakeEnemyPartCollsOld(int snakeEnemyPartCollsOld) {
+        this.snakeEnemyPartCollsOld = snakeEnemyPartCollsOld;
+    }
+
+    /**
+     * @return the snakeEnemyPartCollsOld
+     */
+    public int getSnakeEnemyPartCollsOld() {
+        return snakeEnemyPartCollsOld;
+    }
+    
 
     public void moveEnemy(char move) {
         switch (move) {
