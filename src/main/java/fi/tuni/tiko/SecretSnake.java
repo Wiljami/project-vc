@@ -16,6 +16,7 @@ public class SecretSnake {
     int appleCount = 0;
     boolean keepMoving = true;
     int SnakePartMaxID = 0;
+    int enemyId = 0;
 
     public SecretSnake() {
         
@@ -52,6 +53,7 @@ public class SecretSnake {
     public void startSnake() {
         createBoard();
         generateFirstSnake();
+        generateEnemy();
         spawnApples();
         printBoard();
         keepMoving();
@@ -249,7 +251,17 @@ public class SecretSnake {
     }
 
     public void generateEnemy() {
-        
+        int rowsPlace = randomGenerator(0, rows-1);
+        int collsPlace = randomGenerator(0, colls-1);
+
+        if(board[rowsPlace][collsPlace] == ' '){
+            snakeEnemyPartList.add(new SnakeEnemyPart(rowsPlace, collsPlace, enemyId));
+            board[rowsPlace][collsPlace] = 'E';
+            setSnakeHeadColls(collsPlace);
+            setSnakeHeadRows(rowsPlace);
+        } else {
+            generateEnemy();
+        }
     }
 
     public void generateNewBoardAfterWin() {
