@@ -224,6 +224,7 @@ public class SecretSnake {
     public void keepMoving() {
         while(keepMoving) {
             move();
+            moveEnemy();
             printBoard();
         }
         System.out.println("YOU HAVE DIED A TERRIBLE DEATH FORSHAME.");
@@ -265,7 +266,35 @@ public class SecretSnake {
     }
 
     public void moveEnemy() {
-        
+        int moveDirection = randomGenerator(0, 3);
+        switch (moveDirection) {
+            case '0':
+                if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsNew()-1][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()] != '*'){
+                    snakeEnemyPartList.get(0).moveEnemy('w');
+                }
+            break;
+
+            case '1':
+            if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsNew()][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()-1] != '*'){
+                snakeEnemyPartList.get(0).moveEnemy('a');
+            }
+
+            break;
+
+            case '2':
+            if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsNew()+1][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()] != '*'){
+                snakeEnemyPartList.get(0).moveEnemy('s');
+            }
+
+            break;
+
+            case '3':
+            if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsNew()][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()+1] != '*'){
+                snakeEnemyPartList.get(0).moveEnemy('d');
+            }
+     
+            break;
+        }
     }
 
     public void generateNewBoardAfterWin() {
