@@ -1,0 +1,3 @@
+class PoemWindow extends JFrame{
+    
+}
