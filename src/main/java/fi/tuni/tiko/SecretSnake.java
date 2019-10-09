@@ -264,6 +264,10 @@ public class SecretSnake {
         }
     }
 
+    public void moveEnemy() {
+        
+    }
+
     public void generateNewBoardAfterWin() {
         if(appleCount % 3 == 0) {
             System.out.println("CONGRATULATIONS YOU HAVE PASSED THE MAGICAL NUMBER OF: " + appleCount);
