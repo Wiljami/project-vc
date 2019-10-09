@@ -47,4 +47,8 @@ class SnakeEnemyPart {
     public int getId() {
         return id;
     }
+
+    public void moveEnemy(char move) {
+
+    }
 }
