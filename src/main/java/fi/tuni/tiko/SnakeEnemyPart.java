@@ -49,6 +49,22 @@ class SnakeEnemyPart {
     }
 
     public void moveEnemy(char move) {
+        switch (move) {
+            case 'w':
+                setSnakeEnemyPartRowsNew(getSnakeEnemyPartRowsNew()-1);
+            break;
 
+            case 'a':
+                setSnakeEnemyPartCollsNew(getSnakeEnemyPartCollsNew()-1);
+            break;
+
+            case 's':
+                setSnakeEnemyPartRowsNew(getSnakeEnemyPartRowsNew()+1);
+            break;
+
+            case 'd':
+                setSnakeEnemyPartCollsNew(getSnakeEnemyPartCollsNew()+1);
+            break;
+        }
     }
 }
