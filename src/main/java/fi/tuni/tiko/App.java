@@ -10,6 +10,11 @@ public class App
     public static void main( String[] args )
     {
         calculator = new Calculator();
+        if (args.length == 1) {
+            ConsoleUI console = new ConsoleUI(calculator);
+            CalculatorConsole cc = new CalculatorConsole(console, calculator);
+        }
+
         if (args.length > 0) {
             parseArgs(args);
         } else {
