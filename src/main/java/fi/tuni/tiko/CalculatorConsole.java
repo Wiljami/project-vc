@@ -18,6 +18,8 @@ class CalculatorConsole {
     private final String[] QUIT = {"quit", "q"};
     private final String QUITDESC = " - exits the program";
     final String BADCOMMAND = "Unknown command";
+    final String INTRO = 
+        "Welcome to the calculator console UI.\nType help for commands.";
 
     private final String[] GRAPHCALC = {"graphicalcalculator", "gcalc", "g"};
     private final String[] CALCULATOR = {"calculator", "calc", "c"};

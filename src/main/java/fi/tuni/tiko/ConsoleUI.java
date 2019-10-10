@@ -33,6 +33,7 @@ class ConsoleUI {
 
     public void runModule(CalculatorConsole module) {
         while(running) {
+            System.out.println(module.INTRO);
             String command = askCommand();
             boolean okCommand = false;
             for (Command c : module.getCommands()) {
