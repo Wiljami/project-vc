@@ -33,8 +33,14 @@ class ConsoleUI {
 
     public void runModule(CalculatorConsole module) {
         while(running) {
-            
+            String command = askCommand();            
         }
+    }
+
+    private String askCommand() {
+        System.out.print(LINESTART);
+        String command = input.nextLine();
+        return command.toLowerCase();
     }
 
     public void start() {
