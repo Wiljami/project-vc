@@ -10,6 +10,9 @@ class SnakeEnemyPart {
     public SnakeEnemyPart(int snakeEnemyPartRowsNew, int snakeEnemyPartCollsNew, int id) {
         setSnakeEnemyPartCollsNew(snakeEnemyPartCollsNew);
         setSnakeEnemyPartRowsNew(snakeEnemyPartRowsNew);
+        setSnakeEnemyPartCollsOld(snakeEnemyPartCollsNew);
+        setSnakeEnemyPartRowsOld(snakeEnemyPartRowsNew);
+
         setId(id);
     }
 
@@ -64,6 +67,20 @@ class SnakeEnemyPart {
         return snakeEnemyPartCollsOld;
     }
     
+    /**
+     * @param snakeEnemyPartRowsOld the snakeEnemyPartRowsOld to set
+     */
+    public void setSnakeEnemyPartRowsOld(int snakeEnemyPartRowsOld) {
+        this.snakeEnemyPartRowsOld = snakeEnemyPartRowsOld;
+    }
+
+    /**
+     * @return the snakeEnemyPartRowsOld
+     */
+    public int getSnakeEnemyPartRowsOld() {
+        return snakeEnemyPartRowsOld;
+    }
+
 
     public void moveEnemy(char move) {
         switch (move) {
