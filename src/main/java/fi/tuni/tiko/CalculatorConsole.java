@@ -92,6 +92,7 @@ class CalculatorConsole {
             @Override
             void run() {
                 int a = consoleUI.askValueWithPrompt(SERIESTARGET);
+                int[] series = calculator.fibonacci(a);
                 System.out.println(calculator.fibonacci(a));
             }
         });
