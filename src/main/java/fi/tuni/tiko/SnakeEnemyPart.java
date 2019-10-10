@@ -89,7 +89,6 @@ class SnakeEnemyPart {
                 setSnakeEnemyPartRowsNew(getSnakeEnemyPartRowsNew()-1);
                 setSnakeEnemyPartCollsOld(getSnakeEnemyPartCollsNew());
                 setSnakeEnemyPartCollsNew(getSnakeEnemyPartCollsNew());
-                System.out.println(getSnakeEnemyPartRowsNew() + "old" + getSnakeEnemyPartRowsOld());
             break;
 
             case 'a':
@@ -97,7 +96,6 @@ class SnakeEnemyPart {
                 setSnakeEnemyPartCollsNew(getSnakeEnemyPartCollsNew()-1);
                 setSnakeEnemyPartRowsOld(getSnakeEnemyPartRowsNew());
                 setSnakeEnemyPartRowsNew(getSnakeEnemyPartRowsNew());
-                System.out.println(getSnakeEnemyPartCollsNew() + "old" + getSnakeEnemyPartCollsOld());
             break;
 
             case 's':
@@ -105,7 +103,6 @@ class SnakeEnemyPart {
                 setSnakeEnemyPartRowsNew(getSnakeEnemyPartRowsNew()+1);
                 setSnakeEnemyPartCollsOld(getSnakeEnemyPartCollsNew());
                 setSnakeEnemyPartCollsNew(getSnakeEnemyPartCollsNew());
-                System.out.println(getSnakeEnemyPartRowsNew() + "old" + getSnakeEnemyPartRowsOld());
             break;
 
             case 'd':
@@ -113,7 +110,6 @@ class SnakeEnemyPart {
                 setSnakeEnemyPartCollsNew(getSnakeEnemyPartCollsNew()+1);
                 setSnakeEnemyPartRowsOld(getSnakeEnemyPartRowsNew());
                 setSnakeEnemyPartRowsNew(getSnakeEnemyPartRowsNew());
-                System.out.println(getSnakeEnemyPartCollsNew() + "old" + getSnakeEnemyPartCollsOld());
             break;
         }
     }
