@@ -38,12 +38,12 @@ public class SecretPoemGenerator{
     *
     */
     public void askPoets(){
-        System.out.println("Walt Withman    William Shakespeare    John Keats    Emily Dickinson");
+        System.out.println("Walt Whitman    William Shakespeare    John Keats    Emily Dickinson");
         System.out.println("Pick a poet and press enter: ");
 
         String poet1_input = scanner.nextLine();
-        if (poet1_input.toLowerCase().contains("withman") || poet1_input.toLowerCase().contains("witman")){
-            poet1 = "Withman";
+        if (poet1_input.toLowerCase().contains("whitman") || poet1_input.toLowerCase().contains("withman")){
+            poet1 = "Whitman";
         }else if (poet1_input.toLowerCase().contains("shakespeare") || poet1_input.toLowerCase().contains("shakespear")){
             poet1 = "Shakespeare";
         }else if (poet1_input.toLowerCase().contains("keats")){
@@ -54,8 +54,8 @@ public class SecretPoemGenerator{
 
         System.out.println("Pick another poet: ");
         String poet2_input = scanner.nextLine();
-        if (poet2_input.toLowerCase().contains("withman") || poet2_input.toLowerCase().contains("witman")){
-            poet2 = "Withman";
+        if (poet2_input.toLowerCase().contains("whitman") || poet2_input.toLowerCase().contains("withman")){
+            poet2 = "Whitman";
         }else if (poet2_input.toLowerCase().contains("shakespeare") || poet2_input.toLowerCase().contains("shakespear")){
             poet2 = "Shakespeare";
         }else if (poet2_input.toLowerCase().contains("keats")){
@@ -149,11 +149,11 @@ public class SecretPoemGenerator{
 
     public String userInputToPoet(String poet, String theme) throws IncorrectInput{
         String returnable = "";
-        if(poet.equals("Withman")){
+        if(poet.equals("Whitman")){
             if(theme.equals("Love")){
-                returnable = "love Withman";
+                returnable = "love Whitman";
             }else{
-                returnable = "death Withman";
+                returnable = "death Whitman";
             }
         }else if(poet.equals("Shakespeare")){
             if(theme.equals("Love")){
