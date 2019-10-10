@@ -93,7 +93,10 @@ class CalculatorConsole {
             void run() {
                 int a = consoleUI.askValueWithPrompt(SERIESTARGET);
                 int[] series = calculator.fibonacci(a);
-                System.out.println(calculator.fibonacci(a));
+                for (int n : series) {
+                    System.out.print(n + " ");
+                }
+                System.out.println();
             }
         });
 
