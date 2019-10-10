@@ -29,6 +29,10 @@ class ConsoleUI {
         this.input = new Scanner(System.in);
     }
 
+    public void runModule(CalculatorConsole module) {
+
+    }
+
     public void start() {
         printIntro();
         boolean running = true;
