@@ -228,8 +228,8 @@ public class SecretSnake {
 
     public void keepMoving() {
         while(keepMoving) {
-            move();
             moveEnemy();
+            move();
             printBoard();
         }
         System.out.println("YOU HAVE DIED A TERRIBLE DEATH FORSHAME.");
@@ -275,7 +275,11 @@ public class SecretSnake {
 
         switch (moveDirection) {
             case 0:
-                if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsOld()-1][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsOld()] != '*'){
+                if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsNew()-1][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()] == 'S'){
+                    keepMoving = false;
+                    System.out.println("ENEMY HAS EATEN YOU!");
+                }
+                else if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsNew()-1][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()] != '*'){
                     snakeEnemyPartList.get(0).moveEnemy('w');
                 } else {
                     moveEnemy();
@@ -284,7 +288,11 @@ public class SecretSnake {
             break;
 
             case 1:
-            if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsOld()][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsOld()-1] != '*'){
+            if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsNew()][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()-1] == 'S'){
+                keepMoving = false;
+                System.out.println("ENEMY HAS EATEN YOU!");
+            }
+            else if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsNew()][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()-1] != '*'){
                 snakeEnemyPartList.get(0).moveEnemy('a');
             }else {
                 moveEnemy();
@@ -293,7 +301,11 @@ public class SecretSnake {
             break;
 
             case 2:
-            if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsOld()+1][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsOld()] != '*'){
+            if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsNew()+1][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()] == 'S'){
+                keepMoving = false;
+                System.out.println("ENEMY HAS EATEN YOU!");
+            }
+            else if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsNew()+1][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()] != '*'){
                 snakeEnemyPartList.get(0).moveEnemy('s');
             }else {
                 moveEnemy();
@@ -302,7 +314,11 @@ public class SecretSnake {
             break;
 
             case 3:
-            if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsOld()][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsOld()+1] != '*'){
+            if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsNew()][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()+1] == 'S'){
+                keepMoving = false;
+                System.out.println("ENEMY HAS EATEN YOU!");
+            }
+            else if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsNew()][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()+1] != '*'){
                 snakeEnemyPartList.get(0).moveEnemy('d');
             }else {
                 moveEnemy();
