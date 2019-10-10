@@ -7,15 +7,20 @@ import java.lang.Math;
 public class SecretPoemGenerator{
     Scanner scanner;
     ArrayList<PoetAndTheme> poetsAndThemesList;
-    ArrayList<String> printablePoem;
+    //ArrayList<String> printablePoem;
     String poet1;
     String poet2;
     String theme;
 
+    /**
+    * 
+    * Constructor for the poem generator object.
+    * Creates scanner and a list for PoetAndTheme-objects
+    */
     public SecretPoemGenerator(){
         scanner = new Scanner(System.in);
         poetsAndThemesList = new ArrayList<>();
-        printablePoem = new ArrayList<>();
+        //printablePoem = new ArrayList<>();
     }
 
     public void startPoemGenerator(){
