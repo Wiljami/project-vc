@@ -29,14 +29,18 @@ class ConsoleUI {
         this.input = new Scanner(System.in);
     }
 
-    public void runModule(CalculatorConsole module) {
+    private boolean running = true;
 
+    public void runModule(CalculatorConsole module) {
+        while(running) {
+            
+        }
     }
 
     public void start() {
         printIntro();
-        boolean running = true;
-        while (running) {
+        boolean run = true;
+        while (run) {
             System.out.print(LINESTART);
             String command = input.nextLine();
             command = command.toLowerCase();
@@ -54,7 +58,7 @@ class ConsoleUI {
                 fibonacci();
             } else if (checkCommand(QUIT, command)) {
                 System.out.println("Good bye");
-                running = false;
+                run = false;
                 continue;
             } else {
                 System.out.println("Unknown command. Type 'help' for commands.");
@@ -178,5 +182,6 @@ class ConsoleUI {
 
     void quit(String msg) {
         System.out.println(msg);
+        running = false;
     }
 }

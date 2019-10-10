@@ -102,4 +102,8 @@ class CalculatorConsole {
             }
         });
     }
+    
+    public List<Command> getCommands() {
+        return commands;
+    }
 }
