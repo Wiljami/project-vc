@@ -17,6 +17,7 @@ class CalculatorConsole {
     private final String FIBONACCIDESC = " - fibonacci series";
     private final String[] QUIT = {"quit", "q"};
     private final String QUITDESC = " - exits the program";
+    final String BADCOMMAND = "Unknown command";
 
     private final String[] GRAPHCALC = {"graphicalcalculator", "gcalc", "g"};
     private final String[] CALCULATOR = {"calculator", "calc", "c"};

@@ -43,7 +43,7 @@ class ConsoleUI {
                 }
             }
             if (!okCommand) {
-                
+                System.out.println(module.BADCOMMAND);
             }
         }
     }
