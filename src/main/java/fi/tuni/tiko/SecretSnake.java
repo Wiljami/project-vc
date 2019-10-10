@@ -90,6 +90,11 @@ public class SecretSnake {
             board[s.getSnakePartRowsOld()][s.getSnakePartCollsOld()] = ' ';
             board[s.getSnakePartRowsNew()][s.getSnakePartCollsNew()] = 'S';
         }
+        
+        for (SnakeEnemyPart e : snakeEnemyPartList) {
+            board[e.getSnakeEnemyPartRowsOld()][e.getSnakeEnemyPartCollsOld()] = ' ';
+            board[e.getSnakeEnemyPartRowsNew()][e.getSnakeEnemyPartCollsNew()] = 'E';
+        }
     }
 
     public void move() {
