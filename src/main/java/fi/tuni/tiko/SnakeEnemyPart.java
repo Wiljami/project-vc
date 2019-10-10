@@ -85,19 +85,35 @@ class SnakeEnemyPart {
     public void moveEnemy(char move) {
         switch (move) {
             case 'w':
+                setSnakeEnemyPartRowsOld(getSnakeEnemyPartRowsNew());
                 setSnakeEnemyPartRowsNew(getSnakeEnemyPartRowsNew()-1);
+                setSnakeEnemyPartCollsOld(getSnakeEnemyPartCollsNew());
+                setSnakeEnemyPartCollsNew(getSnakeEnemyPartCollsNew());
+                System.out.println(getSnakeEnemyPartRowsNew() + "old" + getSnakeEnemyPartRowsOld());
             break;
 
             case 'a':
+                setSnakeEnemyPartCollsOld(getSnakeEnemyPartCollsNew());
                 setSnakeEnemyPartCollsNew(getSnakeEnemyPartCollsNew()-1);
+                setSnakeEnemyPartRowsOld(getSnakeEnemyPartRowsNew());
+                setSnakeEnemyPartRowsNew(getSnakeEnemyPartRowsNew());
+                System.out.println(getSnakeEnemyPartCollsNew() + "old" + getSnakeEnemyPartCollsOld());
             break;
 
             case 's':
+                setSnakeEnemyPartRowsOld(getSnakeEnemyPartRowsNew());
                 setSnakeEnemyPartRowsNew(getSnakeEnemyPartRowsNew()+1);
+                setSnakeEnemyPartCollsOld(getSnakeEnemyPartCollsNew());
+                setSnakeEnemyPartCollsNew(getSnakeEnemyPartCollsNew());
+                System.out.println(getSnakeEnemyPartRowsNew() + "old" + getSnakeEnemyPartRowsOld());
             break;
 
             case 'd':
+                setSnakeEnemyPartCollsOld(getSnakeEnemyPartCollsNew());
                 setSnakeEnemyPartCollsNew(getSnakeEnemyPartCollsNew()+1);
+                setSnakeEnemyPartRowsOld(getSnakeEnemyPartRowsNew());
+                setSnakeEnemyPartRowsNew(getSnakeEnemyPartRowsNew());
+                System.out.println(getSnakeEnemyPartCollsNew() + "old" + getSnakeEnemyPartCollsOld());
             break;
         }
     }

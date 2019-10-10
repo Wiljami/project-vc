@@ -267,30 +267,40 @@ public class SecretSnake {
 
     public void moveEnemy() {
         int moveDirection = randomGenerator(0, 3);
+
         switch (moveDirection) {
-            case '0':
-                if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsNew()-1][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()] != '*'){
+            case 0:
+                if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsOld()-1][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsOld()] != '*'){
                     snakeEnemyPartList.get(0).moveEnemy('w');
+                } else {
+                    moveEnemy();
+
                 }
             break;
 
-            case '1':
-            if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsNew()][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()-1] != '*'){
+            case 1:
+            if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsOld()][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsOld()-1] != '*'){
                 snakeEnemyPartList.get(0).moveEnemy('a');
+            }else {
+                moveEnemy();
             }
 
             break;
 
-            case '2':
-            if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsNew()+1][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()] != '*'){
+            case 2:
+            if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsOld()+1][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsOld()] != '*'){
                 snakeEnemyPartList.get(0).moveEnemy('s');
+            }else {
+                moveEnemy();
             }
 
             break;
 
-            case '3':
-            if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsNew()][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()+1] != '*'){
+            case 3:
+            if(board[snakeEnemyPartList.get(0).getSnakeEnemyPartRowsOld()][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsOld()+1] != '*'){
                 snakeEnemyPartList.get(0).moveEnemy('d');
+            }else {
+                moveEnemy();
             }
      
             break;
