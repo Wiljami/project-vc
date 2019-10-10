@@ -7,7 +7,6 @@ import java.lang.Math;
 public class SecretPoemGenerator{
     Scanner scanner;
     ArrayList<PoetAndTheme> poetsAndThemesList;
-    //ArrayList<String> printablePoem;
     String poet1;
     String poet2;
     String theme;
@@ -20,7 +19,6 @@ public class SecretPoemGenerator{
     public SecretPoemGenerator(){
         scanner = new Scanner(System.in);
         poetsAndThemesList = new ArrayList<>();
-        //printablePoem = new ArrayList<>();
     }
 
     public void startPoemGenerator(){
@@ -35,7 +33,6 @@ public class SecretPoemGenerator{
         }catch(Exception e){
             System.out.println("Invalid input. Please, try again!");
         }
-        
     }
 
     /**
