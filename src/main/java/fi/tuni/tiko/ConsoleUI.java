@@ -34,8 +34,16 @@ class ConsoleUI {
     public void runModule(CalculatorConsole module) {
         while(running) {
             String command = askCommand();
+            boolean okCommand = false;
             for (Command c : module.getCommands()) {
-                if (checkCommand(c.getStr(), command)) c.run();
+                if (checkCommand(c.getStr(), command)) {
+                    c.run();
+                    okCommand = true;
+                    continue;
+                }
+            }
+            if (!okCommand) {
+                
             }
         }
     }
