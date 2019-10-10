@@ -2,7 +2,7 @@ package fi.tuni.tiko;
 
 import java.util.*;
 
-class ConsoleCommands {
+class CalculatorConsole {
     private final String[] HELP = {"help", "h"};
     private final String HELPDESC = " - this printout.";
     private final String[] ADDITION = {"addition", "add", "+"};
@@ -35,11 +35,12 @@ class ConsoleCommands {
     private ConsoleUI consoleUI;
     private Calculator calculator;
 
-    public ConsoleCommands(ConsoleUI consoleUI, Calculator calculator) {
+    public CalculatorConsole(ConsoleUI consoleUI, Calculator calculator) {
         this.consoleUI = consoleUI;
         this.calculator = calculator;
         commands = new ArrayList<Command>();
         setupCommands();
+        consoleUI.runModule(this);
     }
 
     private void setupCommands() {
