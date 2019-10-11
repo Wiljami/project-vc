@@ -281,11 +281,10 @@ public class SecretSnake {
                     keepMoving = false;
                     System.out.println("ENEMY HAS EATEN YOU!");
                 }
-                else if(board[rowsNew-1][collsNew] != '*'){
+                else if(board[rowsNew-1][collsNew] == ' '){
                     snakeEnemyPartList.get(0).moveEnemy('w');
                 } else {
                     moveEnemy();
-
                 }
             break;
 
@@ -294,7 +293,7 @@ public class SecretSnake {
                 keepMoving = false;
                 System.out.println("ENEMY HAS EATEN YOU!");
             }
-            else if(board[rowsNew][collsNew-1] != '*'){
+            else if(board[rowsNew][collsNew-1] == ' '){
                 snakeEnemyPartList.get(0).moveEnemy('a');
             }else {
                 moveEnemy();
@@ -307,7 +306,7 @@ public class SecretSnake {
                 keepMoving = false;
                 System.out.println("ENEMY HAS EATEN YOU!");
             }
-            else if(board[rowsNew+1][collsNew] != '*'){
+            else if(board[rowsNew+1][collsNew] == ' '){
                 snakeEnemyPartList.get(0).moveEnemy('s');
             }else {
                 moveEnemy();
@@ -320,7 +319,7 @@ public class SecretSnake {
                 keepMoving = false;
                 System.out.println("ENEMY HAS EATEN YOU!");
             }
-            else if(board[rowsNew][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()+1] != '*'){
+            else if(board[rowsNew][snakeEnemyPartList.get(0).getSnakeEnemyPartCollsNew()+1] == ' '){
                 snakeEnemyPartList.get(0).moveEnemy('d');
             }else {
                 moveEnemy();
