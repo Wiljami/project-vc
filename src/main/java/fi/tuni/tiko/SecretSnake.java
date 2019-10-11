@@ -232,7 +232,7 @@ public class SecretSnake {
             move();
             printBoard();
         }
-        System.out.println("YOU HAVE DIED A TERRIBLE DEATH FORSHAME.");
+        System.out.println("YOU HAVE DIED A TERRIBLE DEATH, FORSHAME.");
         System.out.println("YOUR FINAL SCORE OF APPLES WAS: " +appleCount + ". Congratulations!");
     }
 
