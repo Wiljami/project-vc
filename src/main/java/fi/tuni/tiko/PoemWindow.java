@@ -17,6 +17,9 @@ class PoemWindow extends JFrame{
     generateBtn = new JButton("Generate poem");
     poemTextArea = new JTextArea("test", 10, 10);
 
+    add(generateBtn);
+    add(poemTextArea);
+
     setVisible(true);
     }
     
