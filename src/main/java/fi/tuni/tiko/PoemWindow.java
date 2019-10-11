@@ -14,6 +14,8 @@ class PoemWindow extends JFrame{
     setLayout(new BorderLayout());
 
     generateBtn = new JButton("Generate poem");
+
+    setVisible(true);
     }
     
 }
