@@ -111,6 +111,11 @@ public class SecretPoemGenerator{
         }
     }
 
+    /**
+    * Generates the actual printable poem. Decides the length of generated poem and fetches
+    * every other verse line from desired poet and every other from another desired poet.
+    *
+    */
     public void fetchVerseLines() throws IncorrectInput{
         String strObject1 = "";
         PoetAndTheme object1 = poetsAndThemesList.get(0);
