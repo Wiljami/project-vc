@@ -333,6 +333,7 @@ public class SecretSnake {
             System.out.println("CONGRATULATIONS YOU HAVE PASSED THE MAGICAL NUMBER OF: " + appleCount);
             System.out.println("THIS MEANS YOU GET TO GO TO A NEW BOARD AND CONTINUE YOUR GAME - ENJOY!");
             snakePartList.clear();
+            snakeEnemyPartList.clear();
             SnakePartMaxID = 0;
             startSnake();
         }
