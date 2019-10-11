@@ -21,6 +21,11 @@ public class SecretPoemGenerator{
         poetsAndThemesList = new ArrayList<>();
     }
 
+    /**
+    * 
+    * Starts poem generator. Presents welcome message, calls methods readPoemFiles, askPoets
+    * and fetchVerseLines.
+    */
     public void startPoemGenerator(){
         System.out.println("\nYou found a Secret Poem Generator.");
         System.out.println("Welcome, Friend!");
