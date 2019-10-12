@@ -340,6 +340,12 @@ public class SecretSnake {
         }
     }
 
+    /**
+     * Used to generate a random int number between the minimum and maximum numbers given and then return it.
+     * @param min the minimum int number the random can be.
+     * @param max the maximum int number the random can be.
+     * @return a random in that was generated between the min and max ints.
+     */
     public int randomGenerator(int min, int max) {
         int random = (int) ((Math.random()*((max-min)+1))+min);
         return random;
