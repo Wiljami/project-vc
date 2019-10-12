@@ -246,6 +246,12 @@ public class SecretSnake {
         spawnApples();
     }
 
+    /**
+     * Spawns apples to the gameboard.
+     * 
+     * Used to spawn apples to a random place on the gameboard.
+     * Calls itself until it find a new empty place for an apple placement in the board char array.
+     */
     public void spawnApples() {
         int rowsPlace = randomGenerator(0, rows-1);
         int collsPlace = randomGenerator(0, colls-1);
