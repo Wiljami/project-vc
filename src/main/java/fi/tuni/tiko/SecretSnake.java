@@ -351,6 +351,11 @@ public class SecretSnake {
         return random;
     }
 
+    /**
+     * Prints the gameboard whenever it is called.
+     * 
+     * Used to print the gameboard that is chars to the screen.
+     */
     public void printBoard() {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j  <colls; j++) {
