@@ -7,6 +7,7 @@ import java.awt.*;
 class PoemWindow extends JFrame{
     JButton generateBtn;
     JTextArea poemTextArea;
+    JPanel pane;
 
     public PoemWindow(){
     setSize(300, 300);
@@ -17,6 +18,7 @@ class PoemWindow extends JFrame{
 
     public void createGUI(){
         setLayout(new BorderLayout());
+        pane = new JPanel();
         generateBtn = new JButton("Generate poem");
         poemTextArea = new JTextArea("test", 10, 10);
 
