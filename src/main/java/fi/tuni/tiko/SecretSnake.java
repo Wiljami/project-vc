@@ -262,6 +262,12 @@ public class SecretSnake {
         }
     }
 
+    /**
+     * Generates a new enemy to the board and adds it to an enemy array.
+     * 
+     * Used to generate an enemy to the board char array and add a new snakeEnemyPart object to the snakeEnemyPartList.
+     * Calls itself until it finds an empty place for the placement of the enemy and palces it in place on the board.
+     */
     public void generateEnemy() {
         int rowsPlace = randomGenerator(0, rows-1);
         int collsPlace = randomGenerator(0, colls-1);
