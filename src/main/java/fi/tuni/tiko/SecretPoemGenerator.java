@@ -192,6 +192,11 @@ public class SecretPoemGenerator{
         return returnable;
     }
 
+    /**
+    * Decides the length of generated poem.
+    * @return random int-value between 6 and 10.
+    *
+    */
     public int getRandomPoemLength(){
         double poemLengthDouble = Math.random() * 4 + 6;
         int poemLength = (int) poemLengthDouble;
