@@ -22,5 +22,9 @@ class PoemWindow extends JFrame{
 
     setVisible(true);
     }
+
+    public void createGUI(){
+
+    }
     
 }
