@@ -330,7 +330,7 @@ public class SecretSnake {
     }
 
     public void generateNewBoardAfterWin() {
-        if(appleCount % 3 == 0) {
+        if(appleCount % 15 == 0) {
             System.out.println("CONGRATULATIONS YOU HAVE PASSED THE MAGICAL NUMBER OF: " + appleCount);
             System.out.println("THIS MEANS YOU GET TO GO TO A NEW BOARD AND CONTINUE YOUR GAME - ENJOY!");
             snakePartList.clear();
