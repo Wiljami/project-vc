@@ -101,7 +101,9 @@ class SnakePart {
             break;
         }
     }
-
+    /**
+     * Used to update the snakes oldPlace places with the old newPlace places (done before the new place gets updated.)
+     */
     public void updateOldPlace() {
         setSnakePartCollsOld(getSnakePartCollsNew());
         setSnakePartRowsOld(getSnakePartRowsNew());
