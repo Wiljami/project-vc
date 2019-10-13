@@ -159,6 +159,14 @@ public class SecretPoemGenerator{
         }
     }
 
+    /**
+	*
+    *Reformats user input to match the name of desired PoetAndTheme object (for purpose of
+    * fetching the correct PoetAndTheme object.)
+    *@param poet User input for poet from askPoets method.
+    *@param theme User input for theme from askPoets method.
+    *@return poet and theme in one correctly formatted String.
+    */
     public String userInputToPoet(String poet, String theme) throws IncorrectInput{
         String returnable = "";
         if(poet.equals("Whitman")){
