@@ -10,9 +10,9 @@ class PoemWindow extends JFrame{
     JPanel pane;
 
     public PoemWindow(){
-    setSize(300, 300);
     setTitle("Poem generator");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    pack();
     setVisible(true);
     }
 
