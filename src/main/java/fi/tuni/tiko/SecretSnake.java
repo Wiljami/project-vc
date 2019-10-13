@@ -64,6 +64,9 @@ public class SecretSnake {
         keepMoving();
     }
 
+    /**
+     * Creates the board initially and fills it with * for borders and spaces for empty spaces accross the board.
+     */
     public void createBoard() {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j  <colls; j++) {
