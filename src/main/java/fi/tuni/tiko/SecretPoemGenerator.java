@@ -1,3 +1,10 @@
+/**
+* SecretPoemGenerator object asks user input for two poets and a theme, reads a file that
+* contains poem lines, generates PoetAndTheme objects and composes a desired poem by fetching
+* poem lines from PoetAndTheme objects.
+*
+*/
+
 package fi.tuni.tiko;
 import java.util.Scanner;
 import java.util.ArrayList;
