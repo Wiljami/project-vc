@@ -226,6 +226,11 @@ public class SecretSnake {
         }
     }
 
+    /**
+     * Used to keep the game going until the keepMoving boolean is set to false.
+     * 
+     * Used to call the moveEnemy, move, and printBoard methods in a row until the game has been set to end.
+     */
     public void keepMoving() {
         while(keepMoving) {
             moveEnemy();
