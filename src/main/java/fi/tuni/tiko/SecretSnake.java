@@ -346,6 +346,11 @@ public class SecretSnake {
         }
     }
 
+    /**
+     * Used to generate a new board with a snake and enemy size of 1 every X amount of apples eaten.
+     * 
+     * After each applecount added the it checks if its big enough and then it either goes to the if or not.
+     */
     public void generateNewBoardAfterWin() {
         if(appleCount % 15 == 0) {
             System.out.println("CONGRATULATIONS YOU HAVE PASSED THE MAGICAL NUMBER OF: " + appleCount);
