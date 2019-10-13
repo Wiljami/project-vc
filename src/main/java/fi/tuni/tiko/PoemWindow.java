@@ -19,8 +19,12 @@ class PoemWindow extends JFrame{
     public void createGUI(){
         setLayout(new BorderLayout());
         pane = new JPanel();
+        
         generateBtn = new JButton("Generate poem");
         poemTextArea = new JTextArea("test", 10, 10);
+
+        String[] poets1 = { "Keats","Whitman", "Dickinson","Shakespeare"};
+        final JComboBox<String> poetsBox1 = new JComboBox<String>(poets1);
 
         add(generateBtn);
         add(poemTextArea);
