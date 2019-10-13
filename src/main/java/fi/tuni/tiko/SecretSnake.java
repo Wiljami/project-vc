@@ -50,6 +50,11 @@ public class SecretSnake {
         this.snakeHeadColls = snakeHeadCols;
     }
 
+    /**
+     * Used to start (initialize) the snake board game.
+     * 
+     * Calls all of the needed methods to start the game.
+     */
     public void startSnake() {
         createBoard();
         generateFirstSnake();
