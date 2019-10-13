@@ -211,6 +211,12 @@ public class SecretPoemGenerator{
         return poemLength;
     }
 
+    /**
+	*
+    *Fetches the last poem line and checks that it ends with '.', '!' or '?'.
+    *@param object Poem line is fetched from this PoetAndTheme object.
+    *@return last poem line in String.
+    */
     public String getLastPoemLine(PoetAndTheme object){
         boolean lastCharDot = false;
         String lastVerseLine = "";
