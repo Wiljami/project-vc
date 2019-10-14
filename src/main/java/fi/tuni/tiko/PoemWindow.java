@@ -35,6 +35,9 @@ class PoemWindow extends JFrame{
 
         add(generateBtn);
         add(poemTextArea);
+        add(poetsBox1);
+        add(poetsBox2);
+        add(themesBox);
     }
     
 }
