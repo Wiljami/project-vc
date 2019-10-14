@@ -239,4 +239,8 @@ public class SecretPoemGenerator{
     }
 
 }
+/**
+    * 
+    * Exception class. Will be thrown in fetchVerseLines if correct PoetAndTheme object is not found.
+    */
 class IncorrectInput extends Exception{}
