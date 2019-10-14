@@ -93,6 +93,11 @@ public class SecretSnake {
         }
     }
 
+    /**
+     * Used to update the board array after each move.
+     * First it checks the snakePartList and compares it to the board and updates it correctly with the snake parts.
+     * Then it does the same for the enemies list. 
+     */
     public void updateBoard() {
         for(SnakePart s : snakePartList) {
             board[s.getSnakePartRowsOld()][s.getSnakePartCollsOld()] = ' ';
