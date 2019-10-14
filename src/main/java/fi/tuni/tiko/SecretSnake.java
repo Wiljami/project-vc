@@ -249,6 +249,10 @@ public class SecretSnake {
         System.out.println("YOUR FINAL SCORE OF APPLES WAS: " +appleCount + ". Congratulations!");
     }
 
+    /**
+     * Used to eat an apple (called from move class). The method adds a new snake part to the right placement in the array and to the board and gives +1 to the apple count.
+     * It also spawns a new apple and checks if the applecount is high enough to generate a new board with the method.
+     */
     public void eatApple(){
         System.out.println(snakePartList.get(SnakePartMaxID).getSnakePartRowsOld());
         snakePartList.add(new SnakePart(snakePartList.get(SnakePartMaxID).getSnakePartRowsOld(), snakePartList.get(SnakePartMaxID).getSnakePartCollsOld(), SnakePartMaxID));
