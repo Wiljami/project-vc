@@ -30,6 +30,9 @@ class PoemWindow extends JFrame{
         String[] poets2 = { "Keats","Whitman", "Dickinson","Shakespeare"};
         final JComboBox<String> poetsBox2 = new JComboBox<String>(poets2);
 
+        String[] themes = { "LOVE","DEATH"};
+        final JComboBox<String> themesBox = new JComboBox<String>(themes);
+
         add(generateBtn);
         add(poemTextArea);
     }
