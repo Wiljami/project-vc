@@ -12,6 +12,7 @@ class PoemWindow extends JFrame{
     public PoemWindow(){
     setTitle("Poem generator");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    createGUI();
     pack();
     setVisible(true);
     }
