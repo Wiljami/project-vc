@@ -7,6 +7,12 @@ class SnakePart {
     private int snakePartCollsOld;
     private int id;
 
+    /**
+     * Constructor to create a snake part object with a rows and colls place for placement
+     * @param snakePartRowsNew the snakes rows place in the board
+     * @param snakePartCollsNew the snakes colls place in the board
+     * @param id the id of the snake
+     */
     public SnakePart(int snakePartRowsNew, int snakePartCollsNew, int id) {
         setSnakePartCollsNew(snakePartCollsNew);
         setSnakePartRowsNew(snakePartRowsNew);
