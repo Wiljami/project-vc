@@ -82,6 +82,10 @@ class SnakePart {
         this.snakePartRowsOld = snakePartRowsOld;
     }
 
+    /**
+     * Used to move the snake part to a new place. Not in use currently
+     * @param move the move direction where to move the snake part.
+     */
     public void movePartToNewPlace(char move) {
         switch (move) {
             case 'w':
