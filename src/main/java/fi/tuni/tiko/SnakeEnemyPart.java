@@ -82,6 +82,10 @@ class SnakeEnemyPart {
     }
 
 
+    /**
+     * Used to move the enemy placement in the board array eiher one up,down,left or right depending on the gotten char attribute.
+     * @param move the attribute (wasd) decides which way the enemy should move to next. 
+     */
     public void moveEnemy(char move) {
         switch (move) {
             case 'w':
