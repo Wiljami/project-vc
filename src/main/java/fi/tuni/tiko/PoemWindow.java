@@ -19,7 +19,8 @@ class PoemWindow extends JFrame{
     }
 
     public void createGUI(){
-        setLayout(new BorderLayout());
+        Container mainContainer = this.getContentPane();
+        mainContainer.setLayout(new BorderLayout(8, 6));
         pane = new JPanel();
         
         generateBtn = new JButton("Generate poem");
