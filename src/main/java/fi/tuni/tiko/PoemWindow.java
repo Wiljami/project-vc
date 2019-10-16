@@ -14,7 +14,7 @@ class PoemWindow extends JFrame{
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setLocation(100, 100);
     createGUI();
-    pack();
+    setSize(500, 400);
     setVisible(true);
     }
 
