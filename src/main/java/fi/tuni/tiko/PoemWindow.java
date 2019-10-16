@@ -36,11 +36,11 @@ class PoemWindow extends JFrame{
         String[] themes = { "LOVE","DEATH"};
         final JComboBox<String> themesBox = new JComboBox<String>(themes);
 
-        add(generateBtn);
-        add(poemTextArea);
-        add(poetsBox1);
-        add(poetsBox2);
-        add(themesBox);
+        topPanel.add(poetsBox1);
+        topPanel.add(poetsBox2);
+        topPanel.add(generateBtn);
+        mainContainer.add(topPanel);
+        mainContainer.add(poemTextArea);
     }
     
 }
