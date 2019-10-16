@@ -39,8 +39,8 @@ class PoemWindow extends JFrame{
         topPanel.add(poetsBox1);
         topPanel.add(poetsBox2);
         topPanel.add(generateBtn);
-        mainContainer.add(topPanel);
-        mainContainer.add(poemTextArea);
+        mainContainer.add(topPanel, BorderLayout.PAGE_START);
+        mainContainer.add(poemTextArea, BorderLayout.CENTER);
     }
     
 }
