@@ -5,9 +5,9 @@ class SnakePart {
     private int snakePartRowsNew;
     //The placement (colls) that gets updated and is the new after each move of the snake in the board.
     private int snakePartCollsNew;
-    //The placement (Rows) that is gotten from the SakePartRowsNew each time before that one gets updated to save it for later use on another part.
+    //The placement (Rows) that is gotten from the SnakePartRowsNew each time before that one gets updated to save it for later use on another part.
     private int snakePartRowsOld;
-    //The placement (Colls) that is gotten from the SakePartCollsNew each time before that one gets updated to save it for later use on another part.
+    //The placement (Colls) that is gotten from the SnakePartCollsNew each time before that one gets updated to save it for later use on another part.
     private int snakePartCollsOld;
     //The id of the snake part.
     private int id;
