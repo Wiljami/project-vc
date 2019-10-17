@@ -304,6 +304,11 @@ public class SecretSnake {
         }
     }
 
+    /**
+     * Used to move the enemy depending on where the enemy was before and it's new place.
+     * It gets a random number between 0 and 3 and assigns (wasd) to match each number.
+     * After getting a random number the method checks if the wanted direction either has an empty space or a snake part and moves it accordingly.
+     */
     public void moveEnemy() {
         int moveDirection = randomGenerator(0, 3);
         int rowsNew = snakeEnemyPartList.get(0).getSnakeEnemyPartRowsNew();
