@@ -7,6 +7,12 @@ class SnakeEnemyPart {
     int snakeEnemyPartRowsOld;
     int id;
 
+    /**
+     * Constructor to set all of the needed int attributes upon creation.
+     * @param snakeEnemyPartRowsNew The place for the snake enemy part (Rows) in the board.
+     * @param snakeEnemyPartCollsNew The place for the snake enemy part (Colls) in the board.
+     * @param id the Id of the snake.
+     */
     public SnakeEnemyPart(int snakeEnemyPartRowsNew, int snakeEnemyPartCollsNew, int id) {
         setSnakeEnemyPartCollsNew(snakeEnemyPartCollsNew);
         setSnakeEnemyPartRowsNew(snakeEnemyPartRowsNew);
