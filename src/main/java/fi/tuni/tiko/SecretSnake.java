@@ -79,6 +79,11 @@ public class SecretSnake {
         }
     }
 
+    /**
+     * Generates the very first snake by getting two random numbers for colls and rows for the board and then creating a snake
+     * in both the snakePartArray and the board array for use.
+     * It generates new randoms until it finds an appropriate place to set the first snake part.
+     */
     public void generateFirstSnake() {
         int rowsPlace = randomGenerator(0, rows-1);
         int collsPlace = randomGenerator(0, colls-1);
