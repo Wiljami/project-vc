@@ -1,10 +1,15 @@
 package fi.tuni.tiko;
 
 class SnakeEnemyPart {
+    //The placement (rows) that gets updated and is the new after each move of the enemy in the board.
     int snakeEnemyPartRowsNew;
+    //The placement (colls) that gets updated and is the new after each move of the enemy in the board.
     int snakeEnemyPartCollsNew;
+    //The placement (Colls) that is gotten from the SnakeEnemyPartCollsNew each time before that one gets updated to save it for later use on another part and empty old place.
     int snakeEnemyPartCollsOld;
+    //The placement (Rows) that is gotten from the SnakeEnemyPartRowsNew each time before that one gets updated to save it for later use on another part and empty old place.
     int snakeEnemyPartRowsOld;
+    //The id of the enemy.
     int id;
 
     /**
