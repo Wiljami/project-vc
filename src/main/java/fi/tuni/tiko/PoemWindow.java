@@ -8,7 +8,6 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 
 class PoemWindow extends JFrame{
@@ -32,6 +31,9 @@ class PoemWindow extends JFrame{
         topPanel.setLayout(new FlowLayout(8));
         
         generateBtn = new JButton("Generate poem");
+        String firstLine = "What is called good is perfect, and what is called bad is just as perfect,";
+        String secondLine = "The day is gone, and all its sweets are gone!";
+        String thirdLine = "To think of to-day, and the ages continued henceforward!";
         poemTextArea = new JLabel("<html>" + firstLine + "<br>" + secondLine +
          "<br>" + thirdLine + "<br>" + "<br>" + "</html>", SwingConstants.CENTER);
 
