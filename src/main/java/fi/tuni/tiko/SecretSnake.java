@@ -150,8 +150,6 @@ public class SecretSnake {
                         } else {
                             snakePartList.get(i).setSnakePartRowsNew(snakePartList.get(i).getSnakePartRowsOld()-1);
                         }
-                        System.out.println( "RN: " + snakePartList.get(i).getSnakePartRowsNew() + "CN: " + snakePartList.get(i).getSnakePartCollsNew() + 
-                        "RO: " + snakePartList.get(i).getSnakePartRowsOld() + "CO: " + snakePartList.get(i).getSnakePartCollsOld());
                     }
 
                     updateBoard();
@@ -274,7 +272,7 @@ public class SecretSnake {
     public void eatApple(){
         int rowsOld = snakePartList.get(SnakePartMaxID).getSnakePartRowsOld();
         int collsOld = snakePartList.get(SnakePartMaxID).getSnakePartCollsOld();
-        
+
         snakePartList.add(new SnakePart(rowsOld, collsOld, SnakePartMaxID));
         board[rowsOld][collsOld] = 'S';
         SnakePartMaxID++;
