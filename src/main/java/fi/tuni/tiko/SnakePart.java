@@ -1,5 +1,11 @@
 package fi.tuni.tiko;
 
+/**
+ * SnakePart class is used to create objects that are part of a snake.
+ * Each part has an unique id and position that gets updated depending on the old position of the one snake part before the current one in the arrayList.
+ * 
+ * @author Hanna Tuominen
+ */
 class SnakePart {
     //The placement (rows) that gets updated and is the new after each move of the snake in the board.
     private int snakePartRowsNew;
