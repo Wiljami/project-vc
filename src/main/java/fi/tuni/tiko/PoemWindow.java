@@ -32,12 +32,15 @@ class PoemWindow extends JFrame{
         JPanel btnPanel = new JPanel();
         btnPanel.setLayout(new FlowLayout(8));
         
-        generateBtn = new JButton("Generate poem");
+        generateBtn = new JButton("GENERATE POEM");
         String firstLine = "* * * * * *";
         String secondLine = "* * * * * *";
         String thirdLine = "* * * * * *";
+        String fourthLine = "* * * * * *";
+        String fifthLine = "* * * * * *";
         poemTextArea = new JLabel("<html>" + firstLine + "<br>" + secondLine +
-         "<br>" + thirdLine + "<br>" + "<br>" + "</html>", SwingConstants.CENTER);
+         "<br>" + thirdLine + "<br>" + "<br>" + fourthLine + "<br>" + 
+         fifthLine + "<br>" + "</html>", SwingConstants.CENTER);
 
         String[] poets1 = { "John Keats","Walt Whitman", "Emily Dickinson","William Shakespeare"};
         final JComboBox<String> poetsBox1 = new JComboBox<String>(poets1);
