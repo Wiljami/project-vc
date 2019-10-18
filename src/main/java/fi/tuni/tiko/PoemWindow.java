@@ -1,12 +1,19 @@
 package fi.tuni.tiko;
-import javax.swing.*;
-import javax.swing.border.*;
-import java.awt.event.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.SwingConstants;
 
 class PoemWindow extends JFrame{
     JButton generateBtn;
-    JTextArea poemTextArea;
+    JLabel poemTextArea;
     JPanel pane;
 
     public PoemWindow(){
@@ -25,7 +32,8 @@ class PoemWindow extends JFrame{
         topPanel.setLayout(new FlowLayout(8));
         
         generateBtn = new JButton("Generate poem");
-        poemTextArea = new JTextArea("test", 10, 10);
+        poemTextArea = new JLabel("<html>" + firstLine + "<br>" + secondLine +
+         "<br>" + thirdLine + "<br>" + "<br>" + "</html>", SwingConstants.CENTER);
 
         String[] poets1 = { "Keats","Whitman", "Dickinson","Shakespeare"};
         final JComboBox<String> poetsBox1 = new JComboBox<String>(poets1);
