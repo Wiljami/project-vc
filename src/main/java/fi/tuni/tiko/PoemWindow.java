@@ -29,6 +29,8 @@ class PoemWindow extends JFrame{
         mainContainer.setLayout(new BorderLayout(8, 6));
         JPanel topPanel = new JPanel();
         topPanel.setLayout(new FlowLayout(8));
+        JPanel btnPanel = new JPanel();
+        btnPanel.setLayout(new FlowLayout(8));
         
         generateBtn = new JButton("Generate poem");
         String firstLine = "What is called good is perfect, and what is called bad is just as perfect,";
@@ -48,9 +50,12 @@ class PoemWindow extends JFrame{
 
         topPanel.add(poetsBox1);
         topPanel.add(poetsBox2);
-        topPanel.add(generateBtn);
+        topPanel.add(themesBox);
+        btnPanel.add(generateBtn);
         mainContainer.add(topPanel, BorderLayout.PAGE_START);
         mainContainer.add(poemTextArea, BorderLayout.CENTER);
+        mainContainer.add(btnPanel, BorderLayout.PAGE_END);
+        
     }
     
 }
