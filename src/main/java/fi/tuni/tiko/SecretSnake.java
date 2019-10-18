@@ -272,9 +272,11 @@ public class SecretSnake {
      * It also spawns a new apple and checks if the applecount is high enough to generate a new board with the method.
      */
     public void eatApple(){
-        System.out.println(snakePartList.get(SnakePartMaxID).getSnakePartRowsOld());
-        snakePartList.add(new SnakePart(snakePartList.get(SnakePartMaxID).getSnakePartRowsOld(), snakePartList.get(SnakePartMaxID).getSnakePartCollsOld(), SnakePartMaxID));
-        board[snakePartList.get(SnakePartMaxID).getSnakePartRowsOld()][snakePartList.get(SnakePartMaxID).getSnakePartCollsOld()] = 'S';
+        int rowsOld = snakePartList.get(SnakePartMaxID).getSnakePartRowsOld();
+        int collsOld = snakePartList.get(SnakePartMaxID).getSnakePartCollsOld();
+        
+        snakePartList.add(new SnakePart(rowsOld, collsOld, SnakePartMaxID));
+        board[rowsOld][collsOld] = 'S';
         SnakePartMaxID++;
         appleCount++;
         generateNewBoardAfterWin();
