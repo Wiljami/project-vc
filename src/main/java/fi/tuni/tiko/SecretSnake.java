@@ -115,6 +115,14 @@ public class SecretSnake {
         }
     }
 
+    /**
+     * Each turn the user gets asked first the direction (wasd) until they give an approppriate answer.
+     * Then depending what the user has picked the snake moves itself to that direction one position (the snake head)
+     * and checks where it would land. If it would land to anywhere that is not a wall it continues with the movement and checks where it lands
+     * If it lands to an apple it eats it.
+     * Each of the SnakePart that are in the arraylist gets moved to the last position that was recorded in the one before them.
+     * After the movement the game updates the board array and then each of the snake parts old place in the list is updated to the new place for next round.
+     */
     public void move() {
         char move;
 
