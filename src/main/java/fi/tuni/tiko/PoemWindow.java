@@ -39,13 +39,13 @@ class PoemWindow extends JFrame{
         poemTextArea = new JLabel("<html>" + firstLine + "<br>" + secondLine +
          "<br>" + thirdLine + "<br>" + "<br>" + "</html>", SwingConstants.CENTER);
 
-        String[] poets1 = { "Keats","Whitman", "Dickinson","Shakespeare"};
+        String[] poets1 = { "John Keats","Walt Whitman", "Emily Dickinson","William Shakespeare"};
         final JComboBox<String> poetsBox1 = new JComboBox<String>(poets1);
 
-        String[] poets2 = { "Keats","Whitman", "Dickinson","Shakespeare"};
+        String[] poets2 = {"John Keats","Walt Whitman", "Emily Dickinson","William Shakespeare"};
         final JComboBox<String> poetsBox2 = new JComboBox<String>(poets2);
 
-        String[] themes = { "LOVE","DEATH"};
+        String[] themes = { "LOVE","DEATH               "};
         final JComboBox<String> themesBox = new JComboBox<String>(themes);
 
         topPanel.add(poetsBox1);
