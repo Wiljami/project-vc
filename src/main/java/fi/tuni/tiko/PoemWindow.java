@@ -33,9 +33,9 @@ class PoemWindow extends JFrame{
         btnPanel.setLayout(new FlowLayout(8));
         
         generateBtn = new JButton("Generate poem");
-        String firstLine = "What is called good is perfect, and what is called bad is just as perfect,";
-        String secondLine = "The day is gone, and all its sweets are gone!";
-        String thirdLine = "To think of to-day, and the ages continued henceforward!";
+        String firstLine = "* * * * * *";
+        String secondLine = "* * * * * *";
+        String thirdLine = "* * * * * *";
         poemTextArea = new JLabel("<html>" + firstLine + "<br>" + secondLine +
          "<br>" + thirdLine + "<br>" + "<br>" + "</html>", SwingConstants.CENTER);
 
