@@ -76,5 +76,9 @@ class PoemWindow extends JFrame{
         mainContainer.add(btnPanel, BorderLayout.PAGE_END);
         
     }
+
+    public static void main (String [] args){
+        PoemWindow win = new PoemWindow();
+    }
     
 }
