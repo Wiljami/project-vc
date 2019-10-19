@@ -1,15 +1,10 @@
 package fi.tuni.tiko;
-import java.awt.BorderLayout;
-import java.awt.Container;
-import java.awt.FlowLayout;
-
-import javax.swing.JButton;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.border.*;
 import javax.swing.JComboBox;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
-import javax.swing.border.Border;
+
 
 class PoemWindow extends JFrame{
     JButton generateBtn;
