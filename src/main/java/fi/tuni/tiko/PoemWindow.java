@@ -1,4 +1,5 @@
 package fi.tuni.tiko;
+import java.awt.event.*;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
@@ -26,6 +27,12 @@ class PoemWindow extends JFrame{
     setLocation(100, 100);
     createGUI();
     setSize(500, 400);
+
+    generateBtn.addActionListener(new ActionListener(){
+        public void actionPerformed (ActionEvent e){
+        }
+    });
+
     setVisible(true);
     }
 
