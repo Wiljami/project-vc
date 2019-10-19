@@ -79,6 +79,14 @@ class CalculatorConsole {
                 poems.startPoemGenerator();
             }
         });
+
+        commands.add(new Command(SNAKE, "") {
+            @Override
+            void run() {
+                SecretSnake snake = new SecretSnake();
+                snake.startSnake();
+            }
+        });
     }
 
     private void setupCommands() {
