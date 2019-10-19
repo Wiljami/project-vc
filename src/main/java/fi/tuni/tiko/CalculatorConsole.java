@@ -1,13 +1,16 @@
 package fi.tuni.tiko;
 
+import java.util.ArrayList;
+import java.util.List;
 /**
  * CalculatorConsole is a module for the console UI.
  * 
  * CalculatorConsole holds information and functions for Calculator App 
  * to be used with the ConsoleUI.
+ * 
+ * @author Viljami Pietarila
+ * @version 2019
  */
-
-import java.util.*;
 
 class CalculatorConsole {
     private final String[] HELP = {"help", "h"};
@@ -45,6 +48,13 @@ class CalculatorConsole {
     private ConsoleUI consoleUI;
     private Calculator calculator;
 
+    /**
+     * CalculatorConsole constructor.
+     * 
+     * The constructor setups the commands.
+     * @param consoleUI Reference to the UI element
+     * @param calculator Reference to the App
+     */
     public CalculatorConsole(ConsoleUI consoleUI, Calculator calculator) {
         this.consoleUI = consoleUI;
         this.calculator = calculator;
