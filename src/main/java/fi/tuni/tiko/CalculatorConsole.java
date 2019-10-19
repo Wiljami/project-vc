@@ -71,6 +71,14 @@ class CalculatorConsole {
                 Window Window = new Window("calculator");
             }
         });
+
+        commands.add(new Command(POEM, "") {
+            @Override
+            void run() {
+                SecretPoemGenerator poems = new SecretPoemGenerator();
+                poems.startPoemGenerator();
+            }
+        });
     }
 
     private void setupCommands() {
