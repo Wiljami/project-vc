@@ -9,7 +9,7 @@ import java.util.List;
  * to be used with the ConsoleUI.
  * 
  * @author Viljami Pietarila
- * @version 2019
+ * @version 20191019
  */
 
 class CalculatorConsole {
