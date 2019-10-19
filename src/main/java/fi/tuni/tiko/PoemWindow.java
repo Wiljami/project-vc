@@ -1,9 +1,10 @@
 package fi.tuni.tiko;
-import java.awt.event.*;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -30,6 +31,7 @@ class PoemWindow extends JFrame{
 
     generateBtn.addActionListener(new ActionListener(){
         public void actionPerformed (ActionEvent e){
+            generateBtn.setText("GENERATE NEW POEM");
         }
     });
 
