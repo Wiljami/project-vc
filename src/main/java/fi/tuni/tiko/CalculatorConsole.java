@@ -1,5 +1,12 @@
 package fi.tuni.tiko;
 
+/**
+ * CalculatorConsole is a module for the console UI.
+ * 
+ * CalculatorConsole holds information and functions for Calculator App 
+ * to be used with the ConsoleUI.
+ */
+
 import java.util.*;
 
 class CalculatorConsole {
