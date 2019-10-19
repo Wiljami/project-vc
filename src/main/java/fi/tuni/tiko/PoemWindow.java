@@ -1,9 +1,17 @@
 package fi.tuni.tiko;
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-import javax.swing.border.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.FlowLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.Border;
 
 
 class PoemWindow extends JFrame{
@@ -28,6 +36,7 @@ class PoemWindow extends JFrame{
         topPanel.setLayout(new FlowLayout(8));
         JPanel btnPanel = new JPanel();
         btnPanel.setLayout(new FlowLayout(8));
+        border = BorderFactory.createLineBorder(Color.GRAY, 1);
         
         generateBtn = new JButton("GENERATE POEM");
         String firstLine = "* * * * * *";
@@ -38,6 +47,7 @@ class PoemWindow extends JFrame{
         poemTextArea = new JLabel("<html>" + firstLine + "<br>" + secondLine +
          "<br>" + thirdLine + "<br>" + "<br>" + fourthLine + "<br>" + 
          fifthLine + "<br>" + "</html>", SwingConstants.CENTER);
+        poemTextArea.setBorder(border);
 
         String[] poets1 = { "John Keats","Walt Whitman", "Emily Dickinson","William Shakespeare"};
         final JComboBox<String> poetsBox1 = new JComboBox<String>(poets1);
