@@ -60,7 +60,12 @@ class CalculatorConsole {
         this.calculator = calculator;
         commands = new ArrayList<Command>();
         setupCommands();
+        setupBonusCommands();
         consoleUI.runModule(this);
+    }
+
+    private void setupBonusCommands() {
+        
     }
 
     private void setupCommands() {
