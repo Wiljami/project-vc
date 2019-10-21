@@ -14,7 +14,14 @@ import java.util.List;
  */
 
 class CalculatorConsole {
+    /**
+     * Array of command words for the HELP command
+     */
     private final String[] HELP = { "help", "h" };
+
+    /**
+     * Description of the HELP command
+     */
     private final String HELPDESC = " - this printout.";
     private final String[] ADDITION = { "addition", "add", "+" };
     private final String ADDITIONDESC = " - addition.";
