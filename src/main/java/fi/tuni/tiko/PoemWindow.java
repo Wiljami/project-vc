@@ -22,6 +22,12 @@ class PoemWindow extends JFrame{
     JPanel pane;
     Border border;
 
+    String firstLine;
+    String secondLine;
+    String thirdLine;
+    String fourthLine;
+    String fifthLine;
+
     public PoemWindow(){
     setTitle("Poem generator");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -48,11 +54,11 @@ class PoemWindow extends JFrame{
         border = BorderFactory.createLineBorder(Color.GRAY, 1);
         
         generateBtn = new JButton("GENERATE POEM");
-        String firstLine = "* * * * * *";
-        String secondLine = "* * * * * *";
-        String thirdLine = "* * * * * *";
-        String fourthLine = "* * * * * *";
-        String fifthLine = "* * * * * *";
+        firstLine = "* * * * * *";
+        secondLine = "* * * * * *";
+        thirdLine = "* * * * * *";
+        fourthLine = "* * * * * *";
+        fifthLine = "* * * * * *";
         poemTextArea = new JLabel("<html>" + firstLine + "<br>" + secondLine +
          "<br>" + thirdLine + "<br>" + "<br>" + fourthLine + "<br>" + 
          fifthLine + "<br>" + "</html>", SwingConstants.CENTER);
