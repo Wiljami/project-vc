@@ -1,5 +1,8 @@
 package fi.tuni.tiko;
 
-public class SnakeUI { 
+import javax.swing.JFrame;
 
+public class SnakeUI extends JFrame {
+
+    
 }
