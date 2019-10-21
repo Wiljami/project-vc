@@ -96,6 +96,12 @@ class CalculatorConsole {
         });
     }
 
+    /**
+     * setupCommands method for command setups
+     * 
+     * SetupCommands initiates the different commands of the Console module
+     * and adds them to a list.
+     */
     private void setupCommands() {
         commands.add(new Command(HELP, HELPDESC) {
             @Override
