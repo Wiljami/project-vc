@@ -64,6 +64,13 @@ class CalculatorConsole {
         consoleUI.runModule(this);
     }
 
+    /**
+     * setupBonusCommands method for further command setup
+     * 
+     * Bonus commands are bonus or 'hidden' commands of the app.
+     * They're not part of the Calculator proper, thus they're seperated
+     * to a different method
+     */
     private void setupBonusCommands() {
         commands.add(new Command(GRAPHCALC, "") {
             @Override
