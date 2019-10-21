@@ -33,7 +33,15 @@ class CalculatorConsole {
      * Description of the ADDITION command
      */
     private final String ADDITIONDESC = " - addition.";
+
+    /**
+     * Array of command words for the SUBSTRACTION command
+     */
     private final String[] SUBSTRACTION = { "substraction", "sub", "-" };
+
+    /**
+     * Descrption of the SUBSTRACTION command
+     */
     private final String SUBSTRACTIONDESC = "- substraction.";
     private final String[] MULTIPLICATION = { "multiplication", "multi", "*" };
     private final String MULTIPLICATIONDESC = " - multiplication.";
