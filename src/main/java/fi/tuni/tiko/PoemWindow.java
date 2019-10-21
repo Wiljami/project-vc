@@ -37,6 +37,8 @@ class PoemWindow extends JFrame{
     createGUI();
     setSize(500, 400);
 
+    poemGen.readPoemFiles();
+
     generateBtn.addActionListener(new ActionListener(){
         public void actionPerformed (ActionEvent e){
             onGenerateBtnClick();
