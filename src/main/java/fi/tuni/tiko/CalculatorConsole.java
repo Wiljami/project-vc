@@ -166,6 +166,10 @@ class CalculatorConsole {
         });
     }
 
+    /**
+     * getCommands getter
+     * @return List of Commands
+     */
     public List<Command> getCommands() {
         return commands;
     }
