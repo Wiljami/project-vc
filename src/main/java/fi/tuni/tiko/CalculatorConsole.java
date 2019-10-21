@@ -23,7 +23,15 @@ class CalculatorConsole {
      * Description of the HELP command
      */
     private final String HELPDESC = " - this printout.";
+
+    /**
+     * Array of command words for the ADDITION command
+     */
     private final String[] ADDITION = { "addition", "add", "+" };
+
+    /**
+     * Description of the ADDITION command
+     */
     private final String ADDITIONDESC = " - addition.";
     private final String[] SUBSTRACTION = { "substraction", "sub", "-" };
     private final String SUBSTRACTIONDESC = "- substraction.";
