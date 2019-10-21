@@ -37,6 +37,7 @@ class PoemWindow extends JFrame{
 
     generateBtn.addActionListener(new ActionListener(){
         public void actionPerformed (ActionEvent e){
+            onGenerateBtnClick();
             generateBtn.setText("GENERATE NEW POEM");
         }
     });
