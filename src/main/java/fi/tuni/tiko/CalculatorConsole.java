@@ -43,7 +43,15 @@ class CalculatorConsole {
      * Descrption of the SUBSTRACTION command
      */
     private final String SUBSTRACTIONDESC = "- substraction.";
+    
+    /**
+     * Array of command words for the MULTIPLICATION command
+     */
     private final String[] MULTIPLICATION = { "multiplication", "multi", "*" };
+
+    /**
+     * Descrption of the MULTIPLICATION command
+     */
     private final String MULTIPLICATIONDESC = " - multiplication.";
     private final String[] DIVISION = { "division", "divide", "div", "/" };
     private final String DIVISIONDESC = " - division.";
