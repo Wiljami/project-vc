@@ -4,5 +4,7 @@ import javax.swing.JFrame;
 
 public class SnakeUI extends JFrame {
 
-    
+    public SnakeUI() {
+        
+    }
 }
