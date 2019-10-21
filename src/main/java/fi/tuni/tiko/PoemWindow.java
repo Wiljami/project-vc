@@ -21,6 +21,7 @@ class PoemWindow extends JFrame{
     JLabel poemTextArea;
     JPanel pane;
     Border border;
+    SecretPoemGenerator poemGen;
 
     String firstLine;
     String secondLine;
@@ -29,6 +30,7 @@ class PoemWindow extends JFrame{
     String fifthLine;
 
     public PoemWindow(){
+    poemGen = new SecretPoemGenerator();
     setTitle("Poem generator");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setLocation(100, 100);
