@@ -77,6 +77,10 @@ class PoemWindow extends JFrame{
         
     }
 
+    public void onGenerateBtnClick(){
+
+    }
+
     public static void main (String [] args){
         PoemWindow win = new PoemWindow();
     }
