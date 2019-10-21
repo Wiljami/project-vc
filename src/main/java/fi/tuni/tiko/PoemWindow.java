@@ -89,7 +89,10 @@ class PoemWindow extends JFrame{
     }
 
     public void onGenerateBtnClick(){
-
+        firstLine = poemGen.poetsAndThemesList.get(0).getRandomVerseLine();
+        poemTextArea.setText("<html>" + firstLine + "<br>" + secondLine +
+         "<br>" + thirdLine + "<br>" + "<br>" + fourthLine + "<br>" + 
+         fifthLine + "<br>" + "</html>");
     }
 
     public static void main (String [] args){
