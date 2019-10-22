@@ -99,8 +99,8 @@ class PoemWindow extends JFrame{
          fifthLine + "<br>" + "</html>");
     }
 
-    public static void main (String [] args){
-        PoemWindow win = new PoemWindow();
-    }
+    // public static void main (String [] args){
+    //     PoemWindow win = new PoemWindow();
+    // }
     
 }

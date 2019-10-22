@@ -34,6 +34,7 @@ public class SecretPoemGenerator{
     * and fetchVerseLines.
     */
     public void startPoemGenerator(){
+        PoemWindow win = new PoemWindow();
         System.out.println("\nYou found a Secret Poem Generator.");
         System.out.println("Welcome, Friend!");
         System.out.println("\n         **************************************");
