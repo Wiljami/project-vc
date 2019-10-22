@@ -1,6 +1,7 @@
 package fi.tuni.tiko;
 
-import java.util.*;
+import java.util.List;
+import java.util.Scanner;
 
 /**
  * An UI to be used in console.
@@ -20,6 +21,8 @@ class ConsoleUI {
     private final String[] QUIT = {"quit", "q"};
     private final String LINESTART = "> ";
 
+    private final String[] COFFEE = 
+            {"coffee counter", "coffee", "cof", "black liquid of the gods"};
     private final String[] CALCULATOR = {"calculator", "calc", "c"};
     private final String[] POEM = {"poem", "p", "secret poem generator"};
     private final String[] SNAKE = {"snake", "s", "snaek"};
