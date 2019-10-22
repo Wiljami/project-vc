@@ -100,6 +100,8 @@ class ConsoleUI {
             calculator.startSnake();
         } else if (checkCommand(GRAPHCALC, command)) {
             Window Window = new Window("calculator");
+        } else if (checkCommand(COFFEE, command)) {
+            CoffeeCounter cc = new CoffeeCounter();
         } else {
             System.out.println("Unknown command");
         }
