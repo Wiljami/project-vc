@@ -96,7 +96,9 @@ class PoemWindow extends JFrame{
         String poet1_raw = poetsBox1.getSelectedItem().toString();
         String[] poet1Parts = poet1_raw.split(" ");
         String poet1 = poet1Parts[1];
-        
+        String theme = themesBox.getSelectedItem().toString().replaceAll(" ", "");
+        String strObject1 = poemGen.userInputToPoet(poet1, theme);
+
         firstLine = poemGen.poetsAndThemesList.get(0).getRandomVerseLine();
         poemTextArea.setText("<html>" + firstLine + "<br>" + secondLine +
          "<br>" + thirdLine + "<br>" + "<br>" + fourthLine + "<br>" + 
