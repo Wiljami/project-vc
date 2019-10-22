@@ -29,6 +29,10 @@ class PoemWindow extends JFrame{
     String fourthLine;
     String fifthLine;
 
+    JComboBox<String> poetsBox1;
+    JComboBox<String> poetsBox2;
+    JComboBox<String> themesBox;
+
     public PoemWindow(){
     poemGen = new SecretPoemGenerator();
     setTitle("Poem generator");
@@ -70,13 +74,13 @@ class PoemWindow extends JFrame{
         poemTextArea.setBorder(border);
 
         String[] poets1 = { "John Keats","Walt Whitman", "Emily Dickinson","William Shakespeare"};
-        final JComboBox<String> poetsBox1 = new JComboBox<String>(poets1);
+        poetsBox1 = new JComboBox<String>(poets1);
 
         String[] poets2 = {"John Keats","Walt Whitman", "Emily Dickinson","William Shakespeare"};
-        final JComboBox<String> poetsBox2 = new JComboBox<String>(poets2);
+        poetsBox2 = new JComboBox<String>(poets2);
 
         String[] themes = { "LOVE","DEATH               "};
-        final JComboBox<String> themesBox = new JComboBox<String>(themes);
+        themesBox = new JComboBox<String>(themes);
 
         topPanel.add(poetsBox1);
         topPanel.add(poetsBox2);
