@@ -63,7 +63,15 @@ class CalculatorConsole {
      * Descrption of the DIVISION command
      */
     private final String DIVISIONDESC = " - division.";
+
+    /**
+     * Array of command words for the FIBONACCI command
+     */
     private final String[] FIBONACCI = { "fibonacci", "fibo", "f" };
+
+    /**
+     * Descrption of the FIBONACCI command
+     */
     private final String FIBONACCIDESC = " - fibonacci series";
     private final String[] QUIT = { "quit", "q" };
     private final String QUITDESC = " - exits the program";
