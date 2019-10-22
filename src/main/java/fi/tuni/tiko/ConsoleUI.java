@@ -97,6 +97,8 @@ class ConsoleUI {
             start();
         } else if (checkCommand(POEM, command)) {
             calculator.startPoemGenerator();
+        } else if (checkCommand(POEMWINDOW, command)) {
+            PoemWindow window = new PoemWindow();
         } else if (checkCommand(SNAKE, command)) {
             calculator.startSnake();
         } else if (checkCommand(GRAPHCALC, command)) {
