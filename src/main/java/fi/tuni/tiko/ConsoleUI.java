@@ -25,6 +25,7 @@ class ConsoleUI {
             {"coffee counter", "coffee", "cof", "black liquid of the gods"};
     private final String[] CALCULATOR = {"calculator", "calc", "c"};
     private final String[] POEM = {"poem", "p", "secret poem generator"};
+    private final String[] POEMWINDOW = {"poem window", "pw"};
     private final String[] SNAKE = {"snake", "s", "snaek"};
 
     public ConsoleUI(Calculator calculator) {
