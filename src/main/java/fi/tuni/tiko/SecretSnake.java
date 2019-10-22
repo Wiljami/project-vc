@@ -3,6 +3,16 @@ package fi.tuni.tiko;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * SecretSnake is used to play the snake game. 
+ * 
+ * It collects all of the snakepart and enemypart information and uses 
+ * it to generate a board for the command prompt play. 
+ * The game can only be played in command prompt.
+ * 
+ * @author Hanna Tuominen
+ */
+
 public class SecretSnake {
     char[][] board = new char[20][20];
     ArrayList<SnakePart> snakePartList = new ArrayList<SnakePart>();
