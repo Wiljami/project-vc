@@ -53,7 +53,15 @@ class CalculatorConsole {
      * Descrption of the MULTIPLICATION command
      */
     private final String MULTIPLICATIONDESC = " - multiplication.";
+
+    /**
+     * Array of command words for the DIVISION command
+     */
     private final String[] DIVISION = { "division", "divide", "div", "/" };
+
+    /**
+     * Descrption of the DIVISION command
+     */
     private final String DIVISIONDESC = " - division.";
     private final String[] FIBONACCI = { "fibonacci", "fibo", "f" };
     private final String FIBONACCIDESC = " - fibonacci series";
